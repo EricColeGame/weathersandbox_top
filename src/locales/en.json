@@ -38,106 +38,106 @@
     },
     "start": {
       "eyebrow": "Start Here",
-      "title": "Your My Seafood Stand Journey",
+      "title": "Your Weather Sandbox Journey",
       "cards": [
         {
           "number": "1",
           "title": "Beginner Guide",
-          "description": "Master the Spirit World from day one with our comprehensive beginner guide covering controls, combat, and early progression."
+          "description": "Learn the core weather parameters and complete your first clear-sky experiment in Weather Sandbox."
         },
         {
           "number": "2",
-          "title": "Fastest Leveling",
-          "description": "Dominate early game and max your progression with the most efficient leveling routes and strategies."
+          "title": "Weather Controls",
+          "description": "Master temperature, humidity, air pressure, and wind so every storm reacts the way you expect."
         },
         {
           "number": "3",
-          "title": "Best Farming Spots",
-          "description": "Maximize your Soul Essence and EXP gains with optimal farming locations for every stage."
+          "title": "How to Create Storms",
+          "description": "Combine moisture, instability, lift, and wind shear to build thunder, lightning, and rain."
         },
         {
           "number": "4",
-          "title": "How to Extract",
-          "description": "Learn the best methods and locations for extracting resources in My Seafood Stand."
+          "title": "Tornado and Hurricane",
+          "description": "Spawn, steer, and tune the most powerful disasters in Weather Sandbox."
         }
       ]
     },
     "popular": {
       "eyebrow": "Popular Pages",
-      "title": "Trending Now",
+      "title": "Trending in Weather Sandbox",
       "quickLinks": [
-        "Hollow Progression",
-        "Fastest Leveling",
-        "Spirit Charms",
-        "All Boss Guides"
+        "Weather Controls",
+        "Create Storms",
+        "Tornado Mechanics",
+        "Beginner Guide"
       ],
       "cards": [
         {
           "badge": "Beginner",
-          "title": "Beginner Guide",
-          "description": "Everything you need from your first login to mastering the basics of combat and progression.",
-          "href": "/beginner-guide"
+          "title": "Weather Sandbox Beginner Guide",
+          "description": "Start with the core weather parameters and a step-by-step first session.",
+          "href": "/guide/weather-sandbox-beginner-guide"
         },
         {
-          "badge": "Updated",
-          "title": "Active Codes",
-          "description": "All working codes with rewards redeem before they expire.",
-          "href": "/codes"
+          "badge": "Controls",
+          "title": "Weather Sandbox Controls",
+          "description": "Temperature, humidity, pressure, wind, and precipitation settings explained.",
+          "href": "/controls/weather-sandbox-controls"
         },
         {
-          "badge": "Updated",
-          "title": "Equipment Database",
-          "description": "94 items across 5 slots complete gear database with stats, rarity, and sources.",
-          "href": "/equipment"
+          "badge": "Guide",
+          "title": "How to Create Storms",
+          "description": "Moisture, instability, lift, and shear combined into a full thunderstorm.",
+          "href": "/guide/weather-sandbox-how-to-create-storms"
         },
         {
-          "badge": "Popular",
-          "title": "Which Race Should You Pick?",
-          "description": "Shinigami, Quincy, or Hollow compare all three and find your perfect playstyle.",
-          "href": "/races/best-race"
+          "badge": "Mechanics",
+          "title": "Tornado Mechanics",
+          "description": "Spawn tools, funnel shapes, and the physics behind rotation.",
+          "href": "/mechanics/weather-sandbox-tornado"
         },
         {
-          "badge": "New",
-          "title": "Enemies & Monsters",
-          "description": "23 enemy types across 5 regions drops, locations, and farming tips.",
-          "href": "/enemies"
+          "badge": "Mechanics",
+          "title": "Hurricane Mechanics",
+          "description": "Pressure, wind, and landfall for Category-scale cyclones.",
+          "href": "/mechanics/weather-sandbox-hurricane"
         },
         {
-          "badge": "Popular",
-          "title": "Boss Locations & Drops",
-          "description": "Every boss location, drop table, and respawn timer in one reference.",
-          "href": "/boss-locations-drops-respawn-times"
+          "badge": "Guide",
+          "title": "How to Make a Tornado",
+          "description": "Step-by-step build order for a rotating funnel.",
+          "href": "/guide/weather-sandbox-how-to-make-tornado"
         },
         {
-          "badge": "Popular",
-          "title": "Best Builds",
-          "description": "Optimal stat allocation, skill tree picks, and Charm combos for every playstyle.",
-          "href": "/builds/best-builds"
+          "badge": "Guide",
+          "title": "Weather Sandbox Tips",
+          "description": "Habits that make storms look real and keep the simulation smooth.",
+          "href": "/guide/weather-sandbox-tips"
         },
         {
-          "badge": "New",
-          "title": "Shikai Tier List",
-          "description": "All 6 Shinigami Shikai types ranked by PvP and PvE performance.",
-          "href": "/tier-list/shikai"
+          "badge": "Mechanics",
+          "title": "Simulation Mechanics",
+          "description": "How the atmosphere model turns dials into real-time weather.",
+          "href": "/mechanics/weather-sandbox-simulation"
         },
         {
-          "badge": "New",
-          "title": "World Events Guide",
-          "description": "Supply Caches, Raids, and endgame world events with rare rewards.",
-          "href": "/world-events"
+          "badge": "Platform",
+          "title": "Weather Sandbox on Roblox",
+          "description": "Gameplay overview and how to play Weather Sandbox on Roblox.",
+          "href": "/roblox/weather-sandbox-roblox"
         }
       ]
     },
     "aboutGame": {
-      "title": "What is My Seafood Stand?",
+      "title": "What is Weather Sandbox?",
       "paragraphs": [
-        "My Seafood Stand is a stylized fighting RPG on Roblox inspired by the Bleach anime universe. Choose from three playable races Shinigami, Quincy, or Hollow each with unique progression systems, unlockable abilities, and evolution paths. Master over 130 skills as you fight your way to the level 100 cap.",
-        "Whether you're unlocking your first Shikai, evolving from a base Hollow into an Arrancar, or grinding Quincy Lieutenant missions, our wiki covers every system with detailed guides, data tables, and step-by-step walkthroughs."
+        "Weather Sandbox is a Roblox weather simulation game developed by Beyond Average. You control temperature, wind, humidity, and air pressure to build storms in real time, then watch the simulation respond as clouds, rain, lightning, and tornadoes form across the map.",
+        "Players experiment with everything from a calm clear-sky baseline to a Category-scale hurricane, unlocking new biomes and tools as they master the atmosphere. With over 963K visits and an 85% user rating, Weather Sandbox turns the sky into a sandbox you can pause, rewind, and rebuild."
       ],
       "stats": [
         {
           "label": "Developer",
-          "value": "Midnight Continent"
+          "value": "Beyond Average"
         },
         {
           "label": "Platform",
@@ -145,158 +145,244 @@
         },
         {
           "label": "Genre",
-          "value": "Fighting RPG"
+          "value": "Weather Simulation Sandbox"
         },
         {
           "label": "Visits",
-          "value": "12.6M+"
+          "value": "963K+"
         },
         {
-          "label": "Favorites",
-          "value": "243K+"
+          "label": "Peak CCU",
+          "value": "1,725"
         },
         {
-          "label": "Total Skills",
-          "value": "130+"
+          "label": "Players Online",
+          "value": "70"
         },
         {
-          "label": "Level Cap",
-          "value": "100"
+          "label": "User Rating",
+          "value": "85%"
         }
       ],
       "cta": "Explore All Guides"
     },
     "explore": {
-      "title": "Explore My Seafood Stand Wiki",
-      "description": "Master your seafood restaurant on Roblox with essential progression guides, active codes, complete fish & recipe catalogs, and optimal upgrade strategies.",
+      "title": "Explore Weather Sandbox Wiki",
+      "description": "Weather controls, storm building, biome experiments, and disaster mechanics - everything you need to master the Weather Sandbox atmosphere.",
       "modules": [
         {
           "order": 1,
-          "name": "My Seafood Stand Working Codes",
-          "description": "Redeem the latest working codes to claim free coins, gems, exclusive cosmetics, and boost items before they expire.",
-          "href": "/codes/my-seafood-stand-codes",
-          "displayType": "code-box",
+          "name": "Weather Sandbox Beginner Guide",
+          "description": "A step-by-step starter walkthrough covering the core weather parameters, your first-session setup, and beginner experiments to run in Weather Sandbox.",
+          "href": "/guide/weather-sandbox-beginner-guide",
+          "displayType": "step-by-step",
           "highlights": [
             {
-              "label": "Code",
-              "detail": "FULLRELEASE — Free Cash & Rewards"
+              "label": "1",
+              "detail": "Reset to a clear sky and set a baseline time of day"
             },
             {
-              "label": "Code",
-              "detail": "75KLIKES — Exclusive Ability Reroll"
+              "label": "2",
+              "detail": "Raise surface temperature to build instability"
             },
             {
-              "label": "Tip",
-              "detail": "Codes are case-sensitive; enter them in the Settings menu"
+              "label": "3",
+              "detail": "Push humidity toward saturation so a cloud base forms"
+            },
+            {
+              "label": "4",
+              "detail": "Trigger lift with terrain, a heat source, or a front"
+            },
+            {
+              "label": "5",
+              "detail": "Add wind shear to tilt the updraft and organize rotation"
+            },
+            {
+              "label": "6",
+              "detail": "Enable precipitation, then tune intensity and duration"
             }
           ]
         },
         {
           "order": 2,
-          "name": "Beginner Guide: How to Start & Serve Customers",
-          "description": "Step-by-step beginner guide covering customer ordering, food prep, station management, and cashier checkout mechanics.",
-          "href": "/guide/my-seafood-stand-beginner-guide",
-          "displayType": "feature-cards",
+          "name": "Weather Sandbox Weather Controls",
+          "description": "Every core weather dial in Weather Sandbox - temperature, humidity, air pressure, wind, cloud cover, and precipitation - with practical starting ranges.",
+          "href": "/controls/weather-sandbox-controls",
+          "displayType": "code-cards",
           "highlights": [
             {
-              "label": "Step 1",
-              "detail": "Take customer order at the stall front"
+              "label": "Temperature",
+              "detail": "60-75 F (15-24 C) - energy stored in the air"
             },
             {
-              "label": "Step 2",
-              "detail": "Cook seafood on the grill or boil station"
+              "label": "Humidity",
+              "detail": "50-70% - moisture available for clouds and rain"
             },
             {
-              "label": "Step 3",
-              "detail": "Serve warm food promptly for maximum customer tips"
+              "label": "Pressure",
+              "detail": "Near standard sea level - lower values drive lift and storms"
+            },
+            {
+              "label": "Wind Speed",
+              "detail": "5-15 mph - faster movement and more mixing"
+            },
+            {
+              "label": "Cloud Cover",
+              "detail": "20-50% - shading and storm fuel"
+            },
+            {
+              "label": "Time of Day",
+              "detail": "Mid-morning - stronger convection and longer heating"
             }
           ]
         },
         {
           "order": 3,
-          "name": "Seafood & Fish Tier List",
-          "description": "Complete breakdown of all catchable fish and seafood ranked by market value, customer demand, and profit margins.",
-          "href": "/seafood/my-seafood-stand-tier-list",
-          "displayType": "tier-grid",
+          "name": "Weather Sandbox Storm Guide",
+          "description": "How to create storms in Weather Sandbox by combining moisture, instability, lift, and wind shear, then tuning thunder, lightning, and rain.",
+          "href": "/guide/weather-sandbox-how-to-create-storms",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "S Tier",
-              "detail": "King Crab · Lobster Boil — Highest profit per customer"
+              "label": "Moisture",
+              "detail": "Supplies the water that becomes cloud and rain; raise humidity toward saturation"
             },
             {
-              "label": "A Tier",
-              "detail": "Salmon · Jumbo Shrimp · Tuna Steak — Reliable fast earners"
+              "label": "Unstable",
+              "detail": "Warm surface air keeps rising on its own and builds tall clouds"
             },
             {
-              "label": "B Tier",
-              "detail": "Clams · Oysters · Squid — Great mid-game margin"
+              "label": "Lift",
+              "detail": "Terrain, fronts, or a heat source gives the first upward push"
             },
             {
-              "label": "C Tier",
-              "detail": "Common Sardines · Small Crab — Starter seafood"
+              "label": "Shear",
+              "detail": "Tilts the updraft, separates rain from the core, and extends storm life"
             }
           ]
         },
         {
           "order": 4,
-          "name": "Best Upgrades Progression",
-          "description": "Optimal order to spend your cash: expand kitchen stations, hire waitstaff, speed up grills, and upgrade seating.",
-          "href": "/upgrades/my-seafood-stand-best-upgrades",
-          "displayType": "feature-cards",
+          "name": "Weather Sandbox Biomes",
+          "description": "Explore the map environments in Weather Sandbox and how terrain shapes local weather, from flat plains to mountains and coastlines.",
+          "href": "/mechanics",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Priority 1",
-              "detail": "Cooking Speed & Extra Burners — Clears customer backlog"
+              "label": "Plains",
+              "detail": "Flat ground favors long-lived storm tracks and wide funnel views"
             },
             {
-              "label": "Priority 2",
-              "detail": "Customer Seating Capacity — Increases simultaneous diners"
+              "label": "Mountains",
+              "detail": "High ground forces air upward and triggers rain shadows"
             },
             {
-              "label": "Priority 3",
-              "detail": "Auto-Chef / Waiter Staff — Passive hands-free revenue"
+              "label": "Coast",
+              "detail": "Warm water fuels hurricanes and sharpens sea-breeze fronts"
+            },
+            {
+              "label": "Desert",
+              "detail": "Dry air starves storms, so moisture must be added first"
             }
           ]
         },
         {
           "order": 5,
-          "name": "How to Get Cash Fast",
-          "description": "Top money-making strategies, VIP evaluation, tip maximization, and high-efficiency serving tips.",
-          "href": "/guide/my-seafood-stand-how-to-get-cash-fast",
-          "displayType": "feature-cards",
+          "name": "Weather Sandbox Tools",
+          "description": "The Weather Sandbox tools worth learning first - radar, timelapse, presets, and camera controls - and the experiments each one supports.",
+          "href": "/controls",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Combo",
-              "detail": "Chain orders quickly to build the Customer Happiness multiplier"
+              "label": "Radar",
+              "detail": "Track cells, rotation, and storm motion on a live top-down readout"
             },
             {
-              "label": "High Margin",
-              "detail": "Focus high-tier seafood boils during peak customer rush hours"
+              "label": "Timelapse",
+              "detail": "Replay a full storm lifecycle frame by frame"
             },
             {
-              "label": "Reinvest",
-              "detail": "Keep 20% cash reserve for fresh ingredient replenishment"
+              "label": "Presets",
+              "detail": "Save and reload named scenarios for repeatable tests"
+            },
+            {
+              "label": "Camera",
+              "detail": "Free-cam to film funnels, lightning, and rain bands"
             }
           ]
         },
         {
           "order": 6,
-          "name": "Plot Expansion & Stand Customization",
-          "description": "Unlock bigger land plots, arrange optimal cooking layouts, and add high-value decorative upgrades.",
-          "href": "/upgrades/my-seafood-stand-how-to-upgrade-plot",
-          "displayType": "feature-cards",
+          "name": "Weather Sandbox Contracts",
+          "description": "Weather Sandbox contracts and experiment objectives, with the goals, conditions, and rewards that unlock new tools and biomes.",
+          "href": "/guide",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Plot 1",
-              "detail": "Starter Beach Stand (3 Tables, 1 Grill)"
+              "label": "Baseline",
+              "detail": "Finish a clear-sky run to learn the interface and time controls"
             },
             {
-              "label": "Plot 2",
-              "detail": "Boardwalk Restaurant (6 Tables, 2 Grills, Boil Station)"
+              "label": "Rainfall",
+              "detail": "Produce believable rain and snow from humidity and cooling"
             },
             {
-              "label": "Plot 3",
-              "detail": "Luxury Pier Seafood Pavilion (Full Automation & VIP Seating)"
+              "label": "Storms",
+              "detail": "Build a structured, moving thunderstorm with wind shear"
+            },
+            {
+              "label": "Outbreak",
+              "detail": "Stage a multi-cell outbreak and keep every storm alive"
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "name": "Weather Sandbox Weather Collection",
+          "description": "A checklist of Weather Sandbox weather phenomena to discover and collect, from everyday rain and fog to rare rotating storms.",
+          "href": "/mechanics/weather-sandbox-simulation",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Supercell",
+              "detail": "Rotating thunderstorm with a mesocyclone and anvil top"
+            },
+            {
+              "label": "Waterspout",
+              "detail": "Funnel over water that forms near coastal maps"
+            },
+            {
+              "label": "Blizzard",
+              "detail": "Heavy snow with strong wind and whiteout visibility"
+            },
+            {
+              "label": "Lightning",
+              "detail": "Trigger frequency and audio accents for mature storms"
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "name": "Weather Sandbox Disasters",
+          "description": "The most dangerous weather in Weather Sandbox ranked by impact, from hurricanes and tornadoes to supercells and blizzards, with trigger conditions.",
+          "href": "/mechanics/weather-sandbox-hurricane",
+          "displayType": "tier-grid",
+          "highlights": [
+            {
+              "label": "S",
+              "detail": "Hurricane - Category-scale cyclone with an eye, eyewall, and spiral rain bands"
+            },
+            {
+              "label": "A",
+              "detail": "Tornado - Cone and wedge funnels with debris and structural damage"
+            },
+            {
+              "label": "B",
+              "detail": "Supercell - Long-lived rotating thunderstorm that spawns tornadoes"
+            },
+            {
+              "label": "C",
+              "detail": "Blizzard - Heavy snow and whiteout conditions that stall visibility"
             }
           ]
         }
@@ -304,27 +390,27 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "description": "Quick answers to the most common questions about My Seafood Stand.",
+      "description": "Quick answers to the most common questions about Weather Sandbox.",
       "items": [
         {
-          "question": "What is My Seafood Stand?",
-          "answer": "My Seafood Stand is a free-to-play fighting RPG on Roblox based on the Bleach anime. You choose one of game mechanics Shinigami (Soul Reaper), Quincy, or Hollow each with unique progression, combat abilities, and evolution systems. The game features 130+ skills, a level 100 cap, boss fights, and deep build customization."
+          "question": "What is Weather Sandbox?",
+          "answer": "Weather Sandbox is a Roblox weather simulation game by Beyond Average. You control temperature, wind, humidity, and air pressure to create storms, unlock biomes, and experiment with the atmosphere in real time."
         },
         {
-          "question": "Which race should beginners pick?",
-          "answer": "Shinigami is the most straightforward starter race, while Hollow and Quincy offer more specialized progression routes. Compare their abilities before committing."
+          "question": "How do you control the weather in Weather Sandbox?",
+          "answer": "Open the weather control panel and adjust temperature, humidity, air pressure, wind speed, wind direction, cloud cover, and precipitation. Change one value at a time to see exactly how the sky responds."
         },
         {
-          "question": "What is the current level cap?",
-          "answer": "The current level cap is 100, with more than 130 skills available across trees and race progression systems."
+          "question": "Can you make a tornado in Weather Sandbox?",
+          "answer": "Yes. A Weather Sandbox tornado needs warm moist air near the ground, cold dry air aloft, wind shear, and a lifting trigger. Build those four ingredients and the rotating updraft organizes into a funnel."
         },
         {
-          "question": "Where do I find active codes?",
-          "answer": "Use the Codes page for working codes, rewards, expiration notes, and redeem instructions."
+          "question": "What biomes and tools can you unlock in Weather Sandbox?",
+          "answer": "By completing experiments and contracts you unlock new biomes, tools, and storm presets. Terrain such as plains, mountains, and coastlines changes how weather behaves on each map."
         },
         {
-          "question": "Are boss guides updated?",
-          "answer": "Boss pages are organized with spawn notes, attack patterns, strategies, drop tables, and related next steps for progression."
+          "question": "Is Weather Sandbox free to play?",
+          "answer": "Yes. Weather Sandbox is free to play on Roblox, and you can start experimenting with the full weather control panel right away."
         }
       ]
     },
