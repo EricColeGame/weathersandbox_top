@@ -1,0 +1,119 @@
+export const metadata = {
+  title: "Guía de actualización de sandbox meteorológico: qué cambió, qué hay de nuevo y cómo jugar de forma más inteligente",
+  description: "Una guía práctica de actualización de sandbox meteorológico que cubre nuevas funciones, notas del parche, ajuste del rendimiento y cómo probar cambios antes de que dañen tus partidas guardadas.",
+  category: "versions",
+  date: "2026-10-06",
+}
+
+## Por qué una actualización de sandbox meteorológico merece tu atención
+
+Una actualización de sandbox meteorológico rara vez es solo una corrección de errores. Cuando todo el propósito del software es permitirte ajustar la tasa de precipitación, la cizalladura del viento, la densidad de nubes y la intensidad de las tormentas, un solo cambio en el núcleo de simulación puede repercutir en todos los escenarios que hayas guardado. Un pequeño ajuste que hace más creíble la llovizna puede convertir silenciosamente un preajuste de huracán cuidadosamente equilibrado en algo irreconocible.
+
+Es exactamente por eso que una actualización de sandbox meteorológico vale diez minutos de lectura antes de hacer clic en instalar. Las notas te dicen qué pretendían cambiar los desarrolladores, y tus propias pruebas te dicen qué cambió en realidad. Cuando esas dos cosas no coinciden, querrás descubrirlo en un escenario desechable y no en el proyecto que llevas semanas perfeccionando.
+
+Esta guía está escrita para cualquiera que trate estas herramientas como un pasatiempo, una ayuda didáctica o un espacio de trabajo creativo. Cubre cómo clasificar una actualización, cómo descifrar el lenguaje de las notas del parche, qué respaldar antes de instalar y cómo separar los informes fiables de la comunidad del ruido.
+
+## Qué suele cambiar una actualización de sandbox meteorológico
+
+La mayoría de las actualizaciones entran en un puñado de categorías reconocibles. Saber con cuál estás lidiando te indica cuánto tendrás que probar después y cuán nervioso deberías estar por tus partidas guardadas existentes.
+
+| Tipo de actualización | Qué suele afectar | Qué comprobar primero | Riesgo para tus configuraciones |
+|---|---|---|---|
+| Lanzamiento de funciones | Nuevos sistemas meteorológicos, nuevas herramientas de edición | Notas de la versión, tutoriales | Medio |
+| Ajuste / equilibrio | Tasas, umbrales, constantes físicas | Comportamiento de los escenarios guardados | De medio a alto |
+| Parche de rendimiento | Renderizado, nivel de detalle, tick de simulación | Velocidad de fotogramas, tiempos de carga | Bajo |
+| Calidad de vida | Menús, preajustes, gestión de guardados | Atajos de teclado, diseño de la interfaz | Bajo |
+| Cambio de mod o API | Enlaces de scripting, formatos de recursos | Compatibilidad de mods | Alto |
+| Hotfix / parche correctivo | Cierres inesperados, corrupción de guardados, congelamientos | Lista de problemas conocidos | Bajo |
+
+Las versiones con nuevas funciones son las actualizaciones de las que habla la gente, pero los parches de ajuste son los que remodelan silenciosamente tu trabajo. Si los desarrolladores ajustan cómo se acumula la humedad o cómo escalan las ráfagas con el terreno, cada preajuste que construiste sobre los números antiguos ahora funciona con una física diferente. No es necesariamente malo —puede ser más realista—, pero es un cambio que deberías verificar en lugar de dar por sentado.
+
+Los parches de rendimiento merecen una mirada más atenta de lo que sugiere su nombre aburrido. El trabajo de optimización a veces reduce el número de partículas, simplifica el renderizado de nubes o acorta la distancia a la que se dibuja el clima detallado. La velocidad de fotogramas sube y el cielo se vuelve sutilmente más plano. Si la fidelidad visual es la razón por la que usas un sandbox meteorológico, compara una captura de pantalla antes y después.
+
+Los cambios de mods y API conllevan el mayor riesgo. Cuando una interfaz de scripting cambia, el contenido creado por la comunidad puede romperse al instante y en silencio. Una actualización de sandbox meteorológico que añade un potente enlace nuevo puede, al mismo tiempo, dejar obsoleto aquel del que depende tu plugin favorito.
+
+## Cómo leer las notas del parche sin perderte lo importante
+
+Las notas del parche están escritas para ser rápidas, no claras. Unas pocas palabras cargan mucho peso, y la diferencia entre "ajustado" y "reelaborado" puede ser la diferencia entre una molestia menor y un proyecto roto.
+
+| Término en las notas | Qué suele significar | Por qué deberías preocuparte |
+|---|---|---|
+| "Ajustado" | Pequeño ajuste numérico | Los preajustes pueden desviarse ligeramente |
+| "Reelaborado" | Se reemplazó un sistema | Las configuraciones antiguas pueden comportarse de forma distinta |
+| "Optimizado" | Trabajo de rendimiento | Ojo con el detalle visual reducido |
+| "Se corrigió un problema por el que…" | Se resolvió un error específico | Comprueba si dependías del comportamiento anterior |
+| "Problema conocido" | Un problema se lanza sin corregir | Decide si esperar |
+| "Cambio incompatible" | Incompatible con versiones anteriores | Haz una copia de seguridad antes de instalar |
+| "Obsoleto" | Programado para eliminarse más adelante | Empieza a planificar una migración |
+
+Dos hábitos hacen que las notas del parche sean mucho más útiles. Primero, lee la sección de problemas conocidos antes de la lista de funciones: te dice qué saben ya los desarrolladores que está áspero, lo que te evita enviar un informe duplicado. Segundo, busca rápidamente las palabras "todo" y "cada". Un cambio que se aplica globalmente, como un nuevo valor predeterminado para la intensidad de precipitación, afectará a todos los escenarios que tengas, no solo a los que usan esa función explícitamente.
+
+Lleva también un breve registro de cambios personal. Cuando actualices, anota la versión, la fecha y una frase sobre qué se siente diferente. Seis meses después, esa nota es la forma más rápida de rastrear por qué un escenario dejó de comportarse como lo recuerdas.
+
+## Antes de instalar: lista de comprobación para una actualización de sandbox meteorológico
+
+Instalar es la parte fácil. Prepararse es lo que protege tu trabajo. Sigue estos pasos en orden y rara vez perderás más que unos minutos por un parche defectuoso.
+
+| Paso | Acción | Por qué importa |
+|---|---|---|
+| 1 | Haz una copia de seguridad de partidas guardadas, preajustes y carpetas de mods | La recuperación es imposible sin una copia |
+| 2 | Anota tu número de versión actual | Necesario para revertir o comparar |
+| 3 | Lee la lista de problemas conocidos | Evita cierres inesperados a mitad de proyecto |
+| 4 | Comprueba si tus mods son compatibles | Los mods rotos pueden impedir el inicio |
+| 5 | Prueba primero en un escenario duplicado | Protege tu proyecto principal |
+| 6 | Vuelve a revisar los ajustes de gráficos y simulación | Las actualizaciones a menudo los restablecen o recalculan |
+| 7 | Confirma los atajos de teclado y el diseño de la interfaz | La memoria muscular se rompe en silencio |
+
+El paso cinco es el que más gente se salta. Duplica tu escenario más importante, renómbralo con claridad y carga primero esa copia. Si el clima se comporta de forma extraña, habrás aprendido algo sin dañar el original. Si se comporta bien, promociona la copia y sigue adelante.
+
+También ayuda actualizar en un momento en el que no estés con una fecha límite encima. Las actualizaciones que llegan durante una competición, un proyecto de clase o una entrega de contenido te obligan a solucionar problemas bajo presión. Esperar un día o dos casi siempre es más barato que arreglar un flujo de trabajo corrompido.
+
+## Compromisos entre rendimiento y aspectos visuales tras una actualización
+
+Una actualización de sandbox meteorológico cambia con frecuencia los ajustes predeterminados, ya sea porque las nuevas funciones necesitan margen o porque los desarrolladores encontraron un mejor equilibrio. Revisa tu configuración después de cada parche importante en lugar de asumir que tu perfil antiguo sigue siendo válido.
+
+| Ajuste | Ganancia visual | Coste de rendimiento | Punto de partida sensato |
+|---|---|---|---|
+| Detalle volumétrico de nubes | Alto | Alto | Medio |
+| Densidad de partículas de precipitación | Medio | Medio | Medio |
+| Resolución de sombras | Medio | De medio a alto | Medio |
+| Tasa de tick de simulación | Baja visualmente, alta para precisión | Alto | Ajústala a tu hardware |
+| Actualización de radar o superposición | Bajo | Bajo | Alto |
+| Visualización del campo de viento | Medio | De bajo a medio | Activada |
+
+Un punto de referencia repetible es más útil que una impresión puntual. Crea un pequeño escenario de prueba con una tormenta fija, una posición de cámara fija y una hora del día fija. Ejecútalo después de cada actualización y anota la velocidad de fotogramas y la sensación general. A lo largo de varios parches, ese único escenario se convierte en un registro fiable de cómo ha evolucionado la simulación.
+
+Si el rendimiento baja después de una actualización, cambia un ajuste a la vez. Ajustar cinco controles deslizantes de golpe no te dice nada sobre cuál importó. Empieza por el elemento más costoso de la lista —normalmente el detalle de nubes o la tasa de tick de simulación— y ve bajando hasta que la velocidad de fotogramas se estabilice.
+
+## Informes de la comunidad y notas oficiales: cómo usar ambos
+
+La documentación oficial te da hechos. Los informes de la comunidad te dan matices. Necesitas ambos, pero sirven a propósitos distintos y nunca deberían tratarse como intercambiables.
+
+| Fuente | Fortaleza | Debilidad | Mejor uso |
+|---|---|---|---|
+| Notas oficiales del parche | Autoritativas y completas | Escuetas, a veces promocionales | Establecer hechos de referencia |
+| Publicaciones y transmisiones de desarrolladores | Explican la intención y la dirección | No siempre detalladas | Entender los objetivos de diseño |
+| Informes de la comunidad | Sacan a la luz casos límite reales con rapidez | Sin verificar, a veces emocionales | Encontrar errores reproducibles |
+| Desgloses en vídeo | Muestran el antes y el después con claridad | Pueden quedar obsoletos rápido | Ver los cambios en movimiento |
+
+Cuando leas un hilo de experiencia de jugadores que afirma que un sistema de tormentas está "completamente roto", haz tres preguntas: qué hardware, qué ajustes y qué escenario. Un informe sin esos detalles es una anécdota, no una prueba. Un informe que los incluye es genuinamente valioso y a menudo llega a los desarrolladores más rápido que un ticket formal.
+
+Para las propias notas del parche, el lugar más fiable donde mirar es el canal de noticias de la plataforma de distribución. Si tu sandbox meteorológico se vende a través de [la tienda oficial de Steam](https://store.steampowered.com/), cada página de producto tiene su propio historial de anuncios, que normalmente se actualiza antes o junto con la publicación de la versión. Guarda esa página en marcadores y revísala después de cualquier actualización automática.
+
+Un consejo práctico: mantén una carpeta de marcadores del navegador separada para anuncios de desarrolladores, hilos de errores de la comunidad y listas de compatibilidad de mods. Cuando llegue una actualización, podrás revisar los tres en unos minutos en lugar de buscar desde cero mientras tu proyecto queda a medio romper.
+
+## Preguntas frecuentes
+
+**¿Con qué frecuencia debería esperar una actualización de sandbox meteorológico?**
+Varía mucho según el proyecto y la etapa de desarrollo. Las herramientas en acceso anticipado activo tienden a publicar parches más pequeños y frecuentes, mientras que los lanzamientos maduros pueden sacar un puñado de actualizaciones más grandes al año, además de hotfixes ocasionales. En lugar de adivinar, sigue el canal oficial de anuncios de tu herramienta específica y activa las notificaciones de actualización.
+
+**¿Una actualización de sandbox meteorológico romperá mis escenarios guardados?**
+A veces, pero normalmente de formas pequeñas más que catastróficas. Los guardados rara vez fallan al cargar; en cambio, el clima dentro de ellos puede comportarse de forma distinta porque la física subyacente o los valores predeterminados cambiaron. Hacer una copia de seguridad antes de instalar y probar en un escenario duplicado es la protección más sencilla.
+
+**¿Debería instalar de inmediato o esperar unos días?**
+Si estás a mitad de proyecto, esperar suele ser más inteligente. Da a la comunidad un día o dos para sacar a la luz problemas reproducibles, y luego lee la lista de problemas conocidos antes de comprometerte. Si estás entre proyectos y quieres las funciones más recientes, instalar de inmediato es de bajo riesgo siempre que tus copias de seguridad estén al día.
+
+**¿Cómo informo de un error después de una actualización de sandbox meteorológico?**
+Reprodúcelo al menos dos veces y luego captura tu número de versión, hardware, ajustes de gráficos y los pasos exactos que lo provocan. Un clip corto junto con esos detalles es mucho más accionable que una descripción sola. Publícalo a través del canal oficial si existe, y duplícalo en el foro de la comunidad para que otros usuarios puedan confirmar si ven lo mismo.
+
+Trata cada actualización de sandbox meteorológico como un pequeño experimento en lugar de una descarga rutinaria. Lee las notas, protege tu trabajo, prueba una variable a la vez y lleva un registro escrito de lo que cambió. Hazlo de forma constante y las actualizaciones se convertirán en una ventaja en lugar de una interrupción.

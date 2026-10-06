@@ -1,0 +1,130 @@
+export const metadata = {
+  title: "Weather Sandbox Settings Explained: Full Guide to Weather Controls in Sandbox Games",
+  description: "Learn how weather sandbox settings control rain, storms, and time in sandbox games — plus practical tips for tuning each option to your play style.",
+  category: "controls",
+  date: "2026-10-06",
+}
+
+## What Weather Sandbox Settings Actually Control
+
+Few things break immersion faster than a thunderstorm rolling in halfway through a build you spent hours perfecting, or a bright sunny sky flattening the mood of a scene that needed fog. Weather sandbox settings exist to solve exactly that problem. Instead of leaving rain, wind, and lighting to a random number generator, they hand you the dials and let you decide what the sky does.
+
+If you build, film, test mods, or just want a permanent golden-hour sunset, learning how weather sandbox settings work is the difference between fighting your environment and directing it. Most players only touch the surface — a toggle for rain here, a time slider there — but the full set of options usually runs much deeper.
+
+At a high level, weather sandbox settings fall into a handful of groups. Each group affects something different, and changing one often changes how another feels.
+
+| Setting group | What it controls | Typical options | Why it matters |
+|---|---|---|---|
+| Weather state | The active condition right now | Clear, cloudy, rain, thunder, snow, fog, sandstorm | Instant mood and atmosphere |
+| Intensity | How heavy the effect is | Off, light, moderate, heavy, extreme | Prevents visibility or performance loss |
+| Weather cycle | Whether weather changes on its own | On/off, cycle length, random seed | Builders lock clear skies; survival players keep it on |
+| Transition speed | How long a change takes to fade | Instant, a few seconds, several minutes | Smooth results for cinematics |
+| Wind | Direction and strength | 0–100% strength, compass direction | Affects foliage, particles, sails, flight |
+| Time of day | Sun angle and ambient light | Fixed hour, real-time, custom curve | Consistent lighting for screenshots |
+| Precipitation physics | Puddles, snow buildup, lightning strikes | Per-element toggles | Realism versus performance |
+| Ambient audio | Rain loops, thunder, wind noise | Independent volume sliders | Sells the effect even in low graphics modes |
+
+The important thing to notice is that these are not all the same kind of setting. Some are world rules that apply to everyone, some are personal preferences, and some only exist if a mod or add-on adds them.
+
+## The Core Weather Sandbox Settings, Explained One by One
+
+### Weather state and intensity
+
+The weather state is the headline setting: what is the sky doing right now? In most sandbox titles this is a simple list you pick from, and the game handles the visuals. Intensity is the modifier layered on top — light drizzle versus a downpour, thin mist versus fog so thick you cannot see the next block.
+
+A common mistake is cranking intensity to maximum for drama. Heavy rain plus heavy fog plus strong wind will tank frame rates on mid-range hardware and make gameplay genuinely difficult. Player experience suggests keeping only one element at maximum at a time and letting the others sit in the middle.
+
+### Cycle length and transition speed
+
+If your game supports automatic weather cycling, cycle length decides how often the sky changes on its own. Short cycles feel busy and unpredictable; long cycles feel natural but slow to test against. Transition speed is separate — it controls how long the fade between two weather states takes.
+
+| Goal | Cycle setting | Transition speed | Notes |
+|---|---|---|---|
+| Filming a scene | Off | Slow (30s+) | No surprise changes mid-take |
+| Building a base | Off | Any | Lock clear weather |
+| Survival play | On, medium | Medium | Keeps variety without chaos |
+| Testing weather systems | On, very short | Instant | Fast iteration |
+| Screenshot hunting | Off | Instant | Jump straight to the look you want |
+
+### Wind, fog, and particle density
+
+These are the settings people forget until something looks wrong. Wind drives particle direction, so rain that falls straight down in a gale looks fake. Fog density controls depth and mood, and particle density controls how many raindrops or snowflakes the engine draws. Lowering particle density is one of the fastest performance wins available in most sandbox games.
+
+### Time of day and lighting lock
+
+Time of day is technically a separate system from weather, but the two are usually grouped in the same menu because they interact so heavily. A locked time of day — say, always late afternoon — gives you consistent shadows, which matters enormously if you are capturing a time-lapse or building a comparison shot. Note that some games tie weather to time automatically, so changing the clock may also reset the sky.
+
+## Where to Find Weather Sandbox Settings in Different Games and Engines
+
+There is no universal menu. Where the controls live depends entirely on what you are playing or building in, and knowing the category saves a lot of searching.
+
+| Platform type | Where the controls usually live | Practical notes |
+|---|---|---|
+| Sandbox games with world creation | New world / world options menu | Often locked after creation unless cheats are enabled |
+| Games with a console or chat commands | In-game console or chat bar | Fastest way to change weather live; needs permission |
+| Modded setups | The mod's own config menu or file | Behavior varies a lot between creators |
+| Game engines and level editors | Environment, sky, or weather actor panel | Full control; saved with the project |
+| Multiplayer servers | Server config or admin panel | Applies to every player, not just you |
+
+For PC sandbox titles, browsing [Steam's sandbox tag page](https://store.steampowered.com/tags/en/Sandbox/) is a useful way to see how many different games use weather as a core creative tool — from city builders to survival sims to physics playgrounds.
+
+Two practical rules apply almost everywhere:
+
+- **World-level settings beat personal settings.** If the server says rain, your local preference usually loses.
+- **Commands are temporary, config files are permanent.** A console command changes the current session; a config edit survives restarts.
+
+In games that support console commands, the pattern is usually a short verb followed by a weather type, and a separate rule that turns automatic cycling on or off. Minecraft is the classic example — a `weather` command sets the condition, and a `doWeatherCycle` game rule decides whether it can change by itself. Check your specific game's documentation, since syntax and available conditions differ.
+
+## Recommended Weather Sandbox Settings by Play Style
+
+Rather than guessing, start from a preset and adjust from there. These combinations work well as baselines.
+
+| Play style | Weather state | Cycle | Intensity | Time of day | Wind |
+|---|---|---|---|---|---|
+| Creative builder | Clear | Off | N/A | Locked noon | Low |
+| Cinematic filmmaker | Overcast or storm | Off | Medium–heavy | Locked golden hour | Medium |
+| Survival player | Any | On, medium | Light–moderate | Real-time | Default |
+| Mod or bug tester | Extreme | On, very short | Maximum | Fast-cycling | Maximum |
+| Screenshot hunter | Fog or light snow | Off | Light | Locked dawn/dusk | Low |
+| Performance-focused | Clear | Off | Off | Any | Off |
+
+A few habits make these presets work better in practice:
+
+- Save your presets if the game supports profiles, so you do not rebuild the same setup every session.
+- Change one variable at a time. If you alter wind, fog, and intensity together, you will not know which one broke the look.
+- Write down the values that worked. Community reports frequently mention losing a perfect lighting setup because nobody recorded the numbers.
+
+## Common Mistakes When Adjusting Weather Sandbox Settings
+
+Even experienced players run into the same handful of problems. Most are not bugs — they are setting conflicts.
+
+| Symptom | Likely cause | Fix |
+|---|---|---|
+| Weather keeps changing despite a lock | Automatic cycling still enabled | Turn the cycle rule off, not just the current weather |
+| Rain looks like it is falling sideways | Wind strength set too high | Lower wind or match it to the intended storm |
+| Big frame rate drops during storms | Particle density too high | Reduce particle count before lowering other settings |
+| Settings reset after restarting | Console command used instead of config | Edit the world or server config file |
+| Multiplayer players see different weather | Client-side mod overriding server | Remove the local override or match server settings |
+| Snow accumulates endlessly | Precipitation physics enabled with no cap | Disable buildup or set a maximum depth |
+
+One more thing worth knowing: some sandbox games tie achievements, progression, or scripted events to weather. Turning the system off entirely can quietly disable content you were not expecting to lose. If something stops triggering after you adjust your weather sandbox settings, revert to defaults and test again before assuming it is a bug.
+
+## FAQ
+
+**Do weather sandbox settings affect performance?**
+
+Yes, often significantly. Particle density, fog volume, and lightning effects are the heaviest elements. If you are chasing frame rate, set weather to clear and disable particle-heavy effects first — that single change usually recovers more performance than lowering shadows or textures.
+
+**Can I lock the weather so it never changes?**
+
+In most games, yes. You need to disable automatic cycling, not just set the current condition. Setting a sunny sky while the cycle rule stays on means the sky will eventually shift on its own.
+
+**Why do my weather sandbox settings reset every time I reload?**
+
+Console commands and in-session menus are usually temporary. To make a change stick, edit the world configuration, server config file, or a saved preset instead. On multiplayer servers, only admins can make permanent changes.
+
+**Are these settings available on consoles?**
+
+It depends on the game. Many console sandbox titles offer a reduced version of the weather menu — usually weather state, time of day, and cycle on/off — while advanced controls like wind strength and particle density stay PC-only or require a mod.
+
+Getting comfortable with weather sandbox settings takes an afternoon, but it pays off every session after that. Start with a preset that matches what you are doing, change one slider at a time, and save the combinations that work. Once the sky stops being a surprise, it becomes just another tool in your build.

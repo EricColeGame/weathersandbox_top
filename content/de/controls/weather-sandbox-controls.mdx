@@ -1,0 +1,136 @@
+export const metadata = {
+  title: "Wetter-Sandbox-Steuerung: Regen, Stürme und Himmel-Einstellungen meistern",
+  description: "Erfahre, wie die Wetter-Sandbox-Steuerung auf PC, Konsole und Mobilgerät funktioniert, plus ein Schritt-für-Schritt-Workflow für Stürme, die gut aussehen und flüssig laufen.",
+  category: "controls",
+  date: "2026-10-06",
+}
+
+Ein einziger Tastendruck kann einen Tornado über deiner Stadt entfesseln, und ein einziger Regler kann einen klaren Nachmittag in einen Whiteout verwandeln. Das ist das Versprechen einer gut beherrschten **Wetter-Sandbox-Steuerung**: direkte, nachvollziehbare Kontrolle über den Himmel. Ob du eine filmische Szene grob anlegst, ein Level testest oder einfach neugierig bist, was passiert, wenn ein Schneesturm auf eine Wüste trifft – zu wissen, wo die Steuerung liegt – und in welcher Reihenfolge du sie anfassen solltest – ist der Unterschied zwischen fünf unterhaltsamen Minuten und einem fertigen Projekt.
+
+Diese Anleitung zeigt, wie Wetter-Sandbox-Steuerungen üblicherweise über Plattformen hinweg organisiert sind, welche Ebenen du zuerst anpassen solltest und welche kleinen Fehler ansonsten gute Stürme künstlich aussehen lassen oder deine Bildrate in den Keller ziehen.
+
+## Was du in einer Wetter-Sandbox wirklich steuern kannst
+
+Eine Wetter-Sandbox ist jede Umgebung, in der der Himmel eine Variable ist, die dir gehört, statt eines Skripts, dem du folgst. In einem Spiel kann das ein Kreativmodus-Panel oder eine Entwicklerkonsole sein. In einer Engine oder einem Simulationswerkzeug ist es normalerweise ein Partikelsystem plus eine Reihe von Umgebungs-Aktoren. Der Reiz ist in beiden Fällen derselbe: Du entscheidest, wann es regnet, wie stark, und wie die Welt aussieht, wenn die Sonne zurückkommt.
+
+Das Ermutigende daran ist, dass die Parameterliste kurz ist. Fast jedes Tool organisiert seine Optionen um dieselbe Handvoll physikalischer Werte, sodass sich die Fähigkeiten, die du in einer Sandbox aufbaust, schnell auf die nächste übertragen lassen.
+
+| Wetterelement | Was die Steuerung ändert | Typischer Bereich | Praktischer Hinweis |
+|---|---|---|---|
+| Niederschlagsart | Wechselt zwischen Regen, Schnee, Schneeregen, Hagel | Diskrete Liste | Normalerweise ein Dropdown oder eine Zyklus-Taste |
+| Intensität | Partikelanzahl und Fallgeschwindigkeit | 0–100 % | Der größte visuelle Hebel |
+| Windgeschwindigkeit | Horizontale Kraft auf Partikel und Objekte | Ruhig bis extrem | Neigt außerdem Regen und treibt Trümmer an |
+| Windrichtung | Richtung des Luftstroms | 0–360 Grad | Drehen, um die Sturmbewegung glaubhaft zu machen |
+| Wolkenbedeckung | Skybox-Dichte und Lichtblockierung | Klar bis vollständig bedeckt | Steuert Umgebungslicht und Schatten |
+| Nebeldichte | Sichtweitenabfall mit der Entfernung | Dünner Dunst bis Whiteout | Günstige, wirkungsvolle Stimmungssteuerung |
+| Blitz und Donner | Auslösefrequenz plus Audio | Aus bis nahezu durchgehend | Auf Audio-Übersteuerung achten |
+| Tageszeit | Sonnenwinkel, Farbgrading, Schattenlänge | 24-Stunden-Uhr | Interagiert mit allem oben |
+
+Sobald diese Liste vertraut wirkt, ist der Rest größtenteils Muskelgedächtnis. Was Leute tatsächlich aus dem Konzept bringt, ist nicht die Anzahl der Optionen – sondern die Reihenfolge, in der sie sie anfassen.
+
+## Die drei Steuerungsebenen, die du zuerst lernen solltest
+
+Die meisten Wetter-Sandbox-Steuerungen fallen in drei Ebenen, und zu wissen, in welcher Ebene du arbeitest, beseitigt den Großteil der Verwirrung. Neue Nutzer springen tendenziell direkt zum auffälligsten Effekt und fragen sich dann, warum er aufgeklebt aussieht. Erfahrene Nutzer bauen von unten nach oben auf.
+
+### Ebene 1: Globale Umgebungssteuerung
+
+Diese legen die Grundlage für die gesamte Szene fest – Tageszeit, Wolkenbedeckung und allgemeiner Nebel. Ändere sie zuerst, denn sie bestimmen, wie jedes später hinzugefügte Partikel beleuchtet wird. Ein Regen-Effekt, der in der Abenddämmerung großartig aussieht, kann mittags flach und grau wirken.
+
+### Ebene 2: Lokale und regionale Steuerung
+
+Diese wenden Wetter auf einen bestimmten Bereich an, statt auf die ganze Welt. Mit regionalen Steuerungen kannst du einen sonnigen Platz neben einer regennassen Gasse behalten, und hier findet normalerweise die interessante kreative Arbeit statt.
+
+### Ebene 3: Ereignis-Trigger
+
+Trigger sind die Schalter, die ein bestimmtes Ereignis auslösen: einen Blitzeinschlag, eine Böenfront, einen plötzlichen Starkregen, einen Tornado-Spawn. Sie sollten eher als Akzente denn als Fundament behandelt werden. Löse sie zu früh aus, und du verlierst den Spannungsaufbau, der sie wirken lässt.
+
+| Ebene | Umfang | Typische Eingabe | Am besten geeignet für |
+|---|---|---|---|
+| Globale Umgebung | Gesamte Szene | Regler, Dropdowns, Uhrzeit | Grundstimmung und Beleuchtung |
+| Lokal und regional | Definierte Zone oder Volumen | Zonenwerkzeuge, Pinsel, Bereichsauswahl | Kontrast zwischen Bereichen |
+| Ereignis-Trigger | Sofort oder geplant | Hotkeys, Buttons, skriptgesteuerte Timer | Drama, Pacing, geskriptete Beats |
+
+## Eingabeschemata für PC, Konsole, Touch und Skripting
+
+Die Begriffe der Wetter-Sandbox-Steuerung ändern sich je nach Hardware, aber die zugrunde liegenden Aktionen bleiben gleich. Ein Hotkey auf einer Tastatur, ein Radialmenü auf einem Controller und ein Tap-Ziel auf einem Smartphone erfüllen alle dieselbe Aufgabe: einen Parameter auswählen und seinen Wert anpassen.
+
+| Plattform | Primäre Eingabe | Wo sie glänzt | Wo sie Schwierigkeiten hat |
+|---|---|---|---|
+| PC | Tastatur-Hotkeys plus Mausregler | Schnelle Iteration, präzise Werte | Anfangs steile Lernkurve |
+| Konsole | Radialmenüs und Schultertasten-Modifikatoren | Komfortabel, controller-nativ | Langsamer für feines numerisches Tuning |
+| Mobilgerät und Tablet | Touch-Regler, Tippen-zum-Platzieren, Gestenrotation | Portabilität, intuitive Platzierung | Weniger gleichzeitige Eingaben |
+| Skripting und Konsole | Textbefehle oder Node-Graphen | Wiederholbar, automatisierbar, teilbar | Erfordert das Erlernen der Syntax |
+
+Die Erfahrung von Spielern legt nahe, dass sich das Neubelegen in den ersten zehn Minuten jeder Sitzung lohnt. Das Standardlayout in einem Wetter-Sandbox-Steuerungspanel ist normalerweise für Demonstrationen statt für lange Editing-Sessions ausgelegt. Die meistgenutzten Parameter – Intensität, Windrichtung und Tageszeit – auf Tasten zu legen, auf denen deine linke Hand ohnehin ruht, zahlt sich sofort aus.
+
+Wenn du in einer kommerziellen Engine statt in einem Spiel arbeitest, prüfe die offizielle Dokumentation für die Umgebungswerkzeuge deiner Plattform, bevor du improvisierst. Store-Seiten und Engine-Handbücher sind die verlässliche Quelle dafür, was ein bestimmter Build tatsächlich unterstützt; für einen allgemeinen Eindruck davon, wie breit das Sandbox-Genre geworden ist, ist [Steams Sandbox-Kategorie](https://store.steampowered.com/tags/en/Sandbox/) ein nützlicher Überblick.
+
+## Ein Schritt-für-Schritt-Workflow für saubere Wetteränderungen
+
+Regler zufällig zu ziehen, bis etwas richtig aussieht, ist eine gültige Art zu erkunden, aber eine schreckliche Art, etwas fertigzustellen. Die folgende Reihenfolge hält deine Szene lesbar und macht es einfach, eine einzelne Entscheidung rückgängig zu machen, ohne alles neu aufzubauen.
+
+| Schritt | Was du anpasst | Warum die Reihenfolge wichtig ist |
+|---|---|---|
+| 1. Szene einfrieren | Simulation pausieren oder Zeit sperren | Verhindert, dass sich das Wetter während des Tuning ändert |
+| 2. Grundlage festlegen | Tageszeit, Wolkenbedeckung | Bestimmt die Beleuchtung für jeden späteren Effekt |
+| 3. Wind ausrichten | Richtung vor Geschwindigkeit | Regenwinkel und Trümmer folgen der Richtung |
+| 4. Windgeschwindigkeit erhöhen | Intensität der horizontalen Kraft | Legt fest, wie heftig die Szene wirkt |
+| 5. Niederschlag hinzufügen | Art, dann Intensität | Zuerst die Art, damit du das richtige Partikelset tunst |
+| 6. Atmosphäre schichten | Nebel, Dunst, Farbgrading | Fügt Tiefe ohne zusätzliche Partikelkosten hinzu |
+| 7. Trigger auslösen | Blitze, Böen, Spawns | Akzente wirken besser auf einem fertigen Fundament |
+| 8. Preset speichern | Beschreibend benennen | Ermöglicht dir, das genaue Setup erneut zu laden oder zu teilen |
+
+Zwei Gewohnheiten trennen saubere Ergebnisse von chaotischen. Erstens: Ändere jeweils nur einen Parameter, damit du immer weißt, was ein Problem verursacht hat. Zweitens: Speichere ein Preset, bevor du mit dem Experimentieren beginnst – nicht danach. Einen Sturm, der dir gefallen hat, aus dem Gedächtnis neu aufzubauen, ist weit nerviger, als eine Datei zu laden.
+
+## Fehler, die Wetter künstlich aussehen lassen
+
+Selbst mit solider Wetter-Sandbox-Steuerung verraten ein paar wiederkehrende Fehler die Illusion. Keiner davon betrifft falsche Einstellungen; es geht um die Beziehungen zwischen den Einstellungen.
+
+| Fehler | Warum es künstlich wirkt | Lösung |
+|---|---|---|
+| Regen fällt bei starkem Wind senkrecht nach unten | Ein physikalischer Widerspruch, den das Auge sofort bemerkt | Neige den Niederschlag passend zur Windrichtung |
+| Nebel so dicht, dass nichts sichtbar ist | Entfernt alle Tiefenhinweise | Eine sichtbare Mittelfeld-Ebene beibehalten |
+| Blitz ohne Verzögerung zum Donner | Zerstört das Entfernungsgefühl | Eine kurze Lücke vor dem Audio-Signal einfügen |
+| Gleichmäßige Intensität auf der ganzen Karte | Echtes Wetter hat Ränder | Intensität zwischen Zonen überblenden |
+| Jeder Effekt gleichzeitig auf Maximum | Kein Kontrast, kein Fokus | Ein dominantes Element pro Einstellung behalten |
+| Die Bildrate beim Schichten ignorieren | Ruckeln zerstört die Stimmung | Nach jeder Ergänzung die Performance prüfen |
+
+Community-Berichte weisen den letzten Punkt durchweg als den häufigsten aus. Partikelreiches Wetter sieht in einem Standbild spektakulär aus und bei zwanzig Bildern pro Sekunde erbärmlich. Teste also in Bewegung, nicht in Screenshots.
+
+## Presets, Teilen und Performance-Reserven
+
+Ein gut gebautes Preset ist mehr als eine gespeicherte Reglerposition. Es ist ein kleines Rezept, das andere lesen können. Wenn du ein Preset benennst und dokumentierst, gib die Teile an, die es reproduzierbar machen.
+
+| Preset-Feld | Beispielwert | Warum es angeben |
+|---|---|---|
+| Name | Küstenbö, später Nachmittag | Macht es in einer Liste auffindbar |
+| Tageszeit | Später Nachmittag | Beleuchtung ist die halbe Optik |
+| Wolkenbedeckung | Schwer, geschichtet | Legt den Grundton fest |
+| Wind | Stark, ablandig | Erklärt den Regenwinkel |
+| Niederschlag | Regen, hohe Intensität | Der Haupteffekt |
+| Zusätzliche Effekte | Gelegentliche Blitze, leichter Dunst | Die letzten Schliffe |
+| Performance-Hinweis | Auf Mittelklasse-Hardware getestet | Warnt andere, bevor sie es laden |
+
+Presets zu teilen ist eine der schnellsten Möglichkeiten, besser in Wetter-Sandbox-Steuerung zu werden, weil dir die Datei von jemand anderem Kombinationen zeigt, die du nie ausprobiert hättest. Lade sie, ändere eine Sache und sieh, was kaputtgeht. Diese eine Gewohnheit lehrt dich mehr als eine Stunde einsames Herumprobieren.
+
+Performance verdient einen eigenen Punkt. Wind, Nebel und Partikeldichte kosten alle Bildrate, und ihre Kosten summieren sich. Wenn eine Szene anfängt zu ruckeln, reduziere die Intensität, bevor du die Auflösung reduzierst – ein etwas leichterer Sturm sieht normalerweise besser aus als ein verschwommener.
+
+## Häufig gestellte Fragen
+
+**Was sind Wetter-Sandbox-Steuerungen in einfachen Worten?**
+
+Es sind die Eingaben – Hotkeys, Regler, Radialmenüs oder getippte Befehle – mit denen du Wetter in einer Sandbox-Umgebung erstellst und anpasst. Statt auf Regen zu warten, erzeugst du ihn, stellst seine Stärke ein und richtest den Wind aus, der ihn umhertreibt.
+
+**Kann ich Wetter-Sandbox-Steuerungen auf einer Konsole oder einem Smartphone verwenden?**
+
+Ja. Konsolenversionen verwenden normalerweise Radialmenüs und Modifikatortasten, während Mobilversionen auf Touch-Regler und Tippen-zum-Platzieren-Werkzeuge setzen. Beide sind voll nutzbar, wobei PC-Setups im Allgemeinen feineres numerisches Tuning und schnellere Iteration ermöglichen.
+
+**Warum sieht mein Wetter auch nach dem Tuning aller Einstellungen noch künstlich aus?**
+
+Es ist normalerweise ein Beziehungsproblem und kein Einstellungsproblem. Prüfe, ob der Regenwinkel zur Windrichtung passt, ob der Nebel noch etwas sichtbare Tiefe lässt und ob Blitz und Donner durch eine kurze Verzögerung getrennt sind. Der Kontrast zwischen Zonen ist genauso wichtig wie die Werte selbst.
+
+**Beeinträchtigen diese Steuerungen die Performance?**
+
+Sie können es. Niederschlagsdichte, Wind und Nebel sind die größten Kostentreiber, und ihre Kosten summieren sich. Füge Effekte einzeln hinzu und prüfe deine Bildrate nach jeder Änderung, damit du genau weißt, welche Einstellung dich über die Kante gedrückt hat.
+
+Wetter-Sandbox-Steuerungen zu meistern geht wirklich um Reihenfolge und Zurückhaltung: Lege die Grundlage fest, richte den Wind aus, füge Niederschlag hinzu und setze dann Akzente mit Triggern. Wenn diese Reihenfolge stimmt, wirkt selbst ein einfacher Sturm, als gehöre er in die Welt, statt obenauf geklebt zu sein.

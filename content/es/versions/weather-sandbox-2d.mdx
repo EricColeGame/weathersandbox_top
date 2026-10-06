@@ -1,0 +1,144 @@
+export const metadata = {
+  title: "Versiones de Weather Sandbox 2D explicadas: compilaciones, actualizaciones y qué jugar",
+  description: "Compara las versiones de weather sandbox 2D — demos, compilaciones de acceso anticipado, lanzamientos completos y ramas de mods — además de consejos para elegir la correcta.",
+  category: "versions",
+  date: "2026-10-06",
+}
+
+## ¿Qué es un juego de weather sandbox 2D?
+
+Si alguna vez has querido arrastrar un control deslizante y ver cómo una tormenta eléctrica recorre un paisaje de píxeles, un juego de **weather sandbox 2D** es exactamente ese tipo de juguete. Estos pequeños mundos impulsados por la física te permiten generar lluvia, nieve, viento, rayos y niebla, y luego sentarte a observar cómo la simulación reacciona en tiempo real. El atractivo es sencillo: una compilación de **weather sandbox 2D** se trata de experimentar, no de pronosticar, y la versión que descargas cambia lo que realmente puedes hacer.
+
+A diferencia de una aplicación meteorológica que informa sobre las condiciones, un weather sandbox te permite crearlas. Colocas nubes, ajustas temperaturas, siembras una costa y luego observas cómo se forma la precipitación, suben los ríos y se erosiona el terreno. Algunos títulos son simuladores puros de arena que cae; otros envuelven la simulación dentro de un juego de supervivencia o construcción.
+
+### Los cuatro pilares del género
+
+| Pilar | Qué significa en la práctica | Por qué importa |
+|---|---|---|
+| Simulación de elementos | El agua, el vapor, el hielo, la arena y el fuego interactúan mediante reglas simples | Crea resultados emergentes y no programados |
+| Controles meteorológicos | Deslizadores o herramientas para viento, temperatura, humedad, precipitación | Te permite dirigir la escena en lugar de solo observarla |
+| Libertad de sandbox | Sin estado de derrota, sin temporizador, reinicios ilimitados | Fomenta la experimentación y la prueba de ideas |
+| Persistencia | Archivos guardados, mapas compartibles o escenas exportadas | Convierte un juguete en un proyecto sobre el que puedes construir |
+
+No todas las compilaciones incluyen los cuatro. Esa es la razón más importante por la que la elección de versión importa tanto en este género.
+
+## Cómo se estructuran normalmente las versiones de weather sandbox 2D
+
+Los desarrolladores rara vez usan etiquetas idénticas, pero la mayoría de los proyectos de weather sandbox 2D pasan por una secuencia reconocible. Entender la etapa te indica qué tan estable es la compilación y con qué frecuencia se romperán tus partidas guardadas.
+
+| Etapa | Etiquetas comunes | Qué sueles obtener | Ideal para |
+|---|---|---|---|
+| Prototipo | Demo técnica, WIP, compilación de game jam | Uno o dos tipos de clima, sin guardado, interfaz tosca | Probadores curiosos que quieren un vistazo rápido |
+| Acceso anticipado | Alpha, beta, prelanzamiento | Bucle de simulación central, parches frecuentes, equilibrio cambiante | Jugadores que disfrutan ver crecer un juego |
+| Candidato a lanzamiento | RC, compilaciones 0.9x | Congelación de funciones, pases de rendimiento, barrido de errores | Jugadores que quieren una estabilidad casi final |
+| Lanzamiento completo | 1.0, estable | Formato de guardado bloqueado, soporte de mods documentado, menos fallos | La mayoría de los jugadores |
+| Rama comunitaria | Paquete de mods, compilación personalizada | Elementos, mapas o ajustes de dificultad adicionales | Veteranos que han agotado el contenido original |
+
+Dos patrones aparecen una y otra vez. Primero, las compilaciones prototipo suelen estar basadas en navegador y ser gratuitas, lo que las convierte en la forma más fácil de comprobar si disfrutas del bucle central. Segundo, las compilaciones de acceso anticipado cambian rápido: una función que funciona el lunes puede reequilibrarse el viernes, y los informes de la comunidad mencionan con frecuencia partidas guardadas que dejan de cargar tras un gran parche.
+
+### Por qué los números de versión rara vez coinciden entre proyectos
+
+Un "0.7" de un desarrollador en solitario puede estar más pulido que un "1.0" de otro. Los números de versión describen el progreso interno, no la calidad. Lee el registro de cambios y las notas de parche más recientes en lugar de confiar solo en el número.
+
+## Comparación de funciones versión por versión
+
+La siguiente tabla muestra el patrón general de disponibilidad de funciones a lo largo de las etapas de lanzamiento. Trátala como una lista de verificación para contrastarla con el proyecto específico de weather sandbox 2D que estés considerando, ya que cada desarrollador toma decisiones distintas.
+
+| Función | Demo / Prototipo | Acceso anticipado | Lanzamiento completo | Rama con mods |
+|---|---|---|---|---|
+| Herramientas de control meteorológico | 1–2 efectos | La mayoría de los efectos | Conjunto completo | Ampliado o alterado |
+| Física de fluidos y partículas | Simplificada | Ajustada con el tiempo | Estable | A menudo ampliada |
+| Guardar y cargar | Normalmente ausente | Formato inestable | Formato bloqueado | Varía según el paquete |
+| Editor de mapas o terreno | Raro | Parcial | Común | Normalmente mejorado |
+| Soporte de mods o elementos | Ninguno | Enganches experimentales | API documentada | Ese es el objetivo |
+| Opciones de rendimiento | Mínimas | En crecimiento | Menú de configuración completo | Depende de los mods |
+| Multijugador o compartir | No | Ocasionalmente | A veces | Servidores comunitarios |
+
+### Qué cambia realmente entre compilaciones
+
+- **Fidelidad de la simulación.** Las compilaciones tempranas aproximan el movimiento de fluidos; las posteriores añaden presión, transferencia de calor o cizalladura del viento.
+- **Pulido de la interfaz.** Los prototipos suelen depender de atajos de teclado, mientras que los lanzamientos completos incluyen barras de herramientas, preajustes y deshacer.
+- **Compatibilidad de guardado.** Esta es la fuente de frustración más común. Los informes de la comunidad advierten sistemáticamente de que las actualizaciones importantes pueden invalidar mundos antiguos.
+- **Enganches para mods.** El soporte de mods suele llegar tarde, porque primero debe existir una estructura interna estable antes de que terceros puedan ampliarla de forma segura.
+
+## Comparación de los sandbox 2D de clima y física más populares
+
+Varios títulos 2D conocidos incluyen la simulación meteorológica como sistema central o de apoyo. La siguiente comparación se centra en cómo funciona realmente el clima en cada uno, no en cuál es "mejor".
+
+| Título | Plataforma | Papel del clima | Ideal para |
+|---|---|---|---|
+| Terraria | PC, consola, móvil | El clima llega como eventos del mundo: lluvia, tormentas, tormentas de arena, ventiscas | Jugadores que quieren clima dentro de un sandbox de aventura |
+| Starbound | PC | Peligros climáticos específicos de cada planeta, incluida lluvia ácida y lluvias de meteoritos | Exploradores a quienes les gusta el riesgo ambiental |
+| Sandboxels | Navegador | Elementos de arena que cae, como agua, vapor, nieve y fuego | Experimentos rápidos sin instalación |
+| The Powder Toy | PC | Física de presión, calor y partículas que produce fenómenos similares al clima | Experimentación técnica profunda |
+| Prototipos indie | Navegador y PC | A menudo construidos enteramente en torno al control del clima | Probar nuevas compilaciones antes de comprometerse |
+
+[Terraria en Steam](https://store.steampowered.com/app/105600/Terraria/) es un punto de referencia útil si quieres ver cómo se comporta un sistema meteorológico dentro de un sandbox 2D terminado y con soporte prolongado, en lugar de un simulador dedicado. Si tu interés es puramente controlar el clima, los experimentos en navegador y los prototipos indie normalmente te llevarán allí más rápido.
+
+### Cómo emparejar la herramienta con el objetivo
+
+- ¿Quieres controlar el clima directamente? Elige una compilación de simulación dedicada.
+- ¿Quieres que el clima te sorprenda? Elige un sandbox de supervivencia o aventura.
+- ¿Quieres construir sobre la simulación? Elige un lanzamiento con soporte de mods documentado.
+
+## Cómo elegir la versión correcta y sacarle el máximo partido
+
+Elegir bien se reduce a tres hábitos: conocer tu objetivo, leer el registro de cambios y proteger tus partidas guardadas.
+
+### Paso 1: Define qué quieres del sandbox
+
+| Tu objetivo | Versión que elegir | Por qué |
+|---|---|---|
+| Probar el concepto gratis | Prototipo o demo en navegador | Coste cero, compromiso cero |
+| Seguir el desarrollo de cerca | Acceso anticipado | Actualizaciones frecuentes y comunicación de los desarrolladores |
+| Construir proyectos a largo plazo | Lanzamiento completo | Guardados estables y herramientas documentadas |
+| Ampliar la simulación | Lanzamiento compatible con mods | Contenido comunitario y enganches de scripting |
+
+### Paso 2: Lee el registro de cambios antes de actualizar
+
+Las notas de parche te dicen más sobre una compilación de weather sandbox 2D que cualquier descripción de tienda. Busca tres cosas: si cambió el formato de guardado, si se reajustaron las constantes físicas y si se vio afectado el soporte de mods. Si un parche menciona alguna de ellas, haz primero una copia de seguridad de tus mundos.
+
+### Paso 3: Ajusta el rendimiento desde el principio
+
+Las simulaciones meteorológicas son costosas. Miles de partículas interactuando pueden bloquear una máquina de gama media. Reduce el límite de partículas, baja la resolución de la simulación o encoge el mapa antes de añadir complejidad, no después.
+
+### Consejos que ahorran tiempo
+
+| Consejo | Por qué ayuda |
+|---|---|
+| Empieza con un mapa pequeño | Iteración más rápida y causa-efecto más claro |
+| Guarda antes de grandes experimentos | Las cadenas meteorológicas pueden descontrolarse rápidamente |
+| Prueba una variable a la vez | Aísla qué causó realmente un cambio |
+| Mantén instalada una compilación estable anterior | Te permite retroceder si un nuevo parche falla |
+| Lee los hilos fijados de la comunidad | Los desarrolladores suelen publicar allí problemas conocidos |
+
+### Problemas comunes de versiones y soluciones
+
+| Problema | Causa probable | Solución |
+|---|---|---|
+| El mundo no carga | El formato de guardado cambió | Restaura una copia de seguridad o revierte la compilación |
+| Los mods dejaron de funcionar | La API o la estructura interna cambió | Espera a que el autor del mod lo actualice |
+| La simulación va lenta | Demasiadas partículas activas | Reduce el límite de partículas o el tamaño del mapa |
+| El clima nunca se activa | Preajustes o ajustes de bioma | Revisa la configuración del escenario, no la versión |
+
+## Informes de la comunidad y experiencia de los jugadores
+
+La experiencia de los jugadores en todo el género tiende a converger en unos pocos puntos. Los prototipos son elogiados por su diversión instantánea y criticados por la falta de guardado. Las compilaciones de acceso anticipado ganan lealtad por desarrolladores receptivos y la pierden cuando un parche rompe un mundo en curso. Los lanzamientos completos son la apuesta más segura para cualquiera que planee un proyecto largo, mientras que las ramas con mods ofrecen la mayor variedad a costa de la estabilidad.
+
+Los informes de la comunidad también sugieren que el mayor salto de calidad suele ocurrir entre la primera compilación pública de un proyecto y su primer lanzamiento con funciones completas, no entre parches incrementales. Si no estás seguro de con qué versión de weather sandbox 2D empezar, elige la compilación estable más reciente, aprende los controles y solo entonces experimenta con ramas de vanguardia.
+
+## Preguntas frecuentes sobre weather sandbox 2D
+
+**¿Un juego de weather sandbox 2D es lo mismo que una herramienta de pronóstico meteorológico?**
+No. Un juego de weather sandbox 2D es una simulación interactiva que tú controlas, mientras que una herramienta de pronóstico informa sobre condiciones reales. Comparten vocabulario, no propósito.
+
+**¿Con qué versión debería empezar un principiante?**
+Empieza con un prototipo gratuito o un lanzamiento completo estable. Los prototipos son introducciones sin riesgo; los lanzamientos estables te dan guardados y documentación.
+
+**¿Por qué se rompen mis partidas guardadas tras las actualizaciones?**
+Los juegos de simulación almacenan datos complejos del mundo. Cuando cambian las reglas físicas o las estructuras internas, los archivos antiguos pueden dejar de ser legibles. Guarda siempre copias de seguridad antes de actualizar.
+
+**¿Necesito un ordenador potente?**
+No necesariamente, pero las simulaciones meteorológicas son más pesadas que los juegos 2D típicos. Reducir el límite de partículas y el tamaño del mapa mantiene la mayoría de las compilaciones funcionando sin problemas en hardware de gama media.
+
+Sea cual sea la compilación que elijas, el objetivo es el mismo: escoge una versión que se ajuste a cómo te gusta jugar, mantén una copia de seguridad y date espacio para experimentar.

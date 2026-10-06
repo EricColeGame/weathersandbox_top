@@ -1,0 +1,147 @@
+export const metadata = {
+  title: "Guía para principiantes del sandbox meteorológico: crea, controla y domina el clima simulado",
+  description: "¿Eres nuevo en las herramientas de sandbox meteorológico? Aprende los parámetros meteorológicos clave, los pasos de configuración para tu primera sesión, proyectos para principiantes y los errores que debes evitar en esta guía introductoria.",
+  category: "guide",
+  date: "2026-10-06",
+}
+
+## ¿Qué es exactamente un sandbox meteorológico?
+
+Un sandbox meteorológico te pone el control del cielo en tus manos. La temperatura, la humedad, el viento y la presión atmosférica se convierten en diales que puedes girar, y los resultados se despliegan en tiempo real frente a ti. Donde una aplicación de pronóstico te dice lo que el cielo planea hacer, un sandbox meteorológico te permite decidir qué sucede a continuación. Si alguna vez has querido dejar caer una tormenta de nieve sobre un desierto o ver cómo se forma una tormenta eléctrica a partir de una sola corriente ascendente cálida, este es tu punto de partida.
+
+¿Por qué importa esto? Porque el clima es un sistema, no un ajuste. Cada cambio se propaga hacia afuera: el aire más cálido retiene más humedad, el aire húmedo asciende, el aire ascendente se enfría y aparecen las nubes. Un sandbox hace visibles esas conexiones en minutos en lugar de a lo largo de un semestre de clases. Por eso esta guía para principiantes del sandbox meteorológico se centra en experimentos pequeños y repetibles, en lugar de intentar explicar todos los procesos atmosféricos de golpe.
+
+### Los cuatro rasgos que definen un sandbox
+
+- **Sin condición de victoria fija.** Tú defines el objetivo, ya sea una supercélula fotorrealista o un divertido día de nieve.
+- **Causa y efecto en tiempo real.** Cambia un valor y el cielo responde de inmediato.
+- **Reversibilidad.** Reinicia, deshaz o vuelve a cargar una escena guardada sin ninguna consecuencia.
+- **Persistencia.** Los buenos escenarios se pueden guardar, nombrar, compartir y reutilizar más adelante.
+
+Algunas herramientas se inclinan hacia los juegos, otras hacia la educación, los efectos visuales o el juego puramente creativo. Las habilidades fundamentales se transfieren entre todas ellas, así que rara vez importa con cuál aprendas primero.
+
+### Un sandbox meteorológico no es un servicio de pronóstico
+
+Los principiantes a veces confunden ambos porque los dos implican datos meteorológicos. Resuelven problemas completamente distintos. Un servicio de pronóstico informa lo que probablemente hará la atmósfera real; un sandbox te permite crear una atmósfera propia y ver qué resulta de ella.
+
+| Característica | Sandbox meteorológico | Sitio web o app de pronóstico | Mod meteorológico básico en un juego |
+|---|---|---|---|
+| Objetivo principal | Experimentar y crear | Planificar según las condiciones reales | Añadir ambiente a un juego |
+| Control sobre los parámetros | Control manual total | Ninguno | Preajustes limitados |
+| Retroalimentación en tiempo real | Sí, al instante | No aplica | Parcial |
+| Guardar y compartir escenarios | Normalmente sí | No | Rara vez |
+| Ideal para | Aprender, creación de contenido | Planificación diaria | Inmersión |
+
+## Parámetros meteorológicos clave que todo principiante debería aprender
+
+No necesitas memorizar meteorología para empezar, pero sí necesitas saber qué diales importan. La mayoría de las herramientas de sandbox meteorológico exponen el mismo puñado de variables, aunque las unidades y las etiquetas varíen. Empieza con estas ocho e ignora todo lo demás durante tus primeras sesiones.
+
+| Parámetro | Qué controla realmente | Rango inicial sugerido | Si lo subes más |
+|---|---|---|---|
+| Temperatura | Energía almacenada en el aire | 60–75 °F (15–24 °C) | Más evaporación, corrientes ascendentes más fuertes |
+| Humedad | Humedad disponible en el aire | 50–70 % | Nubes, neblina, niebla, lluvia |
+| Presión atmosférica | Estabilidad y empuje en la columna | Cerca de los valores estándar a nivel del mar | Menos presión significa aire ascendente y tormentas |
+| Velocidad del viento | Con qué rapidez se mueven las masas de aire | 5–15 mph | Tormentas que se desplazan más rápido, más mezcla |
+| Dirección del viento | Hacia dónde viaja el clima | La que necesite tu terreno | Cambia qué regiones reciben el impacto |
+| Intensidad de la precipitación | Con qué fuerza cae la lluvia o la nieve | Ligera | Aguaceros, ventiscas, mala visibilidad |
+| Cobertura de nubes | Sombra y combustible para tormentas | 20–50 % | Cielos cubiertos, luz más tenue |
+| Hora del día y estación | Ángulo solar y calentamiento | Media mañana | Convección más fuerte, días más largos |
+
+Las unidades varían según la herramienta: algunas usan Celsius, otras usan deslizadores de 0 a 100, y algunas usan valores abstractos de «intensidad». Trata los rangos anteriores como puntos de partida sensatos, no como reglas, y ajústalos una vez que veas cómo responde tu herramienta específica.
+
+### La regla de una sola variable
+
+Cambia exactamente un parámetro por experimento. Sube la temperatura, observa, reinicia. Sube la humedad, observa, reinicia. Esto suena lento, pero es drásticamente más rápido que mover seis deslizadores a la vez y luego adivinar cuál provocó el aguacero. En una hora de pruebas disciplinadas, tendrás un modelo mental que la mayoría de los usuarios casuales nunca construye.
+
+### La presión es el parámetro que los principiantes omiten
+
+Si tus tormentas se ven planas y sin vida, la presión suele ser la culpable. La precipitación sin una caída de presión es solo agua cayendo desde un techo gris y plano. Baja primero la presión, luego añade humedad y después añade viento. Esa secuencia produce estructura: celdas en rotación, bordes definidos y ese aspecto pesado y amoratado que tienen las tormentas reales.
+
+## Tu primera sesión: una configuración paso a paso
+
+Planifica con cuidado tus primeros 30 minutos. El objetivo no es construir un huracán, sino aprender dónde está todo en la interfaz para que las sesiones futuras se sientan sin esfuerzo.
+
+| Paso | Acción | Por qué importa |
+|---|---|---|
+| 1 | Elige tu herramienta y comprueba los requisitos del sistema | Evita una sesión que se entrecorta en lugar de simular |
+| 2 | Carga una escena preajustada integrada | Te da una base funcional con la que comparar |
+| 3 | Practica los controles de cámara y de tiempo | Los usarás constantemente |
+| 4 | Ajusta solo la temperatura y luego reinicia | Enseña causa y efecto con una pizarra en blanco |
+| 5 | Añade humedad, luego viento y después presión | Construye una tormenta en el orden correcto |
+| 6 | Guarda el escenario con un nombre claro | Conserva tu mejor trabajo |
+| 7 | Captura o registra tus ajustes | Te permite reproducir los resultados más adelante |
+
+Algunos hábitos hacen que las sesiones sean más fluidas:
+
+- Aprende pronto el control de pausa o cámara lenta; el avance rápido oculta las transiciones interesantes.
+- Encuentra el botón de reinicio o deshacer antes de necesitarlo.
+- Fíjate en si tu herramienta simula un mapa fijo o un mundo infinito; eso cambia cómo colocas el terreno.
+- Mantén un archivo de texto con las combinaciones de parámetros que produjeron resultados que te gustaron.
+
+## Seis proyectos para principiantes que enseñan lo básico rápido
+
+Los proyectos superan a la experimentación libre cuando eres nuevo, porque cada uno tiene una meta clara. Realízalos más o menos en orden; cada uno se apoya en la habilidad anterior.
+
+| Proyecto | Dificultad | Tiempo estimado | Habilidad que desarrolla |
+|---|---|---|---|
+| Línea base de cielo despejado | Fácil | 10–15 min | Leer la interfaz y los controles de tiempo |
+| Mañana con niebla | Fácil | 15 min | Humedad más enfriamiento |
+| Tormenta eléctrica de tarde | Fácil–media | 20–30 min | Calor, humedad y empuje combinados |
+| Día de nieve | Media | 30–45 min | Umbrales de temperatura y tipo de precipitación |
+| Sombra de lluvia de montaña | Media–difícil | 45–60 min | Dirección del viento interactuando con el terreno |
+| Trayectoria de tormenta en rotación | Difícil | 1–2 horas | Presión, rotación y viento sostenido |
+
+La línea base de cielo despejado importa más de lo que parece. Te da un punto de referencia, de modo que cuando más adelante añadas humedad puedas ver con precisión qué cambió. Omitirla es la razón más común por la que los principiantes se sienten perdidos.
+
+## Errores comunes que cometen los principiantes en un sandbox meteorológico
+
+La mayor parte de la frustración en un sandbox meteorológico proviene de una breve lista de errores evitables. Corrígelos y tu progreso se acelerará notablemente.
+
+| Error | Por qué perjudica | La solución |
+|---|---|---|
+| Cambiar muchas variables a la vez | No puedes identificar la causa de un resultado | Una variable por ejecución |
+| Ignorar la presión atmosférica | Las tormentas se ven planas y artificiales | Baja la presión antes de añadir lluvia |
+| Poner la precipitación al máximo de inmediato | La tasa de fotogramas cae y los resultados se ven falsos | Aumenta gradualmente y vigila el rendimiento |
+| No guardar nunca los escenarios | Las buenas configuraciones se pierden para siempre | Guarda y nombra cada ejecución exitosa |
+| Buscar el realismo desde el primer día | Lleva al desánimo | Copia un preajuste y luego ajusta una sola cosa |
+| Olvidar el terreno | El clima se ve genérico y uniforme | Añade colinas, agua o costas para crear contraste |
+
+Los informes de la comunidad mencionan sistemáticamente el mismo patrón: los jugadores que van despacio y aíslan las variables mejoran mucho más rápido que los que tratan los deslizadores como una máquina tragamonedas. La experiencia de los jugadores también sugiere que los problemas de rendimiento casi siempre se deben a la densidad de partículas, no a la complejidad de la simulación, así que reduce primero los recuentos de partículas cuando las cosas se pongan entrecortadas.
+
+## Consejos de rendimiento y cómo seguir aprendiendo
+
+Un sandbox meteorológico puede ser exigente porque simula un sistema físico en tiempo real. Unos cuantos ajustes lo mantienen fluido en hardware modesto:
+
+- Baja la densidad de partículas antes de tocar cualquier otra cosa.
+- Reduce la resolución de simulación o el tamaño de la cuadrícula si tu herramienta lo ofrece.
+- Limita el número de celdas meteorológicas simultáneas.
+- Cierra las aplicaciones en segundo plano mientras ejecutas escenas pesadas.
+- Reutiliza preajustes en lugar de reconstruir configuraciones complejas desde cero.
+
+Una vez que te sientas cómodo, aprender se vuelve social. Comparte tus escenarios guardados, mira vídeos tutoriales y haz preguntas en los foros de la comunidad: la mayoría de las comunidades de sandbox son pequeñas, amables y genuinamente útiles con los recién llegados. Leer las combinaciones de parámetros de otras personas es una de las formas más rápidas de entender por qué ciertas configuraciones producen resultados espectaculares.
+
+Si quieres ver cómo los títulos comerciales de sandbox gestionan los sistemas meteorológicos dinámicos, puedes [explorar la categoría de sandbox en Steam](https://store.steampowered.com/tags/en/Sandbox/) para comparar enfoques entre distintos motores y géneros.
+
+| Semana | Enfoque | Objetivo |
+|---|---|---|
+| 1 | Interfaz y pruebas de una sola variable | Predecir qué hace un deslizador |
+| 2 | Precipitación y nubes | Producir lluvia y nieve creíbles |
+| 3 | Presión y viento | Crear tormentas estructuradas y en movimiento |
+| 4 | Terreno y compartir | Construir una escena que valga la pena compartir |
+
+## Preguntas frecuentes
+
+**¿Necesito una formación en meteorología para disfrutar de un sandbox meteorológico?**
+No. La mayoría de las herramientas están diseñadas para principiantes curiosos, y los conceptos que necesitas —calor, humedad, empuje— se pueden aprender mediante la experimentación. El conocimiento formal ayuda más adelante si quieres realismo, pero no es un requisito previo.
+
+**¿Un sandbox meteorológico es lo mismo que un sitio web de pronóstico del tiempo?**
+En absoluto. Los servicios de pronóstico informan condiciones y predicciones reales. Un sandbox es un entorno creativo y educativo donde tú mismo creas el clima, sin ninguna conexión con lo que ocurre fuera de tu ventana.
+
+**¿Cuánto tiempo tardaré en construir tormentas convincentes?**
+Con sesiones cortas y enfocadas, la mayoría de los principiantes producen lluvia creíble en una semana y tormentas estructuradas en un mes. El factor limitante suele ser la paciencia con las pruebas de una sola variable, no el talento.
+
+**¿Puedo ejecutar un sandbox meteorológico en un ordenador de gama media?**
+Normalmente sí. Baja la densidad de partículas, reduce la resolución de simulación y limita los sistemas meteorológicos simultáneos. Estos tres cambios resuelven la mayoría de las quejas de rendimiento reportadas por los nuevos usuarios.
+
+**¿Qué debería hacer después de terminar esta guía para principiantes del sandbox meteorológico?**
+Elige un proyecto de la tabla anterior, complétalo y guarda el resultado. Luego reconstruye la misma escena desde cero sin mirar tus notas. Esa repetición es lo que convierte el trastear con deslizadores en verdadera intuición.

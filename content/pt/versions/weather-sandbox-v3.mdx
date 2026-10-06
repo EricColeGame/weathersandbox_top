@@ -1,0 +1,127 @@
+export const metadata = {
+  title: "Weather Sandbox V3: recursos, versões e dicas de configuração para cada simulador",
+  description: "Um guia prático sobre o weather sandbox v3: o que muda em uma terceira versão principal, principais recursos a verificar, etapas de configuração e como escolher a build certa.",
+  category: "versions",
+  date: "2026-10-06",
+}
+
+## O que exatamente é um Weather Sandbox?
+
+Quer invocar uma tempestade, congelar um lago inteiro ou ver um furacão se formar sem sair de casa? Essa é a promessa de um weather sandbox: um espaço de simulação onde você controla a atmosfera em vez de apenas ler uma previsão. Quando um desenvolvedor lança um **weather sandbox v3**, geralmente está sinalizando a terceira grande iteração desse sistema de controle — física mais profunda, ferramentas melhores e menos limites artificiais. Saber o que uma build de **weather sandbox v3** realmente entrega importa, porque números de versão têm tanto de marketing quanto de engenharia.
+
+Em sua essência, um weather sandbox é qualquer ambiente interativo em que o clima é uma entrada, e não um cenário fixo. Alguns são jogos completos, alguns são plugins de engine e alguns são ferramentas de ensino em sala de aula. A palavra "sandbox" é a parte importante: você não está seguindo uma tempestade roteirizada. Você está experimentando, quebrando coisas e observando o que acontece depois.
+
+Essa liberdade é o motivo pelo qual a categoria cresceu. Modelos reais de previsão são complexos, mas também rígidos — você não pode pausar uma frente fria e arrastá-la para outro lugar. Um sandbox inverte isso. Ele dá os controles e permite que você aprenda fazendo.
+
+| Tipo de sandbox | Controles típicos | Melhor para |
+|---|---|---|
+| Mods de clima para jogos | Alternâncias por comando, presets, ciclos de hora do dia | Mudanças visuais rápidas em um mundo existente |
+| Sistemas em nível de engine | Grafos de nós, shaders, volumes de partículas | Desenvolvedores criando cenas e níveis |
+| Simuladores científicos e educacionais | Sliders de temperatura, pressão, umidade e vento | Ensino, demonstrações e visuais de pesquisa |
+| Brinquedos de clima independentes | Nuvens arrastar-e-soltar, pincéis de vento | Experimentação casual e capturas de tela |
+
+## Por que o rótulo "V3" importa em um lançamento de Weather Sandbox V3
+
+Lançamentos de terceira geração principal tendem a seguir um padrão reconhecível. A versão um prova o conceito. A versão dois adiciona polimento, presets e uma interface mais amigável. A versão três é onde os desenvolvedores geralmente param de remendar um brinquedo e começam a construir uma plataforma. Isso costuma significar ganchos de script, suporte a mods, sistemas de clima em camadas e trabalho de desempenho que mantém mais do mapa ativo ao mesmo tempo.
+
+Dito isso, "v3" não é um termo padronizado. Dois produtos rotulados como **weather sandbox v3** podem diferir enormemente — um pode ser um simulador com muita física, outro um brinquedo visual leve. Relatos da comunidade frequentemente observam que rótulos de versão descrevem mais o roteiro de um desenvolvedor do que a contagem bruta de recursos, então sempre leia o changelog em vez de confiar apenas no número.
+
+| Estágio da versão | Foco comum | O que os usuários percebem |
+|---|---|---|
+| Primeiro lançamento | Alternâncias centrais de clima e partículas básicas | Chuva, neve e céu limpo sob comando |
+| Segundo lançamento | Presets, timing e limpeza da interface | Clima que muda ao longo do tempo |
+| Terceiro lançamento | Sistemas em camadas, scripting, suporte a mods | Clima interativo, melhor desempenho |
+| Lançamentos posteriores | Estabilidade, ferramentas, conteúdo da comunidade | Menos travamentos, pacotes criados por usuários mais ricos |
+
+Se você está comparando builds, faça uma pergunta: a terceira versão muda o que você pode *construir*, ou apenas a aparência? Uma verdadeira mudança de plataforma permite criar clima que reage ao terreno, à temperatura e ao tempo. Uma atualização cosmética apenas adiciona novos sprites de nuvem.
+
+## Principais recursos a procurar em uma build de Weather Sandbox V3
+
+Nem toda lista de recursos vale o tamanho do download. Estes são os que geralmente separam um **weather sandbox v3** sério de uma build anterior com nova aparência.
+
+- **Controles de atmosfera em camadas** — temperatura, umidade, pressão e vento como valores separados, em vez de um único slider de "tempestade".
+- **Modelagem de tempo e estação** — clima que evolui ao longo de um ciclo diário em vez de reiniciar a cada minuto.
+- **Consciência do terreno** — sombras de chuva atrás de montanhas, neblina acumulada em vales, neve que gruda acima de certa altitude.
+- **Scripting ou automação** — a capacidade de acionar clima por regras, eventos ou uma lista simples de comandos.
+- **Suporte a mods e presets** — uma forma de compartilhar configurações com outros usuários em vez de recriá-las manualmente.
+- **Escalonamento de desempenho** — configurações de qualidade que permitem que hardware mais antigo mantenha uma taxa de quadros estável.
+
+| Recurso | Por que importa | Prioridade |
+|---|---|---|
+| Controles em camadas | Permite causa e efeito realistas | Alta |
+| Consciência do terreno | Faz as paisagens parecerem verossímeis | Alta |
+| Ganchos de scripting | Transforma um brinquedo em ferramenta | Média a alta |
+| Compartilhamento de presets | Economiza horas de configuração manual | Média |
+| Escalonamento de qualidade | Mantém máquinas mais fracas utilizáveis | Média |
+| Modo foto | Útil para criadores e thumbnails | Opcional |
+
+Para quem quer fundamentar essas ideias em meteorologia real, a [National Oceanic and Atmospheric Administration](https://www.noaa.gov/) publica explicações acessíveis sobre como os sistemas atmosféricos reais se comportam — uma referência útil ao ajustar uma simulação.
+
+## Weather Sandbox V3 em jogos, engines e salas de aula
+
+A mesma palavra-chave aparece em lugares muito diferentes. Em jogos de construção em blocos, o clima geralmente é um estado simples que você pode alternar, e a comunidade passou anos forçando esses limites com comandos e mods. A [página de clima da Minecraft Wiki](https://minecraft.wiki/w/Weather) é um bom exemplo de como um sistema básico se torna um playground criativo quando os jogadores ganham acesso a scripting.
+
+Em engines de jogos, um weather sandbox geralmente significa um conjunto de ferramentas: um sistema de céu, emissores de partículas, zonas de vento e efeitos de material para superfícies molhadas ou com neve. A versão três de um kit como esse costuma introduzir melhor mesclagem entre estados — a diferença entre "chuva ligada" e "chuva começando a diminuir".
+
+Em salas de aula e projetos de hobby, weather sandboxes servem a um propósito diferente. Eles permitem que os alunos mudem uma variável e vejam o resultado imediatamente, o que é muito mais memorável do que ler um diagrama. Aqui a prioridade é clareza, não espetáculo.
+
+| Contexto | Objetivo principal | O que "V3" costuma adicionar |
+|---|---|---|
+| Jogos e mods | Diversão e atmosfera | Reatividade, APIs de mods, visuais melhores |
+| Engines de jogos | Ferramentas de produção | Mesclagem em camadas, controles de desempenho |
+| Educação | Causa e efeito claros | Sliders simplificados, cenários guiados |
+| Projetos criativos | Capturas de tela e vídeo | Ferramentas de foto, renderização de alta fidelidade |
+
+## Como configurar e ajustar um Weather Sandbox V3
+
+Começar geralmente é mais fácil do que as pessoas esperam, mas um pouco de ordem ajuda. A experiência de jogadores sugere trabalhar do panorama geral para os detalhes, em vez de ajustar dezenas de sliders de uma vez.
+
+| Etapa | Ação | Por que ajuda |
+|---|---|---|
+| 1 | Comece com um preset padrão | Dá a você uma base conhecida para comparar |
+| 2 | Defina a estação e a hora do dia | Ancora expectativas de temperatura e iluminação |
+| 3 | Ajuste a direção e a velocidade do vento | Impulsiona o movimento das nuvens e os padrões de precipitação |
+| 4 | Adicione precipitação em camadas | Chuva ou neve devem seguir o vento, não lutar contra ele |
+| 5 | Adicione neblina, névoa e densidade de nuvens | Cria profundidade depois que o básico estiver bom |
+| 6 | Salve sua configuração como preset | Permite reutilizar e compartilhar uma configuração funcional |
+
+Alguns hábitos práticos fazem uma diferença real:
+
+- Mude uma variável por vez para saber o que causou um problema.
+- Anote as configurações que funcionaram bem; sandboxes recompensam repetição.
+- Teste primeiro na configuração de qualidade mais baixa, depois aumente.
+- Se o sandbox oferecer suporte a scripting, automatize ciclos climáticos repetitivos desde cedo.
+
+## Desempenho, estabilidade e armadilhas comuns
+
+Efeitos climáticos são caros. Partículas, nuvens volumétricas e superfícies molhadas reflexivas competem pelo mesmo orçamento de hardware. A maioria dos lançamentos de **weather sandbox v3** aborda isso com níveis de qualidade, mas você ainda precisa fazer escolhas.
+
+| Armadilha | Sintoma | Correção |
+|---|---|---|
+| Muitas camadas de partículas | Queda na taxa de quadros durante tempestades | Reduza a contagem ou a densidade de partículas |
+| Nuvens volumétricas no máximo | Ventoinhas da GPU aceleram, surgem engasgos | Reduza a qualidade das nuvens |
+| Loops de script disparando com muita frequência | Congelamentos ocasionais | Aumente o intervalo entre verificações |
+| Mods conflitantes | Visuais quebrados ou travamentos | Desative os mods e reative um por vez |
+| Valores extremos de vento | Objetos e partículas se comportam de forma estranha | Volte a faixas realistas |
+
+Relatos da comunidade também apontam um problema mais sutil: ajuste excessivo. Quando todos os sliders são levados ao máximo, o resultado frequentemente parece menos realista, não mais. Uma garoa suave com neblina baixa costuma parecer mais convincente do que uma tempestade completa no talo.
+
+Se você está atualizando de uma build anterior, espere precisar revisar seus presets antigos. Sistemas de terceira geração frequentemente mudam como os valores são interpretados, então uma configuração que antes significava "chuva leve" pode agora produzir algo mais pesado.
+
+## Perguntas frequentes
+
+**Um weather sandbox v3 é diferente de um mod de clima?**
+Normalmente, sim. Um mod altera o clima de um jogo existente, enquanto um sandbox oferece os controles subjacentes — camadas, scripts e presets — que um mod pode não expor. Alguns projetos borram a linha, então verifique se a build inclui ferramentas de controle direto ou apenas alternâncias de presets.
+
+**Preciso de um computador potente para rodar um?**
+Não necessariamente. A maioria dos sandboxes inclui configurações de qualidade que reduzem os efeitos. Comece em um nível mais baixo, confirme que a taxa de quadros está estável e depois aumente a qualidade de nuvens e partículas passo a passo.
+
+**Posso compartilhar as configurações de clima que crio?**
+Muitas builds de terceira geração oferecem suporte a arquivos de preset ou códigos de exportação, o que torna o compartilhamento simples. Relatos da comunidade sugerem que presets compartilhados são uma das formas mais rápidas de aprender o que a ferramenta realmente pode fazer.
+
+**O que devo verificar antes de baixar uma build rotulada como v3?**
+Leia o changelog, confirme se seu hardware atende aos requisitos declarados e veja o feedback recente dos usuários. O número da versão é uma dica útil, mas as notas de lançamento dizem o que realmente mudou.
+
+## Considerações finais
+
+Um weather sandbox atinge seu melhor momento quando deixa de parecer um menu de configurações e começa a parecer um laboratório. A terceira versão principal de qualquer ferramenta desse tipo costuma ser onde essa mudança acontece — onde scripting, camadas e trabalho de desempenho se combinam para permitir que você construa clima em vez de apenas selecioná-lo. Comece com um preset, mude uma coisa por vez e salve o que funcionar. A atmosfera, literalmente, está em suas mãos.

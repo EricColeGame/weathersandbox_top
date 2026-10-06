@@ -1,0 +1,130 @@
+export const metadata = {
+  title: "Configuración del sandbox meteorológico explicada: Guía completa de los controles del clima en juegos sandbox",
+  description: "Aprende cómo la configuración del sandbox meteorológico controla la lluvia, las tormentas y el tiempo en los juegos sandbox, además de consejos prácticos para ajustar cada opción a tu estilo de juego.",
+  category: "controls",
+  date: "2026-10-06",
+}
+
+## Qué controlan realmente los ajustes del sandbox meteorológico
+
+Pocas cosas rompen la inmersión más rápido que una tormenta eléctrica que aparece a mitad de una construcción en la que llevas horas perfeccionando cada detalle, o un cielo soleado y brillante que aplasta el ambiente de una escena que necesitaba niebla. Los ajustes del sandbox meteorológico existen precisamente para resolver ese problema. En lugar de dejar la lluvia, el viento y la iluminación en manos de un generador de números aleatorios, te entregan los mandos y te dejan decidir qué hace el cielo.
+
+Si construyes, grabas, pruebas mods o simplemente quieres un atardecer dorado permanente, aprender cómo funcionan los ajustes del sandbox meteorológico marca la diferencia entre luchar contra tu entorno y dirigirlo. La mayoría de los jugadores solo raspa la superficie —un interruptor para la lluvia por aquí, un deslizador de hora por allá—, pero el conjunto completo de opciones suele ser mucho más profundo.
+
+A grandes rasgos, los ajustes del sandbox meteorológico se agrupan en unas cuantas categorías. Cada grupo afecta a algo distinto, y cambiar uno suele modificar cómo se siente otro.
+
+| Grupo de ajustes | Qué controla | Opciones típicas | Por qué importa |
+|---|---|---|---|
+| Estado del clima | La condición activa en este momento | Despejado, nublado, lluvia, tormenta, nieve, niebla, tormenta de arena | Ambiente y atmósfera instantáneos |
+| Intensidad | Qué tan fuerte es el efecto | Desactivado, ligero, moderado, fuerte, extremo | Evita pérdida de visibilidad o de rendimiento |
+| Ciclo meteorológico | Si el clima cambia por sí solo | Activado/desactivado, duración del ciclo, semilla aleatoria | Los constructores bloquean cielos despejados; los jugadores de supervivencia lo dejan activado |
+| Velocidad de transición | Cuánto tarda un cambio en desvanecerse | Instantánea, unos segundos, varios minutos | Resultados suaves para cinemáticas |
+| Viento | Dirección y fuerza | Fuerza de 0 a 100 %, dirección de la brújula | Afecta al follaje, las partículas, las velas, el vuelo |
+| Hora del día | Ángulo del sol y luz ambiental | Hora fija, tiempo real, curva personalizada | Iluminación consistente para capturas de pantalla |
+| Física de las precipitaciones | Charco, acumulación de nieve, rayos | Interruptores por elemento | Realismo frente a rendimiento |
+| Audio ambiental | Bucles de lluvia, truenos, ruido del viento | Deslizadores de volumen independientes | Vende el efecto incluso en modos gráficos bajos |
+
+Lo importante que hay que notar es que no todos son el mismo tipo de ajuste. Algunos son reglas del mundo que se aplican a todos, otros son preferencias personales y otros solo existen si un mod o complemento los añade.
+
+## Los ajustes principales del sandbox meteorológico, explicados uno por uno
+
+### Estado del clima e intensidad
+
+El estado del clima es el ajuste estrella: ¿qué está haciendo el cielo ahora mismo? En la mayoría de los títulos sandbox es una lista sencilla de la que eliges, y el juego se encarga de los efectos visuales. La intensidad es el modificador que se superpone —llovizna ligera frente a un aguacero, niebla fina frente a una niebla tan espesa que no puedes ver la siguiente manzana.
+
+Un error común es subir la intensidad al máximo buscando dramatismo. Lluvia fuerte más niebla densa más viento potente hundirán la tasa de fotogramas en hardware de gama media y harán que jugar sea genuinamente difícil. La experiencia de los jugadores sugiere mantener solo un elemento al máximo a la vez y dejar que los demás se queden en un punto medio.
+
+### Duración del ciclo y velocidad de transición
+
+Si tu juego admite ciclos meteorológicos automáticos, la duración del ciclo decide con qué frecuencia cambia el cielo por sí solo. Los ciclos cortos se sienten ajetreados e impredecibles; los ciclos largos se sienten naturales, pero lentos para probar. La velocidad de transición es algo aparte: controla cuánto tarda el desvanecimiento entre dos estados meteorológicos.
+
+| Objetivo | Ajuste del ciclo | Velocidad de transición | Notas |
+|---|---|---|---|
+| Grabar una escena | Desactivado | Lenta (30 s o más) | Sin cambios sorpresa a mitad de toma |
+| Construir una base | Desactivado | Cualquiera | Bloquear el clima despejado |
+| Jugar en supervivencia | Activado, medio | Media | Mantiene variedad sin caos |
+| Probar sistemas meteorológicos | Activado, muy corto | Instantánea | Iteración rápida |
+| Cazar capturas de pantalla | Desactivado | Instantánea | Salta directamente al aspecto que buscas |
+
+### Viento, niebla y densidad de partículas
+
+Estos son los ajustes que la gente olvida hasta que algo se ve mal. El viento determina la dirección de las partículas, así que una lluvia que cae en vertical durante un vendaval parece falsa. La densidad de la niebla controla la profundidad y el ambiente, y la densidad de partículas controla cuántas gotas de lluvia o copos de nieve dibuja el motor. Reducir la densidad de partículas es una de las victorias de rendimiento más rápidas disponibles en la mayoría de los juegos sandbox.
+
+### Hora del día y bloqueo de la iluminación
+
+La hora del día es, técnicamente, un sistema separado del clima, pero los dos suelen agruparse en el mismo menú porque interactúan muchísimo. Una hora del día bloqueada —digamos, siempre a última hora de la tarde— te da sombras consistentes, lo cual importa enormemente si estás capturando un time-lapse o construyendo una toma comparativa. Ten en cuenta que algunos juegos vinculan el clima a la hora automáticamente, así que cambiar el reloj también puede reiniciar el cielo.
+
+## Dónde encontrar los ajustes del sandbox meteorológico en distintos juegos y motores
+
+No hay un menú universal. Dónde viven los controles depende por completo de qué estés jugando o en qué estés construyendo, y conocer la categoría ahorra muchísimo tiempo de búsqueda.
+
+| Tipo de plataforma | Dónde suelen estar los controles | Notas prácticas |
+|---|---|---|
+| Juegos sandbox con creación de mundos | Menú de nuevo mundo / opciones del mundo | A menudo bloqueados tras la creación salvo que se activen los trucos |
+| Juegos con consola o comandos de chat | Consola dentro del juego o barra de chat | La forma más rápida de cambiar el clima en vivo; requiere permisos |
+| Configuraciones con mods | Menú o archivo de configuración propio del mod | El comportamiento varía mucho entre creadores |
+| Motores de juego y editores de niveles | Panel de entorno, cielo o actor meteorológico | Control total; se guarda con el proyecto |
+| Servidores multijugador | Configuración del servidor o panel de administración | Se aplica a todos los jugadores, no solo a ti |
+
+Para los títulos sandbox de PC, navegar por la [página de etiqueta sandbox de Steam](https://store.steampowered.com/tags/en/Sandbox/) es una forma útil de ver cuántos juegos distintos usan el clima como herramienta creativa central —desde constructores de ciudades hasta simuladores de supervivencia y areneros de físicas.
+
+Dos reglas prácticas se aplican casi en todas partes:
+
+- **Los ajustes a nivel de mundo vencen a los personales.** Si el servidor dice lluvia, tu preferencia local normalmente pierde.
+- **Los comandos son temporales, los archivos de configuración son permanentes.** Un comando de consola cambia la sesión actual; una edición en el archivo de configuración sobrevive a los reinicios.
+
+En los juegos que admiten comandos de consola, el patrón suele ser un verbo corto seguido de un tipo de clima, y una regla aparte que activa o desactiva el ciclo automático. Minecraft es el ejemplo clásico: un comando `weather` establece la condición, y una regla de juego `doWeatherCycle` decide si puede cambiar por sí sola. Consulta la documentación específica de tu juego, ya que la sintaxis y las condiciones disponibles varían.
+
+## Ajustes del sandbox meteorológico recomendados según el estilo de juego
+
+En lugar de adivinar, empieza desde un preajuste y ajústalo desde ahí. Estas combinaciones funcionan bien como bases.
+
+| Estilo de juego | Estado del clima | Ciclo | Intensidad | Hora del día | Viento |
+|---|---|---|---|---|---|
+| Constructor creativo | Despejado | Desactivado | N/A | Mediodía bloqueado | Bajo |
+| Cineasta de cinemáticas | Cubierto o tormenta | Desactivado | Media–fuerte | Hora dorada bloqueada | Medio |
+| Jugador de supervivencia | Cualquiera | Activado, medio | Ligera–moderada | Tiempo real | Predeterminado |
+| Probador de mods o errores | Extremo | Activado, muy corto | Máxima | Ciclo rápido | Máximo |
+| Cazador de capturas | Niebla o nieve ligera | Desactivado | Ligera | Amanecer/atardecer bloqueado | Bajo |
+| Enfocado en rendimiento | Despejado | Desactivado | Desactivado | Cualquiera | Desactivado |
+
+Algunos hábitos hacen que estos preajustes funcionen mejor en la práctica:
+
+- Guarda tus preajustes si el juego admite perfiles, para no reconstruir la misma configuración cada sesión.
+- Cambia una variable a la vez. Si alteras el viento, la niebla y la intensidad juntos, no sabrás cuál rompió el aspecto.
+- Anota los valores que funcionaron. Los informes de la comunidad mencionan con frecuencia haber perdido una configuración de iluminación perfecta porque nadie registró los números.
+
+## Errores comunes al ajustar el sandbox meteorológico
+
+Incluso los jugadores experimentados se topan con el mismo puñado de problemas. La mayoría no son errores —son conflictos entre ajustes.
+
+| Síntoma | Causa probable | Solución |
+|---|---|---|
+| El clima sigue cambiando a pesar del bloqueo | El ciclo automático sigue activado | Desactiva la regla del ciclo, no solo el clima actual |
+| La lluvia parece caer de lado | Fuerza del viento demasiado alta | Reduce el viento o ajústalo a la tormenta deseada |
+| Grandes caídas de fotogramas durante tormentas | Densidad de partículas demasiado alta | Reduce el número de partículas antes de bajar otros ajustes |
+| Los ajustes se reinician tras reiniciar | Se usó un comando de consola en vez de la configuración | Edita el archivo de configuración del mundo o del servidor |
+| Los jugadores multijugador ven climas distintos | Un mod del cliente sobrescribe el del servidor | Elimina la anulación local o iguala los ajustes del servidor |
+| La nieve se acumula sin fin | Física de precipitaciones activada sin límite | Desactiva la acumulación o fija una profundidad máxima |
+
+Una cosa más que vale la pena saber: algunos juegos sandbox vinculan logros, progresión o eventos scriptados al clima. Desactivar el sistema por completo puede deshabilitar silenciosamente contenido que no esperabas perder. Si algo deja de activarse después de ajustar la configuración del sandbox meteorológico, vuelve a los valores predeterminados y prueba de nuevo antes de asumir que es un error.
+
+## Preguntas frecuentes
+
+**¿Los ajustes del sandbox meteorológico afectan al rendimiento?**
+
+Sí, a menudo de forma significativa. La densidad de partículas, el volumen de niebla y los efectos de rayos son los elementos más pesados. Si buscas tasa de fotogramas, pon el clima en despejado y desactiva primero los efectos con muchas partículas: ese único cambio suele recuperar más rendimiento que bajar las sombras o las texturas.
+
+**¿Puedo bloquear el clima para que nunca cambie?**
+
+En la mayoría de los juegos, sí. Necesitas desactivar el ciclo automático, no solo fijar la condición actual. Poner un cielo soleado mientras la regla del ciclo sigue activada significa que el cielo acabará cambiando por sí solo.
+
+**¿Por qué mis ajustes del sandbox meteorológico se reinician cada vez que recargo?**
+
+Los comandos de consola y los menús dentro de la sesión suelen ser temporales. Para que un cambio se mantenga, edita la configuración del mundo, el archivo de configuración del servidor o un preajuste guardado. En servidores multijugador, solo los administradores pueden hacer cambios permanentes.
+
+**¿Están disponibles estos ajustes en consolas?**
+
+Depende del juego. Muchos títulos sandbox de consola ofrecen una versión reducida del menú meteorológico —normalmente estado del clima, hora del día y ciclo activado/desactivado—, mientras que los controles avanzados como la fuerza del viento y la densidad de partículas siguen siendo exclusivos de PC o requieren un mod.
+
+Familiarizarte con los ajustes del sandbox meteorológico lleva una tarde, pero da sus frutos en cada sesión posterior. Empieza con un preajuste que encaje con lo que estás haciendo, cambia un deslizador a la vez y guarda las combinaciones que funcionen. Cuando el cielo deje de ser una sorpresa, se convierte en una herramienta más de tu construcción.

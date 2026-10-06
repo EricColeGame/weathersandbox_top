@@ -1,0 +1,119 @@
+export const metadata = {
+  title: "Weather-Sandbox-Update-Leitfaden: Was sich geändert hat, was neu ist und wie man klüger spielt",
+  description: "Ein praxisnaher Leitfaden zu Weather-Sandbox-Updates mit neuen Funktionen, Patch Notes, Performance-Tuning und dem Testen von Änderungen, bevor sie eure Spielstände zerstören.",
+  category: "versions",
+  date: "2026-10-06",
+}
+
+## Warum ein Weather-Sandbox-Update eure Aufmerksamkeit verdient
+
+Ein Weather-Sandbox-Update ist selten nur eine Fehlerbehebung. Wenn der ganze Sinn der Software darin besteht, dass ihr Niederschlagsrate, Windscherung, Wolkendichte und Sturmintensität einstellen könnt, dann kann eine einzige Änderung am Simulationskern durch jedes gespeicherte Szenario hindurchwirken. Eine kleine Anpassung, die Nieselregen glaubwürdiger macht, kann ein sorgfältig ausbalanciertes Hurrikan-Preset still und leise in etwas Unkenntliches verwandeln.
+
+Genau deshalb ist ein Weather-Sandbox-Update zehn Minuten Lektüre wert, bevor ihr auf Installieren klickt. Die Notes sagen euch, was die Entwickler ändern wollten, und euer eigenes Testen zeigt euch, was sich tatsächlich geändert hat. Wenn diese beiden Dinge nicht übereinstimmen, wollt ihr das an einem Wegwerf-Szenario herausfinden und nicht an dem Projekt, das ihr wochenlang verfeinert habt.
+
+Dieser Leitfaden ist für alle geschrieben, die diese Tools als Hobby, als Lehrmittel oder als kreativen Arbeitsbereich nutzen. Er behandelt, wie man ein Update einordnet, wie man die Sprache in Patch Notes entschlüsselt, was man vor der Installation sichern sollte und wie man verlässliche Community-Berichte von Rauschen trennt.
+
+## Was ein Weather-Sandbox-Update üblicherweise ändert
+
+Die meisten Updates fallen in eine Handvoll erkennbarer Kategorien. Zu wissen, mit welcher Kategorie man es zu tun hat, verrät, wie viel Testen danach nötig ist und wie nervös man wegen der bestehenden Spielstände sein sollte.
+
+| Update-Typ | Was es typischerweise betrifft | Zuerst prüfen | Risiko für eure Setups |
+|---|---|---|---|
+| Feature-Release | Neue Wettersysteme, neue Bearbeitungswerkzeuge | Release Notes, Tutorials | Mittel |
+| Tuning / Balance | Raten, Schwellenwerte, Physik-Konstanten | Verhalten gespeicherter Szenarien | Mittel bis hoch |
+| Performance-Patch | Rendering, Detailstufe, Simulationstakt | Bildrate, Ladezeiten | Niedrig |
+| Quality-of-Life | Menüs, Presets, Speicherverwaltung | Hotkeys, UI-Layout | Niedrig |
+| Mod- oder API-Änderung | Scripting-Hooks, Asset-Formate | Mod-Kompatibilität | Hoch |
+| Hotfix | Abstürze, Spielstandbeschädigung, Einfrieren | Liste bekannter Probleme | Niedrig |
+
+Feature-Releases sind die Updates, über die gesprochen wird, aber Tuning-Patches sind diejenigen, die eure Arbeit still umformen. Wenn die Entwickler anpassen, wie sich Feuchtigkeit ansammelt oder wie Böen mit dem Gelände skalieren, dann arbeitet jedes Preset, das ihr auf den alten Werten aufgebaut habt, jetzt mit einer anderen Physik. Das ist nicht zwangsläufig schlecht — es mag realistischer sein —, aber es ist eine Änderung, die ihr überprüfen solltet, statt sie anzunehmen.
+
+Performance-Patches verdienen einen genaueren Blick, als ihr langweiliger Name vermuten lässt. Optimierungsarbeit reduziert manchmal Partikelzahlen, vereinfacht das Cloud-Rendering oder verkürzt die Distanz, bis zu der detailliertes Wetter gezeichnet wird. Die Bildrate steigt, und der Himmel wird subtil flacher. Wenn visuelle Wiedergabetreue der Grund ist, warum ihr überhaupt eine Weather Sandbox nutzt, vergleicht einen Screenshot vorher und nachher.
+
+Mod- und API-Änderungen bergen das höchste Risiko. Wenn sich eine Scripting-Schnittstelle verschiebt, kann von der Community erstellter Inhalt sofort und lautlos kaputtgehen. Ein Weather-Sandbox-Update, das einen mächtigen neuen Hook hinzufügt, kann gleichzeitig denjenigen veralten lassen, von dem euer Lieblings-Plugin abhängt.
+
+## Wie man Patch Notes liest, ohne die wichtigen Teile zu übersehen
+
+Patch Notes werden auf Schnelligkeit geschrieben, nicht auf Klarheit. Ein paar Worte tragen viel Gewicht, und der Unterschied zwischen „getuned" und „überarbeitet" kann der Unterschied zwischen einem kleinen Ärgernis und einem kaputten Projekt sein.
+
+| Begriff in den Notes | Was er üblicherweise bedeutet | Warum er euch interessieren sollte |
+|---|---|---|
+| „Getuned" | Kleine numerische Anpassung | Presets können leicht abweichen |
+| „Überarbeitet" | Ein System wurde ersetzt | Alte Setups können sich anders verhalten |
+| „Optimiert" | Performance-Arbeit | Auf reduziertes visuelles Detail achten |
+| „Ein Problem behoben, bei dem…" | Ein konkreter Fehler wurde behoben | Prüfen, ob ihr euch auf altes Verhalten verlassen habt |
+| „Bekanntes Problem" | Ein Problem wird ungelöst ausgeliefert | Entscheiden, ob ihr wartet |
+| „Breaking Change" | Inkompatibel mit vorherigen Versionen | Vor der Installation sichern |
+| „Veraltet" | Zur späteren Entfernung vorgesehen | Mit der Planung einer Migration beginnen |
+
+Zwei Gewohnheiten machen Patch Notes deutlich nützlicher. Erstens: Lest den Abschnitt mit den bekannten Problemen vor der Feature-Liste — er sagt euch, was die Entwickler bereits als holprig kennen, was euch davor bewahrt, einen doppelten Bericht einzureichen. Zweitens: Überfliegt die Notes nach den Wörtern „alle" und „jede". Eine Änderung, die global gilt, etwa ein neuer Standardwert für die Niederschlagsintensität, betrifft jedes Szenario, das ihr besitzt, nicht nur diejenigen, die diese Funktion explizit verwenden.
+
+Führt außerdem ein kurzes persönliches Changelog. Wenn ihr aktualisiert, notiert die Version, das Datum und einen Satz dazu, was sich anders anfühlt. Ein halbes Jahr später ist diese Notiz der schnellste Weg, nachzuvollziehen, warum ein Szenario aufgehört hat, sich so zu verhalten, wie ihr es in Erinnerung habt.
+
+## Vor der Installation: Eine Checkliste für Weather-Sandbox-Updates
+
+Das Installieren ist der einfache Teil. Die Vorbereitung schützt eure Arbeit. Geht diese Schritte der Reihe nach durch, und ihr werdet durch einen schlechten Patch selten mehr als ein paar Minuten verlieren.
+
+| Schritt | Aktion | Warum es wichtig ist |
+|---|---|---|
+| 1 | Spielstände, Presets und Mod-Ordner sichern | Ohne Kopie ist eine Wiederherstellung unmöglich |
+| 2 | Aktuelle Versionsnummer notieren | Wird zum Zurückrollen oder Vergleichen benötigt |
+| 3 | Liste bekannter Probleme lesen | Vermeidet überraschende Abstürze mitten im Projekt |
+| 4 | Prüfen, ob eure Mods kompatibel sind | Kaputte Mods können den Start verhindern |
+| 5 | Zuerst an einem duplizierten Szenario testen | Schützt euer Hauptprojekt |
+| 6 | Grafik- und Simulationseinstellungen erneut prüfen | Updates setzen sie oft zurück oder skalieren sie neu |
+| 7 | Hotkeys und UI-Layout bestätigen | Muskelgedächtnis bricht lautlos |
+
+Schritt fünf ist derjenige, den die meisten überspringen. Dupliziert euer wichtigstes Szenario, benennt die Kopie klar und ladet zuerst diese Kopie. Wenn sich das Wetter seltsam verhält, habt ihr etwas gelernt, ohne das Original zu beschädigen. Wenn es sich gut verhält, übernehmt die Kopie und macht weiter.
+
+Es hilft außerdem, zu einem Zeitpunkt zu aktualisieren, an dem ihr nicht mitten in einer Deadline steckt. Updates, die während eines Wettbewerbs, eines Klassenprojekts oder einer Content-Deadline eintreffen, zwingen euch, unter Druck Fehler zu suchen. Ein oder zwei Tage zu warten ist fast immer günstiger, als einen beschädigten Workflow zu reparieren.
+
+## Performance- und visuelle Kompromisse nach einem Update
+
+Ein Weather-Sandbox-Update ändert häufig die Standardeinstellungen, entweder weil neue Funktionen Spielraum brauchen oder weil die Entwickler eine bessere Balance gefunden haben. Überprüft eure Konfiguration nach jedem größeren Patch, statt anzunehmen, dass euer altes Profil noch gilt.
+
+| Einstellung | Visueller Gewinn | Performance-Kosten | Sinnvoller Ausgangspunkt |
+|---|---|---|---|
+| Volumetrisches Cloud-Detail | Hoch | Hoch | Mittel |
+| Partikeldichte des Niederschlags | Mittel | Mittel | Mittel |
+| Schattenauflösung | Mittel | Mittel bis hoch | Mittel |
+| Simulationstakt-Rate | Visuell niedrig, hoch für Genauigkeit | Hoch | An eure Hardware anpassen |
+| Radar- oder Overlay-Aktualisierung | Niedrig | Niedrig | Hoch |
+| Windfeld-Visualisierung | Mittel | Niedrig bis mittel | An |
+
+Ein wiederholbarer Benchmark ist nützlicher als ein einmaliger Eindruck. Baut ein kleines Testszenario mit einem festen Sturm, einer festen Kameraposition und einer festen Tageszeit. Führt es nach jedem Update aus und notiert die Bildrate und das Gesamtgefühl. Über mehrere Patches hinweg wird dieses einzelne Szenario zu einer verlässlichen Aufzeichnung davon, wie sich die Simulation entwickelt hat.
+
+Wenn die Performance nach einem Update sinkt, ändert jeweils nur eine Einstellung. Fünf Regler gleichzeitig anzupassen sagt euch nichts darüber, welcher davon entscheidend war. Beginnt mit dem teuersten Punkt auf der Liste — meist Cloud-Detail oder Simulationstakt-Rate — und arbeitet euch nach unten vor, bis sich die Bildrate stabilisiert.
+
+## Community-Berichte und offizielle Notes: Wie man beides nutzt
+
+Offizielle Dokumentation liefert euch Fakten. Community-Berichte liefern euch Textur. Ihr braucht beides, aber sie dienen unterschiedlichen Zwecken und sollten niemals als austauschbar behandelt werden.
+
+| Quelle | Stärke | Schwäche | Beste Nutzung |
+|---|---|---|---|
+| Offizielle Patch Notes | Verbindlich und vollständig | Knapp, manchmal werblich | Grundlegende Fakten feststellen |
+| Entwickler-Posts und Streams | Erklärt Absicht und Richtung | Nicht immer detailliert | Designziele verstehen |
+| Community-Berichte | Bringen echte Randfälle schnell ans Licht | Unbestätigt, manchmal emotional | Reproduzierbare Fehler finden |
+| Video-Analysen | Zeigen Vorher und Nachher klar | Können schnell veralten | Änderungen in Bewegung sehen |
+
+Wenn ihr einen Thread mit Spielererfahrungen lest, der behauptet, ein Sturmsystem sei „völlig kaputt", stellt drei Fragen: welche Hardware, welche Einstellungen und welches Szenario. Ein Bericht ohne diese Angaben ist eine Anekdote, kein Beweis. Ein Bericht mit ihnen ist wirklich wertvoll und erreicht die Entwickler oft schneller als ein formales Ticket.
+
+Für die Patch Notes selbst ist der zuverlässigste Ort der News-Feed der Vertriebsplattform. Wenn eure Weather Sandbox über [Steams offiziellen Storefront](https://store.steampowered.com/) verkauft wird, trägt jede Produktseite ihre eigene Ankündigungshistorie, die üblicherweise vor oder zeitgleich mit dem Livegang des Builds aktualisiert wird. Speichert diese Seite als Lesezeichen und prüft sie nach jedem automatischen Update.
+
+Ein praktischer Tipp: Legt einen separaten Browser-Lesezeichenordner für Entwicklerankündigungen, Community-Bug-Threads und Mod-Kompatibilitätslisten an. Wenn ein Update eintrifft, könnt ihr alle drei in wenigen Minuten durchgehen, statt von null an zu suchen, während euer Projekt halb kaputt liegt.
+
+## FAQ
+
+**Wie oft sollte ich ein Weather-Sandbox-Update erwarten?**
+Das variiert stark je nach Projekt und Entwicklungsphase. Tools im aktiven Early Access neigen dazu, kleinere, häufigere Patches auszuliefern, während ausgereifte Releases vielleicht eine Handvoll größerer Updates pro Jahr plus gelegentliche Hotfixes veröffentlichen. Statt zu raten, folgt dem offiziellen Ankündigungskanal für euer spezifisches Tool und aktiviert Update-Benachrichtigungen.
+
+**Wird ein Weather-Sandbox-Update meine gespeicherten Szenarien zerstören?**
+Manchmal, aber meist auf kleine Weise und nicht katastrophal. Spielstände lassen sich selten nicht laden; stattdessen verhält sich das Wetter darin möglicherweise anders, weil sich die zugrunde liegende Physik oder die Standardwerte geändert haben. Vor der Installation zu sichern und an einem duplizierten Szenario zu testen ist der einfachste Schutz.
+
+**Sollte ich sofort installieren oder ein paar Tage warten?**
+Wenn ihr mitten in einem Projekt steckt, ist Warten meist klüger. Gebt der Community ein oder zwei Tage, um reproduzierbare Probleme aufzudecken, und lest dann die Liste bekannter Probleme, bevor ihr euch festlegt. Wenn ihr zwischen Projekten seid und die neuesten Funktionen wollt, ist eine sofortige Installation risikoarm, solange eure Backups aktuell sind.
+
+**Wie melde ich einen Fehler nach einem Weather-Sandbox-Update?**
+Reproduziert ihn mindestens zweimal und erfasst dann eure Versionsnummer, Hardware, Grafikeinstellungen und die genauen Schritte, die ihn auslösen. Ein kurzer Clip plus diese Angaben ist weitaus handlungsrelevanter als eine bloße Beschreibung. Postet ihn über den offiziellen Kanal, falls einer existiert, und spiegelt ihn im Community-Forum, damit andere Nutzer bestätigen können, ob sie dasselbe sehen.
+
+Behandelt jedes Weather-Sandbox-Update als kleines Experiment statt als routinemäßigen Download. Lest die Notes, schützt eure Arbeit, testet jeweils eine Variable und führt eine schriftliche Aufzeichnung darüber, was sich geändert hat. Wenn ihr das konsequent tut, werden Updates zu einem Vorteil statt zu einer Störung.

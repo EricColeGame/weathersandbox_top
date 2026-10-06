@@ -1,0 +1,126 @@
+export const metadata = {
+  title: "Weather Sandbox Extra: Versões, Complementos e Como Escolher a Build Certa",
+  description: "Compare versões do Weather Sandbox Extra, add-ons e builds de plataforma. Saiba quais recursos importam para simulação, testes e jogo — além de dicas de configuração.",
+  category: "versions",
+  date: "2026-10-06",
+}
+
+## O Que um Weather Sandbox Realmente Faz
+
+Poucas coisas quebram a imersão mais rápido do que um clima que nunca muda — e é exatamente essa lacuna que um nível extra de weather sandbox foi criado para preencher. Um weather sandbox dá a você controle direto sobre temperatura, vento, precipitação, pressão e cobertura de nuvens, e então permite observar as consequências se propagando pelo seu mundo, seu modelo ou seu ambiente de teste. Seja para criar o nível de um jogo, validar um pipeline de previsão ou simplesmente descobrir como uma tempestade se organiza, o controle adicional em uma build extra do Weather Sandbox costuma ser o que separa uma novidade de uma ferramenta de verdade.
+
+No fundo, um sandbox serve para remover as proteções. Em vez de aceitar o que o céu padrão decidir fazer, você mesmo ajusta os controles. A maioria das builds organiza esses controles em algumas famílias:
+
+- **Termodinâmica** — temperatura, umidade, ponto de orvalho e taxas de variação vertical
+- **Dinâmica** — velocidade do vento, direção, rajadas e cisalhamento vertical
+- **Umidade** — chuva, neve, pelotas de gelo, granizo e densidade de nuvens
+- **Pressão e frentes** — centros de alta e baixa pressão, cavados e fronteiras
+- **Tempo** — pausar, retroceder, avançar rápido e linhas do tempo com script
+
+O valor de um sandbox não é o realismo por si só. É a repetibilidade. Quando você consegue manter todas as variáveis estáveis, exceto uma, você realmente aprende algo — ou entrega um recurso sem adivinhar.
+
+## Versões do Weather Sandbox Extra em Resumo
+
+A nomenclatura de versões varia muito entre produtos, mas os próprios níveis tendem a seguir um padrão familiar. Uma build base cobre o essencial. Uma edição extra do weather sandbox amplia a faixa de parâmetros, adiciona gerenciamento de cenários e geralmente abre a porta para scripting ou suporte a mods.
+
+| Nível | O que você normalmente recebe | Melhor para | Fique atento a |
+|---|---|---|---|
+| Sandbox base / padrão | Controles essenciais de temperatura, vento, chuva e nuvens | Demos rápidas, experimentação casual | Pouca profundidade de parâmetros, poucos slots salvos |
+| Nível extra / expandido | Faixas mais amplas, tipos extras de precipitação, perfis nomeados, compartilhamento | Criadores, educadores, modders | Instalação maior, curva de aprendizado mais íngreme |
+| Sandbox de desenvolvedor / API | Acesso via script, endpoints simulados, execuções em lote | Testar integrações antes da produção | Exige familiaridade com programação |
+| Build modificada pela comunidade | Pacotes de clima feitos por usuários, shaders, ajustes de física | Experimentadores de longo prazo | Divergência de compatibilidade entre versões |
+
+A diferença prática entre os níveis raramente é um único recurso de destaque. É o acúmulo de pequenas conveniências — uma linha de base salva, um cenário compartilhável, um slider mais amplo — que, juntas, mudam a forma como você trabalha.
+
+## Base vs. Extra: Quais Recursos Justificam o Upgrade
+
+Se você está decidindo se a edição expandida vale seu tempo, compare as duas lado a lado em vez de ler textos de marketing.
+
+| Recurso | Build base típica | Build extra típica do weather sandbox |
+|---|---|---|
+| Controle de temperatura | Valor global único | Valores em camadas com ferramentas de gradiente |
+| Modelagem de vento | Uma camada de superfície | Faixas multicamada com cisalhamento por altitude |
+| Tipos de precipitação | Chuva e neve | Chuva, neve, pelotas de gelo, granizo, chuva congelante |
+| Salvar/carregar cenário | Um ou dois slots | Perfis nomeados com importação/exportação |
+| Importação de dados históricos | Raro | Comum |
+| Automação ou scripting | Geralmente ausente | Frequentemente incluído |
+| Demanda de hardware | Leve | Moderada a pesada |
+
+Uma regra prática útil: faça upgrade quando você se pegar brigando com os limites da build base, não antes. Se você só ajusta um slider e observa as nuvens se formando, o nível padrão é mais que suficiente. Se você está reproduzindo um evento específico, dando uma aula ou testando como um sistema se comporta sob estresse, a camada extra de controle se paga rapidamente.
+
+## Builds de Plataforma e Suporte a Versões
+
+O mesmo weather sandbox pode se comportar de forma muito diferente dependendo de onde ele roda. Versões de plataforma costumam ser atualizadas em cronogramas separados, e a paridade de recursos não é garantida.
+
+| Plataforma | Profundidade de controle | Pontos fortes | Observações |
+|---|---|---|---|
+| Desktop (PC, Mac, Linux) | Mais alta | Mods, scripting, mapas grandes | Melhor escolha para simulação pesada |
+| Console | Moderada | Pronto para jogar, desempenho estável | Suporte a mods muitas vezes limitado ou ausente |
+| Mobile | Básica | Verificações rápidas em qualquer lugar | UI simplificada, sessões mais curtas |
+| Baseado em navegador | Leve | Acesso instantâneo, demos em sala de aula | Depende da qualidade da conexão |
+| Plug-ins para engines de jogos | Alta | Integrados ao seu próprio projeto | Travados à versão dos lançamentos da engine |
+
+Relatos da comunidade apontam consistentemente uma coisa: quando você atualiza um sandbox, atualize tudo que depende dele ao mesmo tempo. Mods, plug-ins e arquivos de cenário criados para uma versão mais antiga podem carregar incorretamente ou descartar parâmetros silenciosamente. Se um projeto está em andamento, terminá-lo na versão com que você começou geralmente é mais seguro do que buscar a build mais nova no meio do processo.
+
+## Modos de Simulação que Você Pode Executar
+
+Um bom weather sandbox é, na verdade, várias ferramentas compartilhando uma interface. Saber qual modo você precisa economiza horas.
+
+| Modo | O que faz | Bom para | Entrada típica |
+|---|---|---|---|
+| Ao vivo / tempo real | Espelha as condições atuais | Prática de nowcasting | Feeds públicos de observação |
+| Previsão | Avança no tempo | Planejamento, ensino | Saída de modelo |
+| Reprodução histórica | Reconstrói eventos passados | Estudos de caso, treinamento | Registros arquivados |
+| Cenário personalizado | Você define cada variável | Testes de estresse, narrativa | Suas próprias entradas |
+
+Muitos criadores baseiam seus cenários em dados reais de observação, como [as previsões e observações públicas do National Weather Service](https://www.weather.gov/), o que mantém um evento simulado ancorado em algo que realmente aconteceu. Outros preferem invenção pura — uma tempestade fictícia em um litoral fictício — porque isso permite levar aos extremos sem se preocupar com precisão.
+
+O erro mais comum nos quatro modos é a escala. Um sandbox ajustado para um único quarteirão não se comportará de forma sensata quando você o estender por um continente. Escolha seu domínio primeiro, depois ajuste os parâmetros para corresponder.
+
+## Configurando uma Build Extra do Weather Sandbox
+
+A configuração é onde acontece a maior parte da frustração, e quase toda ela é evitável. Siga estas etapas na ordem.
+
+| Etapa | Ação | Por que importa |
+|---|---|---|
+| 1 | Confirme se sua build corresponde à sua plataforma e versão | Builds incompatíveis são a principal causa de falhas de carregamento |
+| 2 | Comece por um preset, não de uma tela em branco | Presets ensinam as relações entre parâmetros |
+| 3 | Defina unidades e fuso horário primeiro | Misturar métrico e imperial no meio do projeto causa erros silenciosos |
+| 4 | Teste a folga de desempenho cedo | Efeitos climáticos são pesados; encontre o teto antes de construir |
+| 5 | Salve um perfil de linha de base | Dá a você um estado conhecido e bom para retornar |
+| 6 | Adicione extras gradualmente | Uma mudança por vez mantém causa e efeito claros |
+
+Dois hábitos separam as pessoas que gostam do seu sandbox das que o abandonam. Primeiro, nomeie seus perfis de forma descritiva — "coastal-storm-v2" é melhor que "test3". Segundo, mantenha um pequeno registro em texto do que você mudou e quando. Quando um cenário para de se comportar como esperado, esse registro é o caminho mais rápido de volta a um estado funcional.
+
+## Dicas Práticas e Armadilhas Relatadas pela Comunidade
+
+A experiência de jogadores e relatos da comunidade apontam para alguns problemas recorrentes que vale a pena conhecer antes de dedicar horas.
+
+- **Não coloque todos os sliders no máximo de uma vez.** Valores extremos interagem de formas instáveis e podem produzir resultados que parecem bugs, mas na verdade são física.
+- **Fique de olho na taxa de quadros, não só nas configurações.** Um sandbox que engasga quebra o ciclo de feedback de que você precisa para aprender.
+- **Faça backup dos arquivos de cenário antes de grandes atualizações.** Migrações de versão nem sempre são limpas, especialmente com builds modificadas.
+- **Leia as notas de versão do seu nível, não as gerais.** Notas da build base muitas vezes omitem mudanças que afetam recursos do nível extra.
+- **Teste no menor mapa primeiro.** Um cenário que funciona em um domínio pequeno pode falhar completamente em escalas maiores.
+- **Entre nos fóruns da comunidade da sua build específica.** Correções para uma versão frequentemente quebram outra.
+
+Acima de tudo, trate o sandbox como um laboratório, não como um brinquedo. O objetivo do clima controlado é que você possa fazer uma pergunta, mudar uma variável e obter uma resposta confiável.
+
+## FAQ
+
+**Uma build extra do weather sandbox é mais difícil de aprender que a versão base?**
+
+Em geral, sim — mas não dramaticamente. O nível extra adiciona parâmetros e ferramentas em vez de substituir os fundamentos. Se você já entende temperatura, vento e umidade, os controles expandidos parecem uma extensão natural. A maioria das pessoas fica confortável em poucas sessões.
+
+**Posso rodar um weather sandbox em um notebook?**
+
+Muitas builds de desktop rodam bem em hardware modesto, especialmente em mapas menores e qualidade de efeitos mais baixa. Os recursos mais pesados — vento em múltiplas camadas, precipitação com muitas partículas e longas reproduções históricas — são onde o desempenho cai. Teste a folga cedo para saber seus limites antes de construir em torno deles.
+
+**As versões entre plataformas permanecem sincronizadas?**
+
+Não de forma confiável. Builds de desktop geralmente recebem atualizações primeiro, com versões de console e mobile vindo depois. Se você colabora com outras pessoas, combinem uma versão antes de começar e evitem atualizar até o projeto terminar.
+
+**O nível extra de um weather sandbox é útil para algo além de jogos?**
+
+Com certeza. Educadores os usam para demonstrar processos atmosféricos, desenvolvedores usam ambientes sandbox para testar integrações dependentes do clima com segurança, e pesquisadores os usam para explorar como pequenas mudanças de parâmetros se propagam por um sistema. A habilidade é transferível — a ferramenta é apenas o ponto de entrada.
+
+Comece com o nível que corresponde à sua ambição hoje, aprenda seus limites e faça upgrade só quando os limites começarem a custar seu tempo. Essa abordagem mantém uma build extra do weather sandbox útil em vez de esmagadora.

@@ -1,0 +1,136 @@
+export const metadata = {
+  title: "Controles de Sandbox de Clima: Domine Chuva, Tempestades e Configurações do Céu",
+  description: "Aprenda como funcionam os controles de sandbox de clima no PC, console e celular, além de um fluxo de trabalho passo a passo para criar tempestades que ficam ótimas e rodam bem.",
+  category: "controls",
+  date: "2026-10-06",
+}
+
+Uma única tecla pode gerar um tornado sobre a sua cidade, e um único controle deslizante pode transformar uma tarde clara em uma nevasca densa. Essa é a promessa de uma configuração de **controles de sandbox de clima** bem dominada: autoridade direta e legível sobre o céu. Seja para montar um plano de cena cinematográfica, testar uma fase ou apenas por curiosidade sobre o que acontece quando uma nevasca atinge um deserto, saber onde ficam os controles — e em que ordem usá-los — é a diferença entre cinco minutos divertidos e um projeto concluído.
+
+Este guia mostra como os controles de sandbox de clima costumam ser organizados entre plataformas, quais camadas ajustar primeiro e os pequenos erros que fazem tempestades boas parecerem falsas ou arrastam sua taxa de quadros para o chão.
+
+## O Que um Sandbox de Clima Realmente Permite Controlar
+
+Um sandbox de clima é qualquer ambiente em que o céu é uma variável que você possui, e não um roteiro que você segue. Em um jogo, isso pode ser um painel de modo criativo ou um console de desenvolvedor. Em uma engine ou ferramenta de simulação, geralmente é um sistema de partículas somado a um conjunto de atores de ambiente. O apelo é idêntico nos dois casos: você decide quando chove, com que intensidade e como o mundo fica quando o sol volta.
+
+A parte animadora é que a lista de parâmetros é curta. Quase toda ferramenta organiza suas opções em torno do mesmo punhado de valores físicos, então as habilidades que você desenvolve em um sandbox se transferem rapidamente para o próximo.
+
+| Elemento climático | O que o controle altera | Faixa típica | Observação prática |
+|---|---|---|---|
+| Tipo de precipitação | Alterna entre chuva, neve, granizo fino, granizo | Lista discreta | Geralmente é um menu suspenso ou uma tecla de ciclo |
+| Intensidade | Quantidade de partículas e velocidade de queda | 0–100% | A alavanca visual mais impactante |
+| Velocidade do vento | Força horizontal sobre partículas e objetos | De calmo a extremo | Também inclina a chuva e movimenta detritos |
+| Direção do vento | Sentido do fluxo de ar | 0–360 graus | Gire para transmitir o movimento da tempestade |
+| Cobertura de nuvens | Densidade do skybox e bloqueio de luz | De limpo a totalmente nublado | Controla a luz ambiente e as sombras |
+| Densidade do nevoeiro | Redução da visibilidade com a distância | De névoa fina a visibilidade zero | Controle de atmosfera barato e de grande impacto |
+| Relâmpagos e trovões | Frequência de disparo mais áudio | De desligado a quase contínuo | Fique atento à distorção de áudio |
+| Hora do dia | Ângulo do sol, correção de cor, comprimento das sombras | Relógio de 24 horas | Interage com tudo o que está acima |
+
+Depois que essa lista parecer familiar, o resto é basicamente memória muscular. O que realmente deixa as pessoas perdidas não é a quantidade de opções — é a ordem em que elas as utilizam.
+
+## As Três Camadas de Controle Que Vale a Pena Aprender Primeiro
+
+A maioria dos controles de sandbox de clima se divide em três camadas, e saber em qual camada você está trabalhando elimina a maior parte da confusão. Usuários novos tendem a ir direto para o efeito mais chamativo e depois se perguntam por que ele parece colado por cima. Usuários experientes constroem de baixo para cima.
+
+### Camada 1: Controles globais de ambiente
+
+Eles definem a base de toda a cena — hora do dia, cobertura de nuvens e nevoeiro geral. Altere-os primeiro, porque eles determinam como cada partícula que você adicionar depois será iluminada. Um efeito de chuva que fica deslumbrante ao entardecer pode parecer apagado e cinza ao meio-dia.
+
+### Camada 2: Controles locais e regionais
+
+Eles aplicam o clima a uma área específica em vez do mundo inteiro. Os controles regionais são o que permite manter uma praça ensolarada ao lado de um beco encharcado de chuva, e normalmente é onde acontece o trabalho criativo mais interessante.
+
+### Camada 3: Gatilhos de eventos
+
+Gatilhos são os interruptores que disparam um evento específico: uma queda de raio, uma frente de rajada, um aguaceiro repentino, o surgimento de um tornado. O melhor é tratá-los como acentos, e não como fundamentos. Dispare-os cedo demais e você perde a construção que faz com que eles causem impacto.
+
+| Camada | Escopo | Entrada típica | Melhor uso |
+|---|---|---|---|
+| Ambiente global | Cena inteira | Controles deslizantes, menus suspensos, relógio de tempo | Atmosfera e iluminação de base |
+| Local e regional | Zona ou volume definido | Ferramentas de zona, pincéis, seletores de região | Contraste entre áreas |
+| Gatilhos de eventos | Instantâneo ou agendado | Teclas de atalho, botões, temporizadores com script | Drama, ritmo, momentos roteirizados |
+
+## Esquemas de Entrada em PC, Console, Toque e Script
+
+O vocabulário dos controles de sandbox de clima muda conforme o hardware, mas as ações subjacentes não. Uma tecla de atalho no teclado, um menu radial no controle e um alvo de toque no celular fazem todos o mesmo trabalho: selecionar um parâmetro e ajustar seu valor.
+
+| Plataforma | Entrada principal | Onde se destaca | Onde tem dificuldade |
+|---|---|---|---|
+| PC | Teclas de atalho mais controles deslizantes com o mouse | Iteração rápida, valores precisos | Curva de aprendizado íngreme no início |
+| Console | Menus radiais e modificadores nos botões de ombro | Confortável, nativo do controle | Mais lento para ajustes numéricos finos |
+| Celular e tablet | Controles deslizantes de toque, tocar para posicionar, gestos de rotação | Portabilidade, posicionamento intuitivo | Menos entradas simultâneas |
+| Script e console | Comandos de texto ou grafos de nós | Repetível, automatizável, compartilhável | Exige aprender sintaxe |
+
+A experiência dos jogadores sugere que reconfigurar as teclas vale os primeiros dez minutos de qualquer sessão. O layout padrão de um painel de controles de sandbox de clima geralmente é feito para demonstração, e não para longas sessões de edição, então mover os parâmetros mais usados — intensidade, direção do vento e hora do dia — para teclas onde sua mão esquerda já repousa compensa imediatamente.
+
+Se você está trabalhando dentro de uma engine comercial em vez de um jogo, consulte a documentação oficial das ferramentas de ambiente da sua plataforma antes de improvisar. Páginas de loja e manuais de engine são a fonte confiável sobre o que uma determinada versão realmente suporta; para ter uma noção geral de quão amplo o gênero sandbox se tornou, a [categoria sandbox da Steam](https://store.steampowered.com/tags/en/Sandbox/) é uma visão geral útil.
+
+## Um Fluxo de Trabalho Passo a Passo para Mudanças de Clima Limpas
+
+Arrastar controles deslizantes aleatoriamente até algo parecer certo é uma forma válida de explorar, mas é uma péssima forma de finalizar. A sequência abaixo mantém sua cena legível e facilita desfazer uma única decisão sem reconstruir tudo.
+
+| Passo | O que você ajusta | Por que a ordem importa |
+|---|---|---|
+| 1. Congele a cena | Pause a simulação ou trave o tempo | Impede que o clima mude enquanto você ajusta |
+| 2. Defina a base | Hora do dia, cobertura de nuvens | Determina a iluminação de todos os efeitos posteriores |
+| 3. Direcione o vento | Direção antes da velocidade | O ângulo da chuva e os detritos seguem o sentido |
+| 4. Aumente a velocidade do vento | Intensidade da força horizontal | Estabelece quão violenta a cena parece |
+| 5. Adicione precipitação | Tipo, depois intensidade | Tipo primeiro, para ajustar o conjunto certo de partículas |
+| 6. Adicione camadas de atmosfera | Nevoeiro, névoa, correção de cor | Adiciona profundidade sem custo extra de partículas |
+| 7. Dispare gatilhos | Relâmpagos, rajadas, surgimentos | Acentos funcionam melhor sobre uma base finalizada |
+| 8. Salve um preset | Dê um nome descritivo | Permite retornar ou compartilhar a configuração exata |
+
+Dois hábitos separam resultados limpos dos bagunçados. Primeiro, altere um parâmetro por vez para que você sempre saiba o que causou um problema. Segundo, salve um preset antes de começar a experimentar — não depois. Reconstruir de memória uma tempestade de que você gostou é muito mais irritante do que carregar um arquivo.
+
+## Erros Que Fazem o Clima Parecer Falso
+
+Mesmo com controles de sandbox de clima sólidos, alguns erros recorrentes entregam a ilusão. Nenhum deles tem a ver com ter as configurações erradas; eles têm a ver com as relações entre as configurações.
+
+| Erro | Por que parece falso | Correção |
+|---|---|---|
+| Chuva caindo reto com vento forte | Contradição física que o olho capta na hora | Incline a precipitação para acompanhar a direção do vento |
+| Nevoeiro tão denso que nada é visível | Elimina todas as pistas de profundidade | Mantenha uma camada de meio de plano visível |
+| Relâmpago sem atraso para o trovão | Quebra a noção de distância | Adicione um pequeno intervalo antes do áudio |
+| Intensidade uniforme em todo o mapa | O clima real tem bordas | Misture a intensidade entre as zonas |
+| Todos os efeitos no máximo ao mesmo tempo | Sem contraste, sem foco | Mantenha um elemento dominante por cena |
+| Ignorar a taxa de quadros ao empilhar camadas | Travamentos destroem a atmosfera | Verifique o desempenho após cada adição |
+
+Relatos da comunidade apontam consistentemente o último como o mais comum. Clima com muitas partículas parece espetacular em uma imagem estática e sofrível a vinte quadros por segundo, então teste em movimento, não em capturas de tela.
+
+## Presets, Compartilhamento e Margem de Desempenho
+
+Um preset bem construído é mais do que uma posição salva de controle deslizante. É uma pequena receita que outras pessoas conseguem ler. Ao nomear e documentar um preset, inclua os elementos que o tornam reproduzível.
+
+| Campo do preset | Valor de exemplo | Por que incluir |
+|---|---|---|
+| Nome | Tempestade costeira, fim de tarde | Torna-o localizável em uma lista |
+| Hora do dia | Fim de tarde | A iluminação é metade da aparência |
+| Cobertura de nuvens | Pesada, em camadas | Define o tom de base |
+| Vento | Forte, vindo do mar | Explica o ângulo da chuva |
+| Precipitação | Chuva, alta intensidade | O efeito principal |
+| Efeitos extras | Relâmpagos ocasionais, névoa leve | Os toques finais |
+| Nota de desempenho | Testado em hardware intermediário | Avisa os outros antes de carregarem |
+
+Compartilhar presets é uma das formas mais rápidas de melhorar em controles de sandbox de clima, porque o arquivo de outra pessoa mostra combinações que você nunca teria tentado. Carregue-o, mude uma coisa e veja o que quebra. Esse único hábito ensina mais do que uma hora de tentativa e erro sozinho.
+
+Desempenho merece seu próprio item. Vento, nevoeiro e densidade de partículas custam quadros, e esses custos se acumulam. Se uma cena começar a travar, reduza a intensidade antes de reduzir a resolução — uma tempestade um pouco mais leve geralmente fica melhor do que uma embaçada.
+
+## Perguntas Frequentes
+
+**O que são controles de sandbox de clima, em termos simples?**
+
+São as entradas — teclas de atalho, controles deslizantes, menus radiais ou comandos digitados — que permitem criar e ajustar o clima dentro de um ambiente sandbox. Em vez de esperar pela chuva, você a gera, regula sua força e direciona o vento que a movimenta.
+
+**Posso usar controles de sandbox de clima em um console ou celular?**
+
+Sim. Versões para console normalmente usam menus radiais e botões modificadores, enquanto versões para celular dependem de controles deslizantes de toque e ferramentas de tocar para posicionar. Ambos são totalmente utilizáveis, embora configurações de PC geralmente permitam ajustes numéricos mais finos e iteração mais rápida.
+
+**Por que meu clima ainda parece falso depois de ajustar tudo?**
+
+Geralmente é um problema de relação, e não de configuração. Verifique se o ângulo da chuva corresponde à direção do vento, se o nevoeiro deixa alguma profundidade visível e se o relâmpago e o trovão estão separados por um pequeno atraso. O contraste entre zonas importa tanto quanto os próprios valores.
+
+**Esses controles prejudicam o desempenho?**
+
+Podem prejudicar. Densidade de precipitação, vento e nevoeiro são os fatores mais pesados, e seus custos se somam. Adicione efeitos um de cada vez e verifique sua taxa de quadros após cada mudança para saber exatamente qual configuração ultrapassou o limite.
+
+Dominar os controles de sandbox de clima é, na verdade, uma questão de sequência e contenção: defina a base, direcione o vento, adicione precipitação e depois faça os acentos com gatilhos. Acerte essa ordem e até uma tempestade simples vai parecer que pertence ao mundo, em vez de estar colada por cima dele.

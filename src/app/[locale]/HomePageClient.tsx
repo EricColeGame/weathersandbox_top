@@ -42,7 +42,7 @@ export default function HomePageClient({ home, locale, articles, recentArticles 
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
           <Button asChild size="lg"><Link href={siteConfig.gameUrl || "#"} target="_blank" rel="noopener noreferrer">{home.hero.primaryCta}<ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
           <Button asChild size="lg" variant="outline"><Link href={localizeHref("/guide", locale)}>{home.hero.secondaryCta}</Link></Button>
-          <Button asChild size="lg" variant="outline"><Link href={localizeHref("/codes", locale)}>{home.hero.tertiaryCta}</Link></Button>
+          <Button asChild size="lg" variant="outline"><Link href={localizeHref("/mechanics", locale)}>{home.hero.tertiaryCta}</Link></Button>
         </div>
       </section>
 
@@ -70,7 +70,7 @@ export default function HomePageClient({ home, locale, articles, recentArticles 
             ))}
           </div>
           <Button asChild className="mt-5 w-full" variant="outline">
-            <Link href={localizeHref("/codes", locale)}>{home.updates.browse}</Link>
+            <Link href={localizeHref("/guide", locale)}>{home.updates.browse}</Link>
           </Button>
         </Card>
 

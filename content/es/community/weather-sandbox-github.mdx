@@ -1,0 +1,139 @@
+export const metadata = {
+  title: "Proyectos de weather sandbox en GitHub: guía comunitaria para simulación y pruebas",
+  description: "Aprende cómo funcionan los repositorios de weather sandbox en GitHub, cómo elegir uno confiable y cómo ejecutar tu propio sandbox de simulación meteorológica paso a paso.",
+  category: "community",
+  date: "2026-10-06",
+}
+
+## ¿Qué es exactamente un weather sandbox?
+
+Si alguna vez has escrito **weather sandbox GitHub** en una barra de búsqueda, probablemente buscabas una cosa concreta: un repositorio donde puedas simular, reproducir o someter a pruebas de estrés las condiciones meteorológicas sin depender de una fuente de pronóstico en vivo. Un sandbox meteorológico es exactamente eso: un entorno controlado donde los datos atmosféricos, la física o los sistemas meteorológicos estilo videojuego se pueden ejecutar, pausar, ajustar y romper de forma segura. Los mejores proyectos de **weather sandbox GitHub** te dan un lugar para experimentar mucho antes de que tu código toque usuarios reales, sensores reales o una tormenta real.
+
+En la práctica, los sandboxes se dividen en tres grandes familias:
+
+- **Sandboxes de datos** simulan o reproducen feeds meteorológicos para que las aplicaciones se puedan probar de forma determinista.
+- **Sandboxes de simulación** ejecutan física atmosférica simplificada, lo que te permite ajustar temperatura, presión, humedad o viento y observar qué ocurre después.
+- **Sandboxes visuales y de juego** se centran en cómo se ve y se siente el clima —lluvia, niebla, nieve, rayos— más que en la precisión numérica.
+
+La mayoría de los repositorios combinan al menos dos de estos. Un sandbox de datos puede incluir un renderizador de partículas simple, mientras que un sandbox de simulación puede incluir un formato de archivo de reproducción para que cada ejecución sea reproducible.
+
+| Componente | Qué hace | Por qué importa |
+|---|---|---|
+| Entrada de escenario | Define las condiciones iniciales | Hace que las pruebas sean repetibles |
+| Control de tiempo | Pausar, rebobinar, avance rápido | Permite inspeccionar eventos poco frecuentes |
+| Adaptador de datos | Carga feeds reales o sintéticos | Cambia API en vivo por fixtures |
+| Capa de salida | Registros, gráficos o renderizado 3D | Convierte números en bruto en decisiones |
+| Reproducción y exportación | Guarda una ejecución en un archivo | Permite compartir y depurar |
+
+La idea clave es la separación: a la lógica de tu aplicación no debería importarle si el clima proviene de un satélite, un archivo CSV o un generador de números aleatorios.
+
+## Tipos de proyectos de weather sandbox en GitHub que merecen tu tiempo
+
+Los resultados de búsqueda en GitHub pueden parecer un cajón desastre. Saber a qué categoría pertenece un proyecto te ayuda a filtrar rápido.
+
+| Tipo de proyecto | Stack típico | Ideal para | Ojo con |
+|---|---|---|---|
+| API meteorológica simulada | Node, Python, Docker | Pruebas de apps y pipelines de CI | Fixtures que nunca se actualizan |
+| Simulador de malla o NWP-lite | Python, Fortran, NetCDF | Prototipos de investigación | Configuración pesada y descargas de datos |
+| Sistema meteorológico para juegos | C#, C++, Godot, Unity | Juegos sandbox y mods | Pulido visual por encima de la precisión |
+| Entorno climático basado en agentes | Python, Julia | Enseñanza y demos | Física demasiado simplificada |
+| Reproducción de radar y nowcast | JavaScript, WebGL | Paneles y herramientas visuales | Licencias sobre imágenes de origen |
+
+**Las API simuladas** son el punto de entrada más fácil. Te permiten devolver una carga de pronóstico fija para que tus pruebas unitarias no se rompan cada vez que cambie el cielo real. **Los sandboxes de simulación** están más cerca de la predicción meteorológica numérica: los modelos de código abierto como WRF y los proyectos de datos abiertos como Open-Meteo han hecho este espacio mucho más accesible que hace una década, aunque exigen cómputo real y paciencia.
+
+**Los sandboxes de juego y visuales** son donde la comunidad de aficionados es más ruidosa. Si quieres lluvia que reaccione a la dirección del viento o nubes que proyecten sombras creíbles, estos proyectos son tu punto de partida; solo recuerda que «verse bien» y «medir bien» son objetivos distintos.
+
+**Los informes de la comunidad** sugieren que los repositorios más reutilizados rara vez son los más ambiciosos. Las herramientas pequeñas y bien documentadas que hacen una sola cosa —generar un escenario de tormenta, reproducir un bucle de radar, simular un endpoint de pronóstico— tienden a recibir forks y mejoras mucho más que los frameworks enormes.
+
+## Cómo evaluar un repositorio de weather sandbox antes de clonarlo
+
+El número de estrellas es una señal débil. Lo que realmente importa es si el proyecto seguirá funcionando el mes que viene.
+
+| Señal | Señal positiva | Señal negativa |
+|---|---|---|
+| README | Explica entradas, salidas y límites | Solo una descripción de una línea |
+| Licencia | Claramente indicada y permisiva | Ningún archivo de licencia |
+| Historial de commits | Actividad constante y reciente | Último commit hace años |
+| Issues | Los mantenedores responden, aunque sea brevemente | Docenas de informes de errores sin respuesta |
+| Datos de ejemplo | Incluye fixtures o una demo | Requiere credenciales privadas |
+| Configuración | Contenedorizada o automatizada | Instrucciones "funciona en mi máquina" |
+| Pruebas | Alguna cobertura automatizada | Sin pruebas ni ejemplos |
+
+Un hábito práctico: clona el repositorio, ejecuta el comando de configuración documentado y cronometra cuánto tarda en producir cualquier salida visible. Si no puedes obtener un solo gráfico, línea de registro o fotograma renderizado en una sesión razonable, el proyecto no está listo para ti, por muy impresionante que suene el concepto.
+
+También revisa la licencia de los datos por separado de la licencia del código. Los conjuntos de datos meteorológicos a menudo tienen sus propios términos, y una licencia de código permisiva no cubre automáticamente las observaciones incluidas.
+
+## Cómo configurar tu propio weather sandbox: un flujo de trabajo práctico
+
+No necesitas una supercomputadora para empezar. El flujo de trabajo que aparece a continuación funciona para una API simulada, un simulador pequeño o un mod de juego.
+
+| Paso | Acción | Resultado |
+|---|---|---|
+| 1 | Define la pregunta que estás probando | Un objetivo acotado y verificable |
+| 2 | Elige un escenario y congélalo | Una línea base repetible |
+| 3 | Crea una capa de adaptador delgada | Datos reales y falsos intercambiables |
+| 4 | Añade controles de tiempo | Pausar, rebobinar y avance rápido |
+| 5 | Registra cada entrada y salida | Ejecuciones depurables y compartibles |
+| 6 | Automatiza una prueba de humo | Protección contra regresiones |
+| 7 | Documenta los límites | Expectativas honestas para los demás |
+
+Empieza con un solo escenario: una tarde de tormentas eléctricas, un frente frío, un día despejado. Congela las entradas en un archivo de fixture para que la misma ejecución produzca siempre el mismo resultado. Luego envuelve tu fuente meteorológica detrás de una interfaz —`getConditions(time, location)` suele ser suficiente— para que puedas cambiar una API en vivo por una respuesta pregrabada sin tocar el resto de tu código.
+
+Después, añade control de tiempo. Poder rebobinar es lo que separa un sandbox de un visor de pronósticos; te permite reproducir un fallo e inspeccionarlo fotograma a fotograma. El registro importa igual. Cuando una ejecución se comporta mal, quieres las entradas exactas que la produjeron, no un recuerdo vago de lo que hiciste clic.
+
+Por último, escribe una prueba automatizada. Incluso una comprobación trivial de que el sandbox carga un fixture y devuelve una temperatura detectará la rotura más común: cambios silenciosos de esquema en los datos de origen.
+
+## Consejos de la comunidad, trampas y experiencia de los jugadores
+
+**Los informes de la comunidad** y la **experiencia de los jugadores** en los foros de sandbox convergen en un puñado de problemas recurrentes. Ninguno es exótico, y todos son evitables.
+
+| Trampa | Qué ocurre | Solución |
+|---|---|---|
+| Perseguir el realismo demasiado pronto | Meses de ajustes, ninguna demo funcional | Publica primero un modelo crudo |
+| Codificar las unidades de forma fija | Errores silenciosos entre métrico e imperial | Guarda las unidades con cada valor |
+| Ignorar las zonas horarias | Las marcas de tiempo se desvían entre ejecuciones | Normaliza a UTC internamente |
+| Confiar en los datos de ejemplo | La demo funciona, el feed real se rompe | Valida contra esquemas en vivo |
+| Omitir la semilla | Las ejecuciones aleatorias no se pueden repetir | Pon semilla a cada generador aleatorio |
+| Sobrecargar la interfaz | Una capa bonita, un motor vacío | Mantén el motor headless |
+
+Un consejo que aparece constantemente en las discusiones de **weather sandbox GitHub**: mantén el motor headless. Si tu simulación puede ejecutarse desde la línea de comandos e imprimir resultados, puedes probarla, automatizarla y compartirla. El renderizado debería ser una capa por encima, nunca la base.
+
+Otro: versiona tus escenarios. Un archivo de escenario es datos, y los datos cambian. Etiquetar escenarios junto con las versiones significa que un informe de error de hace seis meses todavía se puede reproducir hoy.
+
+Y una advertencia amistosa: los proyectos de sandbox atraen la expansión descontrolada del alcance. Alguien siempre quiere corrientes oceánicas, luego aerosoles, luego un modelo completo de transferencia radiativa. Escribe tu alcance en el README y defiéndelo.
+
+## Usos del mundo real más allá del pronóstico
+
+Un sandbox meteorológico no es solo para meteorólogos. Aparece en cualquier lugar donde el clima sea una variable en el sistema de otra persona.
+
+| Caso de uso | Cómo ayuda un sandbox |
+|---|---|
+| Desarrollo de apps | Probar alertas de tormenta sin esperar tormentas |
+| Diseño de juegos | Ajustar el ritmo y la visibilidad del clima |
+| Planificación logística | Reproducir interrupciones y probar respuestas |
+| Educación | Permitir que los estudiantes cambien una variable y vean los efectos |
+| Aprendizaje automático | Generar escenarios de entrenamiento etiquetados bajo demanda |
+| Garantía de calidad | Ejecutar pruebas meteorológicas deterministas en CI |
+
+Para los desarrolladores, la mayor ventaja es el determinismo. Una suite de pruebas que depende del cielo de mañana no es una suite de pruebas. Un sandbox convierte el clima en un fixture, y se puede confiar en los fixtures.
+
+Para los aficionados, la ventaja es el control creativo. Puedes hacer que llueva a voluntad, subir la niebla hasta que el horizonte desaparezca o ver colapsar un sistema de presión en segundos en lugar de días.
+
+## Preguntas frecuentes
+
+**¿Necesito una formación en meteorología para usar un weather sandbox?**
+No. La mayoría de los proyectos de **weather sandbox** están hechos para desarrolladores y aficionados que necesitan el clima como entrada, no como carrera. La familiaridad básica con temperatura, presión, humedad y viento ayuda, pero la documentación de un buen repositorio explicará qué hace cada variable.
+
+**¿Por qué buscar «weather sandbox GitHub» en lugar de usar una API meteorológica directamente?**
+Porque las API en vivo son impredecibles y tienen límites de peticiones. Un sandbox te permite congelar condiciones, reproducir casos límite y ejecutar pruebas sin conexión. Muchos equipos usan ambas: una API real en producción y un sandbox en desarrollo.
+
+**¿Cómo sé si un proyecto de weather sandbox GitHub sigue mantenido?**
+Revisa el historial de commits, el rastreador de issues y si se revisan los pull requests. Un proyecto con commits ocasionales y mantenedores receptivos suele estar más sano que uno con un estallido de actividad hace dos años y silencio desde entonces.
+
+**¿Puedo construir un weather sandbox en un fin de semana?**
+Uno mínimo, sí. Un adaptador de datos simulados, un escenario congelado, controles de tiempo básicos y una única prueba de humo son alcanzables en un fin de semana. La simulación atmosférica realista es una empresa mucho mayor y es mejor tratarla como un proyecto a largo plazo.
+
+**¿Es legal reutilizar datos meteorológicos en mi sandbox?**
+Depende de la fuente. Los conjuntos de datos gubernamentales a menudo son abiertos, pero los proveedores comerciales tienen términos. Revisa siempre la licencia de los datos por separado de la licencia del código antes de redistribuir cualquier cosa.
+
+Para un punto de partida más amplio, explora [la página de temas meteorológicos de GitHub](https://github.com/topics/weather) para ver qué está construyendo activamente la comunidad de código abierto, y luego filtra por lenguaje, licencia y fecha del último commit.

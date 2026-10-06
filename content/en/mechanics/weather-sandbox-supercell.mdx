@@ -1,0 +1,108 @@
+export const metadata = {
+  title: "Weather Sandbox Supercell Mechanics Explained: How Storm Sims Spawn Twisters",
+  description: "Master the weather sandbox supercell: instability, wind shear, updraft rotation, and the exact build order that turns a calm sky into a tornado.",
+  category: "mechanics",
+  date: "2026-10-06",
+}
+
+## Why a Weather Sandbox Supercell Is the Hardest Storm to Build
+
+A **weather sandbox supercell** is the boss fight of storm simulation. Instead of spawning a finished tornado from a menu, you assemble the atmosphere from raw ingredients — moisture, heat, and wind — and hope the physics cooperate. When it works, a towering updraft organizes, tilts, and rotates for hours. When it fails, you get a ten-minute rain shower and a lot of wasted tuning.
+
+That gap is exactly why players sink so many hours into a **weather sandbox supercell** setup. It is the clearest proof that the simulation is actually simulating something rather than playing an animation.
+
+What separates a supercell from an ordinary thunderstorm is one feature: a persistent, rotating updraft called a mesocyclone. Garden-variety storms pulse up and collapse in twenty or thirty minutes because their updraft leans downwind and gets cut off from its own supply of warm, moist air. A supercell dodges that fate. Wind shear tilts the storm, separating the rising air from the sinking air, so the downdraft never strangles the inflow. The storm feeds itself.
+
+Reproducing that self-sustaining loop is the whole challenge. Everything below is about the mechanics that make it happen — and the order in which you should touch them.
+
+## The Four Ingredients Every Supercell Simulation Needs
+
+Most sandbox tools give you sliders for surface temperature, dew point, wind speed, wind direction by altitude, and some kind of lifting trigger. That is not a coincidence. Those controls map almost one-to-one onto the four environmental ingredients meteorologists look for when forecasting severe weather.
+
+| Ingredient | Physical Role | Typical Sandbox Control | Symptom When It's Missing |
+|---|---|---|---|
+| Moisture | Fuel for the updraft and the raw material for clouds | Surface dew point | High cloud base, dry storms, no visible tower |
+| Instability | Buoyancy that keeps air accelerating upward | Surface temp / dew point spread, lapse rate | Weak, shallow updrafts that fizzle fast |
+| Wind shear | Tilts and organizes the updraft into rotation | Wind speed and direction per altitude layer | Pulse storms that never rotate |
+| Lift | The trigger that finally breaks the cap | Terrain, boundaries, fronts, surface heating | Nothing initiates at all |
+
+The interaction matters more than any single number. A sky with enormous instability but no shear produces violent but short-lived pulse storms. A sky with beautiful shear but no buoyancy produces a sheared-out stratocumulus deck and nothing else. You need both, plus enough moisture to keep the cloud base low.
+
+As a rough starting point, many simulation guides and real-world forecasting checklists point toward convective available potential energy in the low thousands of joules per kilogram, deep-layer shear strong enough to visibly tilt a storm, and a lifted condensation level low enough that the cloud base sits well below the freezing level. Treat those as direction, not gospel — every sandbox engine weights its parameters differently.
+
+> For the real-world meteorology behind these parameters, the [NOAA Storm Prediction Center](https://www.spc.noaa.gov/) publishes plain-language severe weather guidance that maps cleanly onto most in-game sliders.
+
+## Reading the Storm: Signatures That Tell You It's Working
+
+Half the skill in a weather sandbox supercell is knowing what to look at. Storms announce their intentions long before a tornado appears, and most simulators render those clues faithfully.
+
+| Signature | What It Tells You | Where You'll See It |
+|---|---|---|
+| Mesocyclone | The updraft has begun rotating — the defining feature | Radar velocity display or visible cloud rotation |
+| Wall cloud | A lowering under the updraft; rotation is tightening near the surface | Directly beneath the storm base |
+| Inflow band ("beaver's tail") | Warm, moist air is still reaching the updraft | A smooth tail cloud feeding the wall cloud |
+| Hook echo | Precipitation has wrapped around the rotation | Radar reflectivity, usually rear flank |
+| Weak echo region | The updraft is so strong that precipitation can't fall into it | A notch in the radar echo, high on the storm |
+| Rear-flank downdraft | Cool, sinking air wrapping around the mesocyclone | Clear slot cutting into the cloud base |
+| Forward-flank gust front | The storm's cold pool is spreading out ahead | Sharp wind shift and temperature drop |
+
+If you can see three or more of these at once, your environment is doing its job. If you see a tall, pretty cloud with none of them, you built a thunderstorm, not a supercell — and no amount of waiting will fix it.
+
+### Classic, Low-Precipitation, and High-Precipitation Modes
+
+Supercells come in three broad flavors, and most sandboxes will produce all three depending on how you nudge moisture and shear.
+
+| Mode | Precipitation | Radar Look | Best For |
+|---|---|---|---|
+| Low-precipitation (LP) | Sparse, small hail | Thin, isolated echo with a sharp inflow notch | Visual storm structure and clear views of rotation |
+| Classic | Moderate rain and hail | Distinct hook echo with a bounded weak echo region | The textbook supercell experience |
+| High-precipitation (HP) | Heavy rain, big hail | Large, blob-like echo with rotation buried inside | Dramatic shelf clouds and dangerous outflow |
+
+## Step-by-Step: Building a Supercell in a Sandbox
+
+Working in the right order saves you hours. Changing wind shear before you have any buoyancy, for example, does nothing visible — you'll just conclude the engine is broken.
+
+| Step | Action | Check Before Moving On |
+|---|---|---|
+| 1 | Set surface moisture with the dew point slider | Cloud base looks low and reasonably flat |
+| 2 | Warm the boundary layer to build instability | Small test cumulus grow steadily instead of dying |
+| 3 | Layer the wind profile — speed increasing with height, direction veering | A visible tilt appears in the updraft |
+| 4 | Add a lifting trigger (terrain, boundary, or heating) | One storm breaks the cap and keeps growing |
+| 5 | Let the updraft mature without interference | Rotation becomes visible under the cloud base |
+| 6 | Watch the rear-flank downdraft wrap around | A clear slot carves into the base |
+| 7 | Adjust and save the preset | Storm survives past the 30-minute mark |
+
+The most common mistake is skipping step 3. Directional shear — wind veering from southeasterly at the surface to southwesterly aloft — is what turns a tilted updraft into a *rotating* one. Speed shear alone tilts a storm; directional shear spins it.
+
+Community reports from sandbox players consistently agree on one thing: build slowly, and change one variable at a time. Chasing three sliders at once makes it impossible to know which adjustment actually helped.
+
+## Troubleshooting a Weather Sandbox Supercell That Won't Rotate
+
+When a storm refuses to cooperate, the cause is usually environmental rather than a bug. Here is a quick diagnostic table.
+
+| Symptom | Likely Cause | Fix |
+|---|---|---|
+| Storm dies within minutes | Convective inhibition too high, or dry air entraining into the updraft | Reduce inhibition, raise surface moisture |
+| Updraft leans but never spins | Not enough directional shear in the lowest few kilometers | Veer the low-level wind more, strengthen the low-level jet |
+| Rotation appears but no tornado | Cloud base too high, weak low-level helicity | Lower the lifted condensation level, tighten low-level shear |
+| Storm becomes a messy rain blob | Too much moisture, insufficient mid-level flow | Trim dew point slightly, boost mid-level wind speed |
+| Storm splits into two | Excessive directional shear in a narrow layer | Smooth the wind profile between layers |
+| Simulation stutters badly | Particle or entity count exceeding the engine's budget | Lower grid resolution, reduce debris and rain particles |
+
+A useful rule: rotation that never tightens usually means the low-level environment is too cool or too dry. Rotation that tightens but produces nothing usually means the cloud base is sitting too high for the circulation to reach the ground.
+
+Once you have a working preset, save it. Most sandboxes let you export parameter sets or share a scenario file, which is how the community builds libraries of "recipe" storms — a dryline classic supercell, a tropical high-precipitation beast, a low-precipitation structure showcase. Loading someone else's preset and then breaking it on purpose is one of the fastest ways to learn what each slider actually does.
+
+## FAQ
+
+**What makes a weather sandbox supercell different from a normal storm in a game?**
+The rotation is persistent and self-sustaining. Ordinary storms in a sandbox rise and collapse based on a short burst of buoyancy; a supercell keeps its mesocyclone for hours because its updraft and downdraft stay separated. That longevity is the entire mechanical signature.
+
+**Do I need real meteorology knowledge to build one?**
+Not formally, but the sliders reward the same intuition forecasters use. Understanding that moisture fuels the updraft, instability drives it upward, and shear organizes it into rotation will get you most of the way. Everything else is tuning.
+
+**Why does my weather sandbox supercell spin but never produce a tornado?**
+Check the cloud base height and the low-level wind field first. If the lifted condensation level is too high, the circulation stays aloft and never reaches the surface. Strengthening low-level directional shear and lowering the cloud base usually fixes it.
+
+**Can I share my storm setup with other players?**
+Most sandbox platforms support saving and exporting scenario files, parameter presets, or shareable world seeds. Community preset libraries are a great shortcut — download a known-good storm, then adjust one variable at a time to see exactly what it changes.

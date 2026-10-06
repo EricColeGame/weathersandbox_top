@@ -1,0 +1,123 @@
+export const metadata = {
+  title: "Rayos en sandbox meteorológico: cómo funcionan realmente las tormentas, los impactos y las chispas",
+  description: "Una guía práctica sobre los rayos en un sandbox meteorológico: cómo los sistemas de tormentas generan impactos, cómo provocarlos a voluntad y cómo mantener un rendimiento fluido.",
+  category: "mechanics",
+  date: "2026-10-06",
+}
+
+## Por qué los rayos en un sandbox meteorológico importan más que la lluvia
+
+Pocas cosas venden una tormenta como el estallido de un rayo, y en un sandbox meteorológico es el momento en que todos los demás sistemas reaccionan a la vez. Los rayos impulsan simultáneamente la luz, el sonido, el daño, el fuego, el comportamiento de la IA y el pánico del jugador, y por eso importan mucho más que la lluvia que cae alrededor. Entender los rayos en un sandbox meteorológico significa entender un motor de probabilidades envuelto en dirección artística, y esta guía desglosa ese motor pieza por pieza.
+
+La lluvia es ambiente. Los rayos son *consecuencia*. Una tormenta que solo oscurece el cielo es decorado; una tormenta que ocasionalmente lanza un impacto contra el suelo cambia cómo se mueven, construyen y planifican los jugadores. Esa diferencia es la razón entera por la que los rayos en un sandbox meteorológico se tratan como una mecánica y no como un efecto de partículas.
+
+Este artículo cubre cómo suele estructurarse la lógica de impactos, cómo forzar un rayo cuando quieres uno, qué ocurre tras el impacto y cómo evitar que una escena cargada de rayos hunda tu tasa de fotogramas. Todo aquí se mantiene al nivel de la intención de diseño, porque los valores exactos cambian de un motor, mod o título a otro.
+
+## Cómo funciona un sistema de rayos en un sandbox meteorológico
+
+La mayoría de las implementaciones siguen el mismo bucle de tres etapas: un estado de tormenta acumula carga, una comprobación decide si se dispara y un impacto se resuelve contra el mundo. La parte interesante es qué alimenta cada etapa.
+
+### Etapa 1: La acumulación de carga
+
+Una tormenta no impacta solo con un temporizador. Los diseñadores suelen condicionar los impactos a un valor de "intensidad de tormenta" que sube a medida que el sistema meteorológico se intensifica. La intensidad puede aumentar por el volumen de lluvia, la duración transcurrida de la tormenta, un paseo aleatorio o una curva scriptada. Una vez que la intensidad cruza un umbral, el sistema empieza a tirar para ver si hay impactos.
+
+Por eso algunas tormentas se sienten tranquilas y otras violentas. Si la intensidad sube de forma lineal, la tormenta escala de manera predecible. Si usa una curva ruidosa, obtienes ráfagas: grupos de impactos separados por calma. La mayoría de los jugadores nunca nota la curva, pero sí nota absolutamente el ritmo.
+
+### Etapa 2: La comprobación de impacto
+
+La comprobación en sí suele ser una tirada de probabilidad evaluada en un intervalo fijo. Dos variables dominan: con qué frecuencia ocurre la tirada y qué probabilidad tiene de tener éxito. Subir cualquiera de las dos hace que la tormenta se sienta más furiosa.
+
+Un detalle sutil pero importante es que muchos sistemas también requieren un objetivo válido antes de disparar. Si no existe un punto de impacto válido —ningún suelo expuesto, ninguna entidad apuntable, ninguna superficie legal—, la tirada se descarta en lugar de ponerse en cola. Eso evita que los rayos caigan en lugares imposibles.
+
+### Etapa 3: Resolución y secuelas
+
+Una vez elegido un punto de impacto, el sistema dispara los elementos visuales y sonoros, y luego aplica efectos. Los efectos son la parte que convierte los rayos de espectáculo en jugabilidad, y se detallan más abajo.
+
+| Componente del sistema | Qué controla | Si se ajusta demasiado alto | Si se ajusta demasiado bajo |
+|---|---|---|---|
+| Curva de intensidad de tormenta | Con qué rapidez escala la tormenta | Impactos constantes, sin acumulación | La tormenta nunca alcanza el umbral de impacto |
+| Frecuencia de tiradas | Con qué frecuencia se considera un impacto | Ritmo de ametralladora, fatiga auditiva | Largos silencios entre rayos |
+| Probabilidad de éxito | Probabilidad de que cada tirada dispare | Caos impredecible | Los rayos se sienten scriptados y raros |
+| Reglas de objetivo válido | Dónde pueden caer los rayos | Impactos en ubicaciones absurdas | Los rayos fallan silenciosamente al aparecer |
+| Tiempo de enfriamiento | Separación mínima entre impactos | Las tormentas se sienten planas | Destellos superpuestos y audio saturado |
+
+### Etapa 4: Anclaje en el mundo real
+
+Las buenas simulaciones toman prestado de la física real incluso cuando la simplifican. Los impactos reales favorecen objetos altos, aislados y conductores, y el mismo sesgo aparece en los juegos como "preferir el punto más alto dentro de un radio". Si quieres que tu tormenta se perciba creíble, imita esa preferencia en lugar de dispersar rayos de forma uniforme. La [guía de seguridad contra rayos del National Weather Service](https://www.weather.gov/safety/lightning) es una referencia útil sobre cómo se comportan los impactos reales y por qué existen las reglas de refugio: principios que se traducen sorprendentemente bien a la lógica de un sandbox.
+
+## Provocar rayos a voluntad: flujo de trabajo paso a paso
+
+Si tu objetivo es un rayo *ahora mismo* —para una cinemática, un evento scriptado o una prueba—, por lo general no esperas a que la tormenta coopere. Lo fuerzas. El flujo de trabajo de abajo se aplica a la mayoría de configuraciones de sandbox meteorológico, ya sea que trabajes en el modo creativo de un juego, un kit de modding o un recurso meteorológico.
+
+| Paso | Acción | Por qué importa |
+|---|---|---|
+| 1 | Forzar el estado de tormenta a intensidad máxima | Evita la rampa natural para que la comprobación de impacto sea elegible |
+| 2 | Establecer la probabilidad de éxito de la tirada como garantizada | Elimina la aleatoriedad para pruebas reproducibles |
+| 3 | Definir un objetivo de impacto explícito | Evita que el sistema descarte la tirada por falta de un punto válido |
+| 4 | Desactivar o acortar el tiempo de enfriamiento | Permite disparar rayos consecutivos para pruebas de sincronización |
+| 5 | Disparar el impacto y observar | Confirma que visuales, audio y efectos se resuelven correctamente |
+| 6 | Restaurar tus valores originales | Las anulaciones scriptadas que se dejan activas causan un clima extraño después |
+
+Algunas notas prácticas sobre esa secuencia:
+
+- **Prueba siempre con el objetivo definido.** La colocación aleatoria se ve bien en una captura y terrible en movimiento.
+- **Captura el audio por separado del visual.** Un rayo que cae a tiempo pero suena tarde es la queja de pulido más común en reportes de la comunidad.
+- **Revisa las secuelas, no solo el destello.** La propagación del fuego, la conversión de entidades y el daño son donde se esconden los errores.
+- **Registra tus anulaciones.** Si un evento de tormenta scriptado deja la intensidad fijada al máximo, los jugadores lo notarán de inmediato.
+
+## Qué hacen los rayos después de impactar
+
+El destello es la parte fácil. Los efectos son lo que convierten los rayos en un sandbox meteorológico en una mecánica en lugar de un espectáculo de luces. Los títulos sandbox varían mucho aquí, pero las categorías son consistentes.
+
+| Categoría de efecto | Comportamiento típico | Propósito de diseño |
+|---|---|---|
+| Ambiental | Prende bloques u objetos inflamables | Crea peligros emergentes y jugabilidad de limpieza |
+| Transformación de entidades | Convierte ciertas criaturas en formas alternativas | Recompensa a los jugadores por atraer mobs hacia tormentas |
+| Daño a entidades | Daño directo o un breve efecto de estado | Castiga el posicionamiento expuesto |
+| Impactos redirigibles | Pararrayos o conductores dedicados absorben los rayos | Da a los jugadores una herramienta defensiva con una salida extra |
+| Generación de recursos | Los impactos redirigidos cargan o alimentan dispositivos | Convierte un peligro en una fuente de energía |
+| Salida de señal | Un impacto emite un pulso detectable | Permite artilugios al estilo redstone o basados en lógica |
+
+Un ejemplo bien conocido es el concepto del pararrayos: un conductor colocado que atrae los impactos lejos de tu construcción y, cuando recibe uno, emite una señal que puede accionar maquinaria. En títulos como Minecraft, los rayos también transforman famosamente a ciertas criaturas y crean variantes cargadas, y por eso las guías de experiencia del jugador suelen recomendar construir un pararrayos antes de una tormenta, no después.
+
+La lección de diseño es simple: dale a los rayos al menos un uso *positivo*. Si cada rayo es puramente destructivo, los jugadores simplemente se esconderán bajo techo e ignorarán por completo tu sistema meteorológico.
+
+## Problemas de rendimiento y diseño
+
+Los rayos son baratos de dibujar y caros de *simular*. El destello en sí es un efecto de corta duración, pero la comprobación de impacto, la búsqueda de objetivos y la lógica de secuelas pueden ejecutarse en cada tick si se lo permites.
+
+| Problema de rendimiento | Por qué perjudica | Mitigación práctica |
+|---|---|---|
+| Búsquedas de objetivos por fotograma | Escanea cada punto candidato en un radio | Guarda en caché una lista de candidatos y actualízala en intervalos |
+| Entidades de secuelas sin límite | El fuego, las partículas y los restos se acumulan | Limita los objetos generados y elimínalos con un temporizador |
+| Audio superpuesto | Varios clips de trueno se apilan y saturan | Impón una separación mínima entre señales de trueno |
+| Cambio constante de fuentes de luz | Las luces dinámicas reactivan las sombras | Usa un efecto de destello breve en lugar de una luz dinámica completa cuando sea posible |
+| Estado de tormenta constante | Las tormentas nunca terminan, así que las comprobaciones nunca se detienen | Da a las tormentas una duración definida y un enfriamiento |
+
+Los errores de diseño comunes son igual de costosos que los de rendimiento:
+
+| Error | Síntoma que reportan los jugadores | Solución |
+|---|---|---|
+| Sin aviso previo | "Salió de la nada" | Añade un destello o un preaviso sonoro antes del impacto |
+| Impactos con temporizador fijo | "Es tan predecible" | Aleatoriza el intervalo dentro de un rango |
+| Sin zonas seguras | "No puedo construir nada" | Garantiza que el refugio funcione de forma fiable |
+| Destrucción pura | "Solo espero a que pase" | Añade un resultado redirigible o recolectable |
+| Frecuencia sin límite | "Nunca se detiene" | Impón enfriamientos y duraciones de tormenta |
+
+## FAQ
+
+**¿Los rayos en un sandbox meteorológico necesitan seguir la física real para sentirse bien?**
+No, pero deberían seguir reglas *consistentes*. Los impactos reales favorecen puntos altos, aislados y conductores, y imitar ese sesgo hace que la colocación se sienta intencional. Los jugadores perdonan la simplificación; no perdonan la aleatoriedad que parece un error.
+
+**¿Puedo provocar un solo rayo sin iniciar una tormenta completa?**
+En la mayoría de los sistemas, sí: fuerza la intensidad de la tormenta hasta su umbral, garantiza la tirada y define un objetivo explícito. La clave es restaurar tus valores originales después, para que la anulación no se filtre a la jugabilidad normal.
+
+**¿Por qué mis rayos nunca impactan nada?**
+La causa más común es una comprobación de objetivo válido fallida. Si no existe ningún punto de impacto legal dentro del alcance, muchos sistemas descartan la tirada en silencio en lugar de reintentar. Verifica tus reglas de objetivo antes de asumir que la tormenta está rota.
+
+**¿Con qué frecuencia deberían caer rayos en un sandbox meteorológico?**
+Eso depende de la intención. Para ambiente, los rayos poco frecuentes con un audio potente tienen más peso. Para un encuentro centrado en el peligro, funcionan mejor impactos más frecuentes con avisos claros. Elijas lo que elijas, añade un enfriamiento: la queja más frecuente en reportes de la comunidad sobre los rayos en un sandbox meteorológico es que nunca dan tregua.
+
+## Conclusión
+
+Los rayos son el momento en que un sandbox meteorológico demuestra que en realidad está simulando algo. Construye una curva de carga, condiciónala con una comprobación de probabilidad justa, asegúrate de que los rayos tengan objetivos legales, dale a las secuelas al menos un resultado útil y limita todo el conjunto para que no se te escape de las manos. Si haces eso, tus tormentas dejarán de ser ruido de fondo y empezarán a ser la razón por la que los jugadores miran el cielo antes de salir.

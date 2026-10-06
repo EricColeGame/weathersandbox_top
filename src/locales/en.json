@@ -9,7 +9,14 @@
   "nav": {
     "home": "Home",
     "menu": "Menu",
-    "toggleTheme": "Toggle theme"
+    "toggleTheme": "Toggle theme",
+    "guide": "Guide",
+    "mechanics": "Mechanics",
+    "controls": "Controls",
+    "platforms": "Platforms",
+    "versions": "Versions",
+    "community": "Community",
+    "roblox": "Roblox"
   },
   "home": {
     "meta": {
@@ -421,7 +428,34 @@
       "secondary": "Play on Roblox"
     }
   },
-  "bosses": {},
+  "guide": {
+    "overviewTitle": "Weather Sandbox Guides",
+    "overviewDescription": "Start with the weather sandbox beginner guide, then follow step-by-step tutorials for storms, tornadoes, and hurricanes."
+  },
+  "mechanics": {
+    "overviewTitle": "Weather Sandbox Mechanics",
+    "overviewDescription": "Understand how the weather sandbox simulates tornadoes, supercells, hurricanes, lightning, radar, and timelapse playback."
+  },
+  "controls": {
+    "overviewTitle": "Weather Sandbox Controls",
+    "overviewDescription": "Learn the weather sandbox control scheme, tune the settings panel, and play comfortably on desktop and mobile."
+  },
+  "platforms": {
+    "overviewTitle": "Weather Sandbox Platforms",
+    "overviewDescription": "Check where to download the weather sandbox, which devices and app versions are supported, and how to play online for free."
+  },
+  "versions": {
+    "overviewTitle": "Weather Sandbox Versions",
+    "overviewDescription": "Compare weather sandbox versions, including the 2D and 3D builds, the extra edition, v3, and old version downloads."
+  },
+  "community": {
+    "overviewTitle": "Weather Sandbox Community",
+    "overviewDescription": "Find the official weather sandbox Discord, Reddit, GitHub, and website to share creations and get help."
+  },
+  "roblox": {
+    "overviewTitle": "Weather Sandbox Roblox",
+    "overviewDescription": "Explore the weather sandbox Roblox experience, its gameplay loop, and a dedicated Roblox guide for new players."
+  },
   "shared": {
     "wikiNavigation": "Wiki Navigation",
     "activeCodes": "Active Codes",
@@ -452,9 +486,9 @@
     "officialYoutube": "Official YouTube",
     "vvBuilder": "Weather Sandbox Tools",
     "beginnerGuide": "Beginner Guide",
-    "raceGuides": "Race Guides",
-    "bossGuides": "Boss Guides",
-    "buildGuide": "Build Guide",
+    "mechanicsGuides": "Weather Mechanics",
+    "controlsGuides": "Controls & Settings",
+    "platformsGuides": "Platforms & Download",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
   }

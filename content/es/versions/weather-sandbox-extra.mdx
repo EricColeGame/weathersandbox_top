@@ -1,0 +1,126 @@
+export const metadata = {
+  title: "Weather Sandbox Extra: Versiones, complementos y cómo elegir la compilación adecuada",
+  description: "Compara versiones de Weather Sandbox Extra, complementos y compilaciones por plataforma. Descubre qué funciones importan para simulación, pruebas y juego, además de consejos de configuración.",
+  category: "versions",
+  date: "2026-10-06",
+}
+
+## Qué hace realmente un sandbox meteorológico
+
+Pocas cosas rompen la inmersión más rápido que un clima que nunca cambia, y ese es exactamente el vacío que un nivel extra de sandbox meteorológico está diseñado para llenar. Un sandbox meteorológico te da control directo sobre temperatura, viento, precipitación, presión y cobertura de nubes, y luego te permite ver las consecuencias propagarse por tu mundo, tu modelo o tu entorno de pruebas. Ya sea que estés creando un nivel de juego, validando una canalización de pronóstico o simplemente tengas curiosidad por saber cómo se organiza una tormenta, el control adicional de una compilación extra de sandbox meteorológico suele ser lo que separa una novedad de una herramienta genuina.
+
+En esencia, un sandbox consiste en eliminar las barandillas. En lugar de aceptar lo que decida hacer el cielo predeterminado, tú mismo ajustas los controles. La mayoría de las compilaciones organizan esos controles en unas pocas familias:
+
+- **Termodinámica** — temperatura, humedad, punto de rocío y gradientes térmicos
+- **Dinámica** — velocidad del viento, dirección, ráfagas y cizalladura vertical
+- **Humedad** — lluvia, nieve, aguanieve, granizo y densidad de nubes
+- **Presión y frentes** — centros de alta y baja presión, vaguadas y límites
+- **Tiempo** — pausa, rebobinado, avance rápido y líneas temporales programadas
+
+El valor de un sandbox no es el realismo por sí mismo. Es la repetibilidad. Cuando puedes mantener todas las variables constantes excepto una, de verdad puedes aprender algo, o lanzar una función sin adivinar.
+
+## Versiones de Weather Sandbox Extra de un vistazo
+
+Los nombres de las versiones varían muchísimo entre productos, pero los niveles en sí tienden a seguir un patrón conocido. Una compilación base cubre lo esencial. Una edición extra de sandbox meteorológico amplía el rango de parámetros, añade gestión de escenarios y, por lo general, abre la puerta a scripts o compatibilidad con mods.
+
+| Nivel | Lo que suele incluir | Ideal para | Ojo con |
+|---|---|---|---|
+| Sandbox base / estándar | Controles básicos de temperatura, viento, lluvia y nubes | Demos rápidas, trastear de forma casual | Poca profundidad de parámetros, pocas ranuras guardadas |
+| Nivel extra / ampliado | Rangos más amplios, tipos adicionales de precipitación, perfiles con nombre, compartir | Creadores, educadores, modders | Instalación más grande, curva de aprendizaje más pronunciada |
+| Sandbox para desarrolladores / API | Acceso por scripts, endpoints simulados, ejecuciones por lotes | Probar integraciones antes de producción | Requiere soltura con programación |
+| Compilación con mods de la comunidad | Paquetes meteorológicos creados por usuarios, shaders, ajustes de física | Trasteadores a largo plazo | Deriva de compatibilidad entre versiones |
+
+La diferencia práctica entre niveles rara vez es una única función destacada. Es la acumulación de pequeñas comodidades —una línea base guardada, un escenario compartible, un deslizador más amplio— que en conjunto cambian tu forma de trabajar.
+
+## Base vs. Extra: qué funciones justifican la mejora
+
+Si estás decidiendo si la edición ampliada merece tu tiempo, compara ambas cara a cara en lugar de leer textos de marketing.
+
+| Función | Compilación base típica | Compilación extra típica de sandbox meteorológico |
+|---|---|---|
+| Control de temperatura | Valor global único | Valores por capas con herramientas de gradiente |
+| Modelado del viento | Una capa superficial | Bandas multicapa con cizalladura por altitud |
+| Tipos de precipitación | Lluvia y nieve | Lluvia, nieve, aguanieve, granizo, lluvia engelante |
+| Guardar/cargar escenarios | Una o dos ranuras | Perfiles con nombre con importación/exportación |
+| Importación de datos históricos | Poco común | Común |
+| Automatización o scripts | Normalmente ausente | Incluida con frecuencia |
+| Coste de hardware | Ligero | Moderado a alto |
+
+Una regla útil: mejora cuando te encuentres luchando contra los límites de la compilación base, no antes. Si solo ajustas un deslizador y observas cómo llegan las nubes, el nivel estándar es más que suficiente. Si estás reproduciendo un evento específico, enseñando una lección o probando cómo se comporta un sistema bajo estrés, la capa adicional de control se amortiza rápidamente.
+
+## Compilaciones por plataforma y soporte de versiones
+
+El mismo sandbox meteorológico puede comportarse de forma muy distinta según dónde se ejecute. Las versiones por plataforma a menudo se actualizan en calendarios separados, y la paridad de funciones no está garantizada.
+
+| Plataforma | Profundidad de control | Puntos fuertes | Notas |
+|---|---|---|---|
+| Escritorio (PC, Mac, Linux) | Máxima | Mods, scripts, mapas grandes | La mejor opción para simulación pesada |
+| Consola | Moderada | Listo para jugar, rendimiento estable | El soporte de mods suele ser limitado o inexistente |
+| Móvil | Básica | Comprobaciones rápidas sobre la marcha | Interfaz simplificada, sesiones más cortas |
+| Basado en navegador | Ligera | Acceso instantáneo, demos para clase | Depende de la calidad de la conexión |
+| Plugins para motores de juego | Alta | Integrado en tu propio proyecto | Bloqueado a las versiones del motor |
+
+Los informes de la comunidad señalan una cosa de forma constante: cuando actualices un sandbox, actualiza todo lo que dependa de él al mismo tiempo. Los mods, plugins y archivos de escenario creados para una versión anterior pueden cargarse incorrectamente o perder parámetros en silencio. Si tienes un proyecto en curso, terminarlo con la versión con la que empezaste suele ser más seguro que perseguir la compilación más reciente a mitad de camino.
+
+## Modos de simulación que puedes ejecutar
+
+Un buen sandbox meteorológico es en realidad varias herramientas compartiendo una misma interfaz. Saber qué modo necesitas te ahorra horas.
+
+| Modo | Qué hace | Bueno para | Entrada típica |
+|---|---|---|---|
+| En vivo / tiempo real | Refleja las condiciones actuales | Práctica de nowcasting | Fuentes públicas de observación |
+| Pronóstico | Avanza en el tiempo | Planificación, enseñanza | Salida de modelos |
+| Repetición histórica | Reconstruye eventos pasados | Estudios de casos, formación | Registros archivados |
+| Escenario personalizado | Tú defines cada variable | Pruebas de estrés, narrativa | Tus propias entradas |
+
+Muchos creadores basan sus escenarios en datos de observación reales, como [los pronósticos y observaciones públicas del Servicio Meteorológico Nacional](https://www.weather.gov/), lo que mantiene un evento simulado anclado a algo que ocurrió de verdad. Otros prefieren la invención pura —una tormenta ficticia en una costa ficticia— porque les permite llevar los extremos al límite sin preocuparse por la precisión.
+
+El error más común en los cuatro modos es la escala. Un sandbox ajustado para una sola manzana de una ciudad no se comportará de forma sensata cuando lo extiendas por un continente. Elige primero tu dominio y luego ajusta los parámetros para que coincidan.
+
+## Configurar una compilación extra de sandbox meteorológico
+
+La configuración es donde ocurren la mayoría de las frustraciones, y casi todas son evitables. Sigue estos pasos en orden.
+
+| Paso | Acción | Por qué importa |
+|---|---|---|
+| 1 | Confirma que tu compilación coincide con tu plataforma y versión | Las compilaciones que no coinciden son la principal causa de fallos de carga |
+| 2 | Empieza desde un preajuste, no desde una hoja en blanco | Los preajustes te enseñan las relaciones entre parámetros |
+| 3 | Define unidades y zona horaria primero | Mezclar métrico e imperial a mitad de proyecto causa errores silenciosos |
+| 4 | Prueba el margen de rendimiento desde el principio | Los efectos meteorológicos son costosos; encuentra el techo antes de construir |
+| 5 | Guarda un perfil de línea base | Te da un estado conocido y funcional al que volver |
+| 6 | Añade los extras gradualmente | Un cambio a la vez mantiene clara la causa y el efecto |
+
+Dos hábitos separan a quienes disfrutan de su sandbox de quienes lo abandonan. Primero, nombra tus perfiles de forma descriptiva: "tormenta-costera-v2" es mejor que "test3". Segundo, lleva un breve registro de texto de lo que cambiaste y cuándo. Cuando un escenario deje de comportarse bien, ese registro es el camino más rápido de vuelta a un estado funcional.
+
+## Consejos prácticos y trampas reportadas por la comunidad
+
+La experiencia de los jugadores y los informes de la comunidad apuntan a un puñado de problemas recurrentes que conviene conocer antes de dedicar horas.
+
+- **No pongas todos los deslizadores al máximo a la vez.** Los valores extremos interactúan de forma inestable y pueden producir resultados que parecen errores, pero en realidad son física.
+- **Vigila tu tasa de fotogramas, no solo tus ajustes.** Un sandbox que se entrecorta rompe el bucle de retroalimentación del que necesitas aprender.
+- **Haz copia de seguridad de los archivos de escenario antes de actualizaciones importantes.** Las migraciones de versión no siempre son limpias, sobre todo con compilaciones modificadas.
+- **Lee las notas de la versión para tu nivel, no las generales.** Las notas de la compilación base a menudo omiten cambios que afectan a funciones del nivel extra.
+- **Prueba primero en el mapa más pequeño.** Un escenario que funciona en un dominio pequeño puede fallar por completo a escalas mayores.
+- **Únete a los foros de la comunidad de tu compilación específica.** Las soluciones para una versión con frecuencia rompen otra.
+
+Sobre todo, trata el sandbox como un laboratorio, no como un juguete. El sentido del clima controlado es que puedes hacer una pregunta, cambiar una variable y obtener una respuesta en la que confías.
+
+## Preguntas frecuentes
+
+**¿Es más difícil aprender una compilación extra de sandbox meteorológico que la versión base?**
+
+Por lo general, sí, pero no de forma dramática. El nivel extra añade parámetros y herramientas en lugar de reemplazar los fundamentos. Si ya entiendes temperatura, viento y humedad, los controles ampliados se leen como una extensión natural. La mayoría de las personas se sienten cómodas tras unas pocas sesiones.
+
+**¿Puedo ejecutar un sandbox meteorológico en un portátil?**
+
+Muchas compilaciones de escritorio funcionan bien en hardware modesto, especialmente con tamaños de mapa pequeños y menor calidad de efectos. Las funciones más pesadas —viento multicapa, precipitación con muchas partículas y repeticiones históricas largas— son donde cae el rendimiento. Prueba el margen desde el principio para conocer tus límites antes de construir en torno a ellos.
+
+**¿Las versiones entre plataformas se mantienen sincronizadas?**
+
+No de forma fiable. Las compilaciones de escritorio suelen recibir actualizaciones primero, mientras que las versiones de consola y móvil van por detrás. Si colaboras con otras personas, acordad una versión antes de empezar y evitad actualizar hasta que el proyecto termine.
+
+**¿Sirve un nivel extra de sandbox meteorológico para algo más allá de los juegos?**
+
+Sin duda. Los educadores los usan para demostrar procesos atmosféricos, los desarrolladores usan entornos sandbox para probar integraciones dependientes del clima de forma segura, y los investigadores los usan para explorar cómo pequeños cambios de parámetros se propagan por un sistema. La habilidad se transfiere; la herramienta es solo el punto de entrada.
+
+Empieza con el nivel que coincida con tu ambición actual, aprende sus límites y mejora solo cuando esos límites empiecen a costarte tiempo. Ese enfoque mantiene útil una compilación extra de sandbox meteorológico en lugar de abrumadora.

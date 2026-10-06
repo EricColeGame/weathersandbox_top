@@ -1,0 +1,121 @@
+export const metadata = {
+  title: "Mecánicas del timelapse en sandbox meteorológico: cómo funcionan las tormentas dinámicas, los ciclos y la captura en time-lapse",
+  description: "Un análisis profundo de las mecánicas del timelapse en sandbox meteorológico — cómo los juegos sandbox simulan tormentas, estaciones y ciclos, y cómo capturarlos fotograma a fotograma.",
+  category: "mechanics",
+  date: "2026-10-06",
+}
+
+## Por qué un sandbox meteorológico es más que un simple interruptor de lluvia
+
+Un sandbox meteorológico te da control directo sobre el cielo: generas una tormenta eléctrica, arrastras un frente frío por un valle, aceleras un ciclo estacional completo y luego grabas todo como un timelapse. Esa combinación de simulación y control libre es lo que separa un verdadero sandbox meteorológico de un juego que simplemente aparece y desvanece una textura de lluvia. Si alguna vez has querido ver pasar una década de clima en noventa segundos, vale la pena entender las mecánicas detrás de ese momento. Una vez que sabes cómo funciona internamente la simulación, cómo captura fotogramas la cámara y dónde se sincronizan ambas cosas, tus clips de timelapse en sandbox meteorológico dejan de parecer aleatorios y empiezan a parecer deliberados.
+
+El atractivo es tanto práctico como artístico. Los timelapses revelan patrones que el juego en tiempo real oculta: cómo se acumula la niebla antes del amanecer, cómo se desplazan y disipan las células de tormenta, cómo descienden las líneas de nieve por una montaña a medida que bajan las temperaturas. Ya seas un creador que hace cortos cinematográficos, un constructor que somete un mapa a pruebas de estrés o un jugador que simplemente disfruta viendo cómo el clima simulado hace lo suyo, las mecánicas son las mismas. Esta guía desglosa los sistemas, el flujo de trabajo de captura y los ajustes que más importan.
+
+## Mecánicas centrales dentro de un sandbox meteorológico
+
+La mayoría de los motores sandbox dividen el clima en un puñado de variables independientes que alimentan un bucle de simulación compartido. Entender qué controla cada perilla es la diferencia entre «llovió» y «yo dirigí esa tormenta».
+
+| Variable | Qué controla | Comportamiento típico del sandbox |
+| --- | --- | --- |
+| Densidad de nubes | Cobertura del cielo y difusión de la luz | Control deslizante o comando de consola, a menudo por capas de altitud |
+| Tipo de precipitación | Lluvia, nieve, granizo, aguanieve | Ligado a umbrales de temperatura, a veces forzado manualmente |
+| Vector de viento | Dirección y velocidad de deriva de partículas | Afecta nubes, ángulo de lluvia, humo y follaje |
+| Curva de temperatura | Calor diurno/nocturno y estacional | Controlada por un reloj, o sobrescrita con un valor fijo |
+| Presión / célula de tormenta | Punto de aparición e intensidad de tormentas | Procedimental, guionizado o totalmente activado por el jugador |
+| Escala temporal | Qué tan rápido avanza la simulación | El ajuste más importante para el trabajo de timelapse |
+
+La idea mecánica clave es que la mayoría de los motores separan la **velocidad de simulación** de la **tasa de fotogramas de renderizado**. El mundo puede avanzar diez minutos de juego por segundo real mientras tu GPU sigue dibujando sesenta fotogramas por segundo. Ese desacoplamiento es exactamente lo que hace posible un timelapse en sandbox meteorológico: la simulación se acelera, la cámara se mantiene firme y la herramienta de captura graba un flujo uniforme de fotogramas que después se reproduce como una secuencia comprimida.
+
+Otra mecánica que vale la pena señalar es la **persistencia**. En un buen sandbox meteorológico, el estado del clima se guarda, no solo se muestra. Las nubes tienen posiciones, las tormentas tienen duración y la nieve se acumula en las superficies en lugar de desaparecer cuando termina la tormenta. La persistencia es lo que da continuidad a un timelapse; sin ella, tu clip parece una presentación de cielos inconexos.
+
+### Control del sandbox frente al clima procedimental
+
+Algunos sandboxes te dan un panel de control; otros te dan un valor de semilla y dejan que una función de ruido haga el resto. El clima controlado por el jugador es mejor para timelapses guionizados, porque puedes garantizar una tormenta dramática en el momento exacto en que la quieres. El clima procedimental es mejor para capturas largas y naturalistas: un ciclo de varios días en el que realmente no sabes qué va a pasar después. Muchos sandboxes te permiten combinar ambos: sembrar un sistema procedimental y luego empujarlo manualmente cuando una escena necesita un empujón.
+
+## Cómo se captura realmente un timelapse en un sandbox meteorológico
+
+Grabar un timelapse es un proceso por etapas, no un solo botón. Las mecánicas siguen un orden predecible, y saltarse un paso suele ser la razón por la que un clip termina entrecortado o parpadeando.
+
+1. **Bloquea la cámara.** Una cámara estática o controlada por splines elimina la deriva y hace que las nubes sean el único elemento en movimiento.
+2. **Configura la escala temporal.** Aumenta la velocidad de simulación hasta que un segundo real equivalga a varios minutos de juego.
+3. **Fija el intervalo de fotogramas.** Captura un fotograma a un intervalo constante —por ejemplo, cada minuto de juego— en lugar de depender de la grabación en tiempo real.
+4. **Desactiva los efectos dinámicos que rompen la continuidad.** El desenfoque de movimiento, los cambios de profundidad de campo y los saltos agresivos de LOD se perciben como ruido en una secuencia acelerada.
+5. **Ensambla y recambia el tiempo.** Reproduce los fotogramas a una tasa de fotogramas normal para que la simulación acelerada se perciba como movimiento fluido.
+
+| Método de captura | Cómo funciona | Mejor para | Compensaciones |
+| --- | --- | --- | --- |
+| Tecla de captura de pantalla integrada | Fotogramas manuales en momentos elegidos | Clips cortos, dirigidos artísticamente | Tedioso; los errores de sincronización son fáciles |
+| Captura guionizada o con mods | Fotogramas automatizados con temporizador | Ciclos climáticos largos | Requiere configuración y pruebas |
+| Grabación de repetición o demo | El motor registra el flujo de eventos y luego vuelve a renderizar | Tormentas con mucha física | Archivos grandes; tiempo de re-renderizado |
+| Software de captura externo | Graba en tiempo real, acelerado en edición | Creadores casuales | Mucho almacenamiento; el ritmo de fotogramas puede desviarse |
+
+Para quien busca un sandbox con un sistema climático robusto, explorar [la tienda oficial de Steam](https://store.steampowered.com/) y filtrar por las etiquetas de sandbox y simulación sigue siendo la forma más rápida de comparar lo que cada motor ofrece realmente.
+
+### Por qué el intervalo de fotogramas supera a la grabación en tiempo real
+
+La grabación en tiempo real captura lo que sea que el motor renderice en ese momento, lo que significa que una caída de fotogramas durante una tormenta fuerte se convierte en un tartamudeo permanente en tu timelapse. La captura basada en intervalos evita esto por completo: cada fotograma es una instantánea limpia de un estado de simulación específico, y la velocidad de reproducción se decide después en la edición. Si te llevas una sola cosa de esta sección, que sea esta: captura según el reloj de la simulación, no según el reloj de pared.
+
+## Comportamiento del sandbox meteorológico según los géneros de sandbox
+
+No todos los sandboxes meteorológicos tratan el cielo de la misma manera, y el género suele predecir qué tan favorable es el sistema para el timelapse.
+
+| Género | Estilo de control del clima | Atractivo para el timelapse | Ojo con |
+| --- | --- | --- | --- |
+| Constructores de vóxeles | Controlado por comandos, alternancias instantáneas | Tormentas dramáticas y de alto contraste | Saltos repentinos de estado entre fotogramas |
+| Sandboxes de física | Eventos guionizados y objetos destructibles | Caos más clima, muy vistoso | Inestabilidad física a escalas temporales altas |
+| Constructores de ciudades | Zonas climáticas y ciclos estacionales | Patrones a largo plazo y respuesta del tráfico | Ralentización de la simulación a medida que crecen las ciudades |
+| Sims de supervivencia | Día/noche y estaciones procedimentales | Secuencias atmosféricas de desarrollo lento | Cambios de iluminación bruscos al amanecer y al atardecer |
+| Sims de vehículos y vuelo | Clima volumétrico por capas | Hermosos cambios de nubes y visibilidad | Alta carga de GPU en altitudes elevadas |
+
+Los informes de la comunidad apuntan sistemáticamente a la misma compensación: cuanto más detallado físicamente es el clima, más costoso resulta simularlo a alta velocidad. Un sandbox de vóxeles con lluvia de partículas simple puede funcionar a escalas temporales extremas sin quejarse, mientras que un sistema de nubes volumétricas puede necesitar que se reduzca la escala temporal para mantener estable la simulación.
+
+## Consejos para obtener metraje de timelapse más limpio en un sandbox meteorológico
+
+Los buenos timelapses son, en su mayoría, una cuestión de disciplina con los ajustes. La siguiente hoja de referencia refleja aquello en lo que suelen coincidir los creadores experimentados.
+
+| Ajuste | Conservador | Cinematográfico | Notas |
+| --- | --- | --- | --- |
+| Intervalo de fotogramas | Cada minuto de juego | Cada 10–30 segundos de juego | Los intervalos más cortos suavizan tormentas rápidas |
+| Duración del clip | 20–30 segundos | 60–90 segundos | Los clips más largos necesitan un arco visual más fuerte |
+| Cámara | Trípode fijo | Spline lento u órbita | El movimiento nunca debe competir con el clima |
+| Escala temporal | 5–10x | 20x y más | Prueba la estabilidad antes de comprometerte |
+| Resolución | Coincide con tu línea de tiempo del editor | Sobremuestrea y luego reduce | El sobremuestreo oculta el aliasing en las partículas |
+
+Hábitos adicionales que dan resultado:
+
+- **Explora la escena primero en tiempo real.** Observa un ciclo climático completo a velocidad normal para encontrar el momento más fotogénico.
+- **Ancla un elemento en primer plano.** Un árbol, una torre o un vehículo le da al espectador una referencia fija de la rapidez con que pasa el tiempo.
+- **Captura un poco más.** Graba diez segundos de fotogramas antes y después de tu ventana prevista para tener margen en la edición.
+- **Mantén un mod o preset de iluminación consistente.** Cambiar de shaders a mitad de la captura es la forma más rápida de arruinar la continuidad.
+- **Nombra tus carpetas de fotogramas por día de simulación.** Hace que reensamblar una captura larga sea muchísimo más fácil.
+
+## Problemas comunes y soluciones reportadas por la comunidad
+
+Incluso un sandbox meteorológico bien construido te dará problemas de vez en cuando. Estos son los problemas que aparecen con más frecuencia en los hilos de experiencia de jugadores.
+
+| Síntoma | Causa probable | Solución |
+| --- | --- | --- |
+| Las nubes parpadean entre fotogramas | Anti-aliasing o efectos temporales que se reinician | Desactiva el AA temporal durante la captura |
+| El clima se reinicia a mitad del clip | El autoguardado o la recarga de chunks borra el estado | Amplía el radio de simulación o pausa los autoguardados |
+| El movimiento se ve entrecortado | Intervalos de fotogramas inconsistentes | Cambia a un temporizador guionizado en lugar de capturas manuales |
+| Tamaños de archivo enormes | Fotogramas sin comprimir a alta resolución | Captura con un códec sin pérdida y luego vuelve a codificar |
+| La tormenta nunca llega | La semilla procedimental produce un clima tranquilo | Fuerza el evento manualmente o vuelve a sembrar el mundo |
+
+Vale la pena destacar un informe recurrente de la comunidad: muchos sandboxes vinculan discretamente el clima al chunk cargado o a la región alrededor del jugador. Aleja la cámara de la posición original y la simulación puede reconstruirse en silencio, borrando la tormenta que habías preparado con tanto cuidado. Mantener la cámara cerca de la acción, o ampliar el área cargada antes de empezar, evita la mayoría de estos dolores de cabeza.
+
+## Preguntas frecuentes
+
+**¿Qué es exactamente un sandbox meteorológico?**
+Un sandbox meteorológico es un juego o entorno de simulación donde el jugador puede crear, modificar y observar libremente sistemas climáticos —tormentas, viento, temperatura y estaciones— en lugar de limitarse a experimentar condiciones predefinidas. La parte de «sandbox» significa que no hay un objetivo fijo que gobierne el cielo.
+
+**¿Necesito mods para hacer un timelapse en un sandbox meteorológico?**
+No siempre. Muchos sandboxes incluyen un control de escala temporal, una tecla de captura de pantalla y una consola de comandos meteorológicos, lo cual basta para un clip básico. Los mods y las herramientas de scripting ayudan sobre todo con la captura automatizada de fotogramas durante ciclos largos, donde las capturas manuales se vuelven poco prácticas.
+
+**¿Por qué mi timelapse se ve entrecortado aunque el juego funcione fluido?**
+La falta de fluidez casi siempre proviene de intervalos de fotogramas inconsistentes, no de una tasa de fotogramas baja. Si los fotogramas se capturan con intervalos irregulares en tiempo real, la reproducción se entrecortará sin importar lo potente que sea tu hardware. Captura con un intervalo de simulación fijo y el problema suele desaparecer.
+
+**¿Cuánto debería durar un timelapse en un sandbox meteorológico?**
+La mayoría de los creadores se queda entre 20 y 90 segundos. Los clips más cortos van bien para una única tormenta dramática, mientras que los clips más largos funcionan mejor para arcos estacionales completos, pero cualquier cosa que pase de un minuto necesita una progresión visual clara para mantener la atención.
+
+**¿Puedo capturar cambios climáticos que ocurren a lo largo de años de juego?**
+Sí, siempre que el sandbox conserve su estado climático y puedas subir la escala temporal lo suficiente. La principal limitación es la estabilidad de la simulación: a velocidades muy altas, algunos motores empiezan a omitir o simplificar eventos climáticos, así que prueba ejecuciones cortas antes de comprometerte con una captura larga.

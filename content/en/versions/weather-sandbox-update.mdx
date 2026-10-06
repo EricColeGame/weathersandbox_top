@@ -1,0 +1,119 @@
+export const metadata = {
+  title: "Weather Sandbox Update Guide: What Changed, What's New, and How to Play Smarter",
+  description: "A practical weather sandbox update guide covering new features, patch notes, performance tuning, and how to test changes before they break your saves.",
+  category: "versions",
+  date: "2026-10-06",
+}
+
+## Why a Weather Sandbox Update Deserves Your Attention
+
+A weather sandbox update is rarely just a bug fix. When the entire point of the software is letting you dial in rainfall rate, wind shear, cloud density, and storm intensity, a single change to the simulation core can ripple through every scenario you have saved. A tweak that makes drizzle more believable can quietly turn a carefully balanced hurricane preset into something unrecognizable.
+
+That is exactly why a weather sandbox update is worth ten minutes of reading before you click install. The notes tell you what the developers intended to change, and your own testing tells you what actually changed. When those two things disagree, you want to find out on a throwaway scenario rather than on the project you have been refining for weeks.
+
+This guide is written for anyone who treats these tools as a hobby, a teaching aid, or a creative workspace. It covers how to classify an update, how to decode the language in patch notes, what to back up before you install, and how to separate reliable community reports from noise.
+
+## What a Weather Sandbox Update Usually Changes
+
+Most updates fall into a handful of recognizable buckets. Knowing which bucket you are dealing with tells you how much testing you will need afterward, and how nervous you should be about your existing saves.
+
+| Update type | What it typically touches | Check first | Risk to your setups |
+|---|---|---|---|
+| Feature release | New weather systems, new editing tools | Release notes, tutorials | Medium |
+| Tuning / balance | Rates, thresholds, physics constants | Behavior of saved scenarios | Medium to high |
+| Performance patch | Rendering, level of detail, simulation tick | Frame rate, load times | Low |
+| Quality-of-life | Menus, presets, save management | Hotkeys, UI layout | Low |
+| Mod or API change | Scripting hooks, asset formats | Mod compatibility | High |
+| Hotfix | Crashes, save corruption, freezes | Known-issues list | Low |
+
+Feature releases are the updates people talk about, but tuning patches are the ones that quietly reshape your work. If the developers adjust how moisture accumulates or how gusts scale with terrain, every preset you built on top of the old numbers is now operating on different physics. That is not necessarily bad — it may be more realistic — but it is a change you should verify rather than assume.
+
+Performance patches deserve a closer look than their boring name suggests. Optimization work sometimes reduces particle counts, simplifies cloud rendering, or shortens the distance at which detailed weather is drawn. The frame rate goes up, and the sky subtly gets flatter. If visual fidelity is the reason you use a weather sandbox in the first place, compare a screenshot before and after.
+
+Mod and API changes carry the highest risk. When a scripting interface shifts, community-made content can break instantly and silently. A weather sandbox update that adds a powerful new hook may simultaneously deprecate the one your favorite plugin depends on.
+
+## How to Read Patch Notes Without Missing the Important Parts
+
+Patch notes are written for speed, not clarity. A few words carry a lot of weight, and the difference between "tuned" and "reworked" can be the difference between a minor annoyance and a broken project.
+
+| Term in the notes | What it usually means | Why you should care |
+|---|---|---|
+| "Tuned" | Small numeric adjustment | Presets may drift slightly |
+| "Reworked" | A system was replaced | Old setups may behave differently |
+| "Optimized" | Performance work | Watch for reduced visual detail |
+| "Fixed an issue where…" | A specific bug was resolved | Check whether you relied on old behavior |
+| "Known issue" | A problem ships unfixed | Decide whether to wait |
+| "Breaking change" | Incompatible with previous versions | Back up before installing |
+| "Deprecated" | Slated for removal later | Start planning a migration |
+
+Two habits make patch notes far more useful. First, read the known-issues section before the feature list — it tells you what the developers already know is rough, which saves you from filing a duplicate report. Second, skim for the words "all" and "every." A change that applies globally, such as a new default for precipitation intensity, will affect every scenario you own, not just the ones that use that feature explicitly.
+
+Keep a short personal changelog too. When you update, write down the version, the date, and one sentence about what feels different. Six months later, that note is the fastest way to trace why a scenario stopped behaving the way you remember.
+
+## Before You Install: A Weather Sandbox Update Checklist
+
+Installing is the easy part. Preparing is what protects your work. Run through these steps in order, and you will rarely lose more than a few minutes to a bad patch.
+
+| Step | Action | Why it matters |
+|---|---|---|
+| 1 | Back up saves, presets, and mod folders | Recovery is impossible without a copy |
+| 2 | Record your current version number | Needed to roll back or compare |
+| 3 | Read the known-issues list | Avoids surprise crashes mid-project |
+| 4 | Check whether your mods are compatible | Broken mods can prevent startup |
+| 5 | Test on a duplicate scenario first | Protects your main project |
+| 6 | Re-check graphics and simulation settings | Updates often reset or re-scale them |
+| 7 | Confirm hotkeys and UI layout | Muscle memory breaks silently |
+
+Step five is the one most people skip. Duplicate your most important scenario, rename it clearly, and load that copy first. If the weather behaves strangely, you have learned something without damaging the original. If it behaves well, promote the copy and move on.
+
+It also helps to update at a moment when you are not mid-deadline. Updates that arrive during a competition, a class project, or a content deadline force you to troubleshoot under pressure. Waiting a day or two is almost always cheaper than fixing a corrupted workflow.
+
+## Performance and Visual Trade-Offs After an Update
+
+A weather sandbox update frequently changes default settings, either because new features need headroom or because the developers found a better balance. Revisit your configuration after every major patch instead of assuming your old profile still applies.
+
+| Setting | Visual gain | Performance cost | Sensible starting point |
+|---|---|---|---|
+| Volumetric cloud detail | High | High | Medium |
+| Precipitation particle density | Medium | Medium | Medium |
+| Shadow resolution | Medium | Medium to high | Medium |
+| Simulation tick rate | Low visually, high for accuracy | High | Match to your hardware |
+| Radar or overlay refresh | Low | Low | High |
+| Wind field visualization | Medium | Low to medium | On |
+
+A repeatable benchmark is more useful than a one-time impression. Build a small test scenario with a fixed storm, fixed camera position, and fixed time of day. Run it after every update and note the frame rate and the overall feel. Over several patches, that single scenario becomes a reliable record of how the simulation has evolved.
+
+If performance drops after an update, change one setting at a time. Adjusting five sliders at once tells you nothing about which one mattered. Start with the most expensive item on the list — usually cloud detail or simulation tick rate — and work downward until the frame rate stabilizes.
+
+## Community Reports and Official Notes: How to Use Both
+
+Official documentation gives you facts. Community reports give you texture. You need both, but they serve different purposes and should never be treated as interchangeable.
+
+| Source | Strength | Weakness | Best use |
+|---|---|---|---|
+| Official patch notes | Authoritative and complete | Terse, sometimes promotional | Establishing baseline facts |
+| Developer posts and streams | Explains intent and direction | Not always detailed | Understanding design goals |
+| Community reports | Surfaces real edge cases fast | Unverified, sometimes emotional | Finding reproducible bugs |
+| Video breakdowns | Shows before-and-after clearly | Can go stale quickly | Seeing changes in motion |
+
+When you read a player experience thread claiming that a storm system is "completely broken," ask three questions: what hardware, what settings, and what scenario. A report without those details is an anecdote, not evidence. A report with them is genuinely valuable and often reaches the developers faster than a formal ticket.
+
+For patch notes themselves, the most dependable place to look is the distribution platform's news feed. If your weather sandbox is sold through [Steam's official storefront](https://store.steampowered.com/), each product page carries its own announcement history, which is usually updated before or alongside the build going live. Bookmark that page and check it after any automatic update.
+
+One practical tip: keep a separate browser bookmark folder for developer announcements, community bug threads, and mod compatibility lists. When an update lands, you can sweep all three in a few minutes instead of searching from scratch while your project sits half-broken.
+
+## FAQ
+
+**How often should I expect a weather sandbox update?**
+It varies widely by project and by stage of development. Tools in active early access tend to ship smaller, more frequent patches, while mature releases may push a handful of larger updates per year plus occasional hotfixes. Rather than guessing, follow the official announcement channel for your specific tool and enable update notifications.
+
+**Will a weather sandbox update break my saved scenarios?**
+Sometimes, but usually in small ways rather than catastrophic ones. Saves rarely fail to load; instead, the weather inside them may behave differently because the underlying physics or defaults changed. Backing up before installing and testing on a duplicate scenario is the simplest protection.
+
+**Should I install immediately or wait a few days?**
+If you are mid-project, waiting is usually smarter. Give the community a day or two to surface reproducible problems, then read the known-issues list before you commit. If you are between projects and want the newest features, installing right away is low risk as long as your backups are current.
+
+**How do I report a bug after a weather sandbox update?**
+Reproduce it at least twice, then capture your version number, hardware, graphics settings, and the exact steps that trigger it. A short clip plus those details is far more actionable than a description alone. Post it through the official channel if one exists, and mirror it in the community forum so other users can confirm whether they see the same thing.
+
+Treat every weather sandbox update as a small experiment rather than a routine download. Read the notes, protect your work, test one variable at a time, and keep a written record of what changed. Do that consistently, and updates become an advantage instead of a disruption.

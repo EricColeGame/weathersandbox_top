@@ -1,0 +1,119 @@
+export const metadata = {
+  title: "Guia de Atualização do Sandbox de Clima: O Que Mudou, O Que Há de Novo e Como Jogar de Forma Mais Inteligente",
+  description: "Um guia prático de atualização do sandbox de clima que aborda novos recursos, notas de patch, ajuste de desempenho e como testar mudanças antes que elas quebrem seus saves.",
+  category: "versions",
+  date: "2026-10-06",
+}
+
+## Por Que uma Atualização do Sandbox de Clima Merece Sua Atenção
+
+Uma atualização do sandbox de clima raramente é apenas uma correção de bug. Quando o objetivo central do software é permitir que você ajuste taxa de chuva, cisalhamento do vento, densidade de nuvens e intensidade de tempestades, uma única mudança no núcleo da simulação pode repercutir em todos os cenários que você salvou. Um ajuste que torna a garoa mais verossímil pode, silenciosamente, transformar um preset de furacão cuidadosamente balanceado em algo irreconhecível.
+
+É exatamente por isso que uma atualização do sandbox de clima vale dez minutos de leitura antes de você clicar em instalar. As notas dizem o que os desenvolvedores pretendiam mudar, e seus próprios testes dizem o que realmente mudou. Quando essas duas coisas divergem, você quer descobrir isso em um cenário descartável, e não no projeto que vem refinando há semanas.
+
+Este guia é para quem trata essas ferramentas como hobby, recurso didático ou espaço criativo. Ele aborda como classificar uma atualização, como decifrar a linguagem das notas de patch, o que fazer backup antes de instalar e como separar relatos confiáveis da comunidade de ruído.
+
+## O Que uma Atualização do Sandbox de Clima Costuma Mudar
+
+A maioria das atualizações se encaixa em alguns grupos reconhecíveis. Saber com qual grupo você está lidando indica quanto teste será necessário depois e quão nervoso você deve ficar em relação aos seus saves existentes.
+
+| Tipo de atualização | O que ela costuma afetar | Verifique primeiro | Risco para suas configurações |
+|---|---|---|---|
+| Lançamento de recurso | Novos sistemas de clima, novas ferramentas de edição | Notas de lançamento, tutoriais | Médio |
+| Ajuste / balanceamento | Taxas, limites, constantes físicas | Comportamento de cenários salvos | Médio a alto |
+| Patch de desempenho | Renderização, nível de detalhe, tick de simulação | Taxa de quadros, tempos de carregamento | Baixo |
+| Qualidade de vida | Menus, presets, gerenciamento de saves | Atalhos, layout da interface | Baixo |
+| Mudança em mod ou API | Ganchos de script, formatos de assets | Compatibilidade de mods | Alto |
+| Hotfix | Travamentos, corrupção de save, congelamentos | Lista de problemas conhecidos | Baixo |
+
+Lançamentos de recursos são as atualizações das quais as pessoas falam, mas patches de ajuste são os que silenciosamente remodelam seu trabalho. Se os desenvolvedores ajustam como a umidade se acumula ou como as rajadas escalam com o terreno, todo preset que você criou com base nos números antigos agora opera com uma física diferente. Isso não é necessariamente ruim — pode ser mais realista —, mas é uma mudança que você deve verificar em vez de presumir.
+
+Patches de desempenho merecem uma olhada mais atenta do que seu nome entediante sugere. O trabalho de otimização às vezes reduz a contagem de partículas, simplifica a renderização de nuvens ou encurta a distância em que o clima detalhado é desenhado. A taxa de quadros sobe, e o céu fica sutilmente mais plano. Se a fidelidade visual é a razão pela qual você usa um sandbox de clima, compare uma captura de tela antes e depois.
+
+Mudanças em mods e APIs carregam o maior risco. Quando uma interface de script muda, conteúdo feito pela comunidade pode quebrar instantânea e silenciosamente. Uma atualização do sandbox de clima que adiciona um novo gancho poderoso pode, ao mesmo tempo, tornar obsoleto aquele do qual seu plugin favorito depende.
+
+## Como Ler Notas de Patch Sem Perder as Partes Importantes
+
+As notas de patch são escritas para velocidade, não para clareza. Algumas palavras carregam muito peso, e a diferença entre "ajustado" e "reformulado" pode ser a diferença entre um pequeno incômodo e um projeto quebrado.
+
+| Termo nas notas | O que ele geralmente significa | Por que você deve se importar |
+|---|---|---|
+| "Ajustado" | Pequeno ajuste numérico | Presets podem variar ligeiramente |
+| "Reformulado" | Um sistema foi substituído | Configurações antigas podem se comportar de modo diferente |
+| "Otimizado" | Trabalho de desempenho | Fique atento à redução de detalhes visuais |
+| "Corrigido um problema em que…" | Um bug específico foi resolvido | Verifique se você dependia do comportamento antigo |
+| "Problema conhecido" | Um problema é lançado sem correção | Decida se vale esperar |
+| "Mudança disruptiva" | Incompatível com versões anteriores | Faça backup antes de instalar |
+| "Obsoleto" | Programado para remoção futura | Comece a planejar uma migração |
+
+Dois hábitos tornam as notas de patch muito mais úteis. Primeiro, leia a seção de problemas conhecidos antes da lista de recursos — ela diz o que os desenvolvedores já sabem que está instável, o que evita que você abra um relatório duplicado. Segundo, procure pelas palavras "todos" e "cada". Uma mudança que se aplica globalmente, como um novo padrão para intensidade de precipitação, afetará todos os cenários que você possui, não apenas os que usam aquele recurso explicitamente.
+
+Mantenha também um pequeno changelog pessoal. Quando atualizar, anote a versão, a data e uma frase sobre o que parece diferente. Seis meses depois, essa nota é a forma mais rápida de rastrear por que um cenário deixou de se comportar como você lembra.
+
+## Antes de Instalar: Um Checklist de Atualização do Sandbox de Clima
+
+Instalar é a parte fácil. Preparar é o que protege seu trabalho. Siga estas etapas na ordem e raramente perderá mais do que alguns minutos com um patch ruim.
+
+| Etapa | Ação | Por que importa |
+|---|---|---|
+| 1 | Faça backup de saves, presets e pastas de mods | A recuperação é impossível sem uma cópia |
+| 2 | Registre o número da sua versão atual | Necessário para reverter ou comparar |
+| 3 | Leia a lista de problemas conhecidos | Evita travamentos inesperados no meio do projeto |
+| 4 | Verifique se seus mods são compatíveis | Mods quebrados podem impedir a inicialização |
+| 5 | Teste primeiro em um cenário duplicado | Protege seu projeto principal |
+| 6 | Verifique novamente as configurações gráficas e de simulação | Atualizações frequentemente as redefinem ou reescalam |
+| 7 | Confirme atalhos e layout da interface | A memória muscular quebra silenciosamente |
+
+A etapa cinco é a que a maioria das pessoas pula. Duplique seu cenário mais importante, renomeie-o claramente e carregue essa cópia primeiro. Se o clima se comportar de forma estranha, você aprendeu algo sem danificar o original. Se se comportar bem, promova a cópia e siga em frente.
+
+Também ajuda atualizar em um momento em que você não está no meio de um prazo. Atualizações que chegam durante uma competição, um projeto de aula ou um prazo de conteúdo forçam você a solucionar problemas sob pressão. Esperar um ou dois dias quase sempre é mais barato do que consertar um fluxo de trabalho corrompido.
+
+## Compromissos de Desempenho e Visual Após uma Atualização
+
+Uma atualização do sandbox de clima frequentemente altera as configurações padrão, seja porque novos recursos precisam de folga, seja porque os desenvolvedores encontraram um equilíbrio melhor. Revise sua configuração após cada patch importante em vez de presumir que seu perfil antigo ainda se aplica.
+
+| Configuração | Ganho visual | Custo de desempenho | Ponto de partida sensato |
+|---|---|---|---|
+| Detalhe volumétrico das nuvens | Alto | Alto | Médio |
+| Densidade de partículas de precipitação | Médio | Médio | Médio |
+| Resolução de sombras | Médio | Médio a alto | Médio |
+| Taxa de tick da simulação | Baixo visualmente, alto para precisão | Alto | Ajuste ao seu hardware |
+| Atualização de radar ou overlay | Baixo | Baixo | Alto |
+| Visualização do campo de vento | Médio | Baixo a médio | Ativada |
+
+Um benchmark repetível é mais útil do que uma impressão única. Crie um pequeno cenário de teste com uma tempestade fixa, posição de câmera fixa e hora do dia fixa. Execute-o após cada atualização e anote a taxa de quadros e a sensação geral. Ao longo de vários patches, esse único cenário se torna um registro confiável de como a simulação evoluiu.
+
+Se o desempenho cair após uma atualização, mude uma configuração de cada vez. Ajustar cinco controles deslizantes de uma vez não diz nada sobre qual deles importou. Comece pelo item mais caro da lista — geralmente detalhe de nuvens ou taxa de tick da simulação — e vá descendo até a taxa de quadros se estabilizar.
+
+## Relatos da Comunidade e Notas Oficiais: Como Usar Ambos
+
+A documentação oficial fornece fatos. Relatos da comunidade fornecem textura. Você precisa dos dois, mas eles servem a propósitos diferentes e nunca devem ser tratados como intercambiáveis.
+
+| Fonte | Força | Fraqueza | Melhor uso |
+|---|---|---|---|
+| Notas de patch oficiais | Autoritativas e completas | Sucintas, às vezes promocionais | Estabelecer fatos básicos |
+| Posts e transmissões dos desenvolvedores | Explicam intenção e direção | Nem sempre detalhados | Entender os objetivos de design |
+| Relatos da comunidade | Revelam casos extremos reais rapidamente | Não verificados, às vezes emocionais | Encontrar bugs reproduzíveis |
+| Análises em vídeo | Mostram antes e depois com clareza | Podem ficar desatualizadas rapidamente | Ver mudanças em movimento |
+
+Quando você lê um tópico de experiência de jogador afirmando que um sistema de tempestade está "completamente quebrado", faça três perguntas: qual hardware, quais configurações e qual cenário. Um relato sem esses detalhes é uma anedota, não evidência. Um relato com eles é genuinamente valioso e muitas vezes chega aos desenvolvedores mais rápido do que um ticket formal.
+
+Para as próprias notas de patch, o lugar mais confiável para procurar é o feed de notícias da plataforma de distribuição. Se seu sandbox de clima é vendido pela [loja oficial da Steam](https://store.steampowered.com/), cada página de produto tem seu próprio histórico de anúncios, que geralmente é atualizado antes ou junto com a entrada da build no ar. Marque essa página nos favoritos e confira-a após qualquer atualização automática.
+
+Uma dica prática: mantenha uma pasta de favoritos separada no navegador para anúncios dos desenvolvedores, tópicos de bugs da comunidade e listas de compatibilidade de mods. Quando uma atualização chega, você pode revisar os três em poucos minutos, em vez de procurar do zero enquanto seu projeto fica meio quebrado.
+
+## Perguntas Frequentes
+
+**Com que frequência devo esperar uma atualização do sandbox de clima?**
+Varia muito conforme o projeto e o estágio de desenvolvimento. Ferramentas em acesso antecipado ativo tendem a lançar patches menores e mais frequentes, enquanto lançamentos maduros podem enviar algumas atualizações maiores por ano, além de hotfixes ocasionais. Em vez de adivinhar, siga o canal oficial de anúncios da sua ferramenta específica e ative notificações de atualização.
+
+**Uma atualização do sandbox de clima vai quebrar meus cenários salvos?**
+Às vezes, mas geralmente de maneiras pequenas, e não catastróficas. Saves raramente deixam de carregar; em vez disso, o clima dentro deles pode se comportar de modo diferente porque a física ou os padrões subjacentes mudaram. Fazer backup antes de instalar e testar em um cenário duplicado é a proteção mais simples.
+
+**Devo instalar imediatamente ou esperar alguns dias?**
+Se você está no meio de um projeto, esperar geralmente é mais inteligente. Dê à comunidade um ou dois dias para revelar problemas reproduzíveis, depois leia a lista de problemas conhecidos antes de confirmar. Se você está entre projetos e quer os recursos mais recentes, instalar imediatamente é de baixo risco, desde que seus backups estejam atualizados.
+
+**Como reporto um bug após uma atualização do sandbox de clima?**
+Reproduza-o pelo menos duas vezes e depois capture o número da sua versão, hardware, configurações gráficas e os passos exatos que o acionam. Um clipe curto mais esses detalhes é muito mais acionável do que apenas uma descrição. Publique pelo canal oficial, se houver, e replique no fórum da comunidade para que outros usuários possam confirmar se veem a mesma coisa.
+
+Trate cada atualização do sandbox de clima como um pequeno experimento, e não como um download de rotina. Leia as notas, proteja seu trabalho, teste uma variável de cada vez e mantenha um registro escrito do que mudou. Faça isso de forma consistente, e as atualizações se tornam uma vantagem em vez de uma interrupção.

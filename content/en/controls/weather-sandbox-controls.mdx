@@ -1,0 +1,136 @@
+export const metadata = {
+  title: "Weather Sandbox Controls: Master Rain, Storms, and Sky Settings",
+  description: "Learn how weather sandbox controls work on PC, console, and mobile, plus a step-by-step workflow for building storms that look and run great.",
+  category: "controls",
+  date: "2026-10-06",
+}
+
+A single keystroke can spin up a tornado over your city, and one slider can turn a clear afternoon into a whiteout. That is the promise of a well-learned **weather sandbox controls** setup: direct, readable authority over the sky. Whether you are blocking out a cinematic, testing a level, or just curious what happens when a blizzard hits a desert, knowing where the controls live — and what order to touch them in — is the difference between a fun five minutes and a finished project.
+
+This guide walks through how weather sandbox controls are usually organized across platforms, which layers to adjust first, and the small mistakes that make otherwise good storms look fake or drag your frame rate into the mud.
+
+## What a Weather Sandbox Actually Lets You Control
+
+A weather sandbox is any environment where the sky is a variable you own rather than a script you follow. In a game, that might be a creative-mode panel or a developer console. In an engine or simulation tool, it is usually a particle system plus a set of environment actors. The appeal is identical either way: you decide when it rains, how hard, and what the world looks like when the sun comes back.
+
+The encouraging part is that the parameter list is short. Almost every tool organizes its options around the same handful of physical values, so the skills you build in one sandbox transfer quickly to the next.
+
+| Weather element | What the control changes | Typical range | Practical note |
+|---|---|---|---|
+| Precipitation type | Switches between rain, snow, sleet, hail | Discrete list | Usually a dropdown or a cycle hotkey |
+| Intensity | Particle count and fall speed | 0–100% | The single biggest visual lever |
+| Wind speed | Horizontal force on particles and objects | Calm to extreme | Also tilts rain and drives debris |
+| Wind direction | Heading of the airflow | 0–360 degrees | Rotate to sell storm movement |
+| Cloud cover | Skybox density and light blocking | Clear to fully overcast | Drives ambient light and shadows |
+| Fog density | Visibility falloff with distance | Thin haze to whiteout | Cheap, high-impact mood control |
+| Lightning and thunder | Trigger frequency plus audio | Off to near-continuous | Watch for audio clipping |
+| Time of day | Sun angle, color grade, shadow length | 24-hour clock | Interacts with everything above |
+
+Once that list feels familiar, the rest is mostly muscle memory. What actually trips people up is not the number of options — it is the order in which they touch them.
+
+## The Three Control Layers Worth Learning First
+
+Most weather sandbox controls fall into three layers, and knowing which layer you are working in removes most of the confusion. New users tend to jump straight to the flashiest effect, then wonder why it looks pasted on. Experienced users build from the bottom up.
+
+### Layer 1: Global environment controls
+
+These set the baseline for the entire scene — time of day, cloud cover, and overall fog. Change them first, because they determine how every particle you add later will be lit. A rain effect that looks gorgeous at dusk can look flat and gray at noon.
+
+### Layer 2: Local and regional controls
+
+These apply weather to a specific area rather than the whole world. Regional controls are what let you keep a sunny plaza next to a rain-soaked alley, and they are usually where the interesting creative work happens.
+
+### Layer 3: Event triggers
+
+Triggers are the switches that fire a specific event: a lightning strike, a gust front, a sudden downpour, a tornado spawn. They are best treated as accents rather than foundations. Fire them too early and you lose the buildup that makes them land.
+
+| Layer | Scope | Typical input | Best used for |
+|---|---|---|---|
+| Global environment | Entire scene | Sliders, dropdowns, time clock | Baseline mood and lighting |
+| Local and regional | Defined zone or volume | Zone tools, brushes, region selectors | Contrast between areas |
+| Event triggers | Instant or scheduled | Hotkeys, buttons, scripted timers | Drama, pacing, scripted beats |
+
+## Input Schemes Across PC, Console, Touch, and Scripting
+
+The vocabulary of weather sandbox controls changes with the hardware, but the underlying actions do not. A hotkey on a keyboard, a radial menu on a controller, and a tap target on a phone are all doing the same job: selecting a parameter and adjusting its value.
+
+| Platform | Primary input | Where it shines | Where it struggles |
+|---|---|---|---|
+| PC | Keyboard hotkeys plus mouse sliders | Fast iteration, precise values | Steep learning curve at first |
+| Console | Radial menus and shoulder-button modifiers | Comfortable, controller-native | Slower for fine numeric tuning |
+| Mobile and tablet | Touch sliders, tap-to-place, gesture rotation | Portability, intuitive placement | Fewer simultaneous inputs |
+| Scripting and console | Text commands or node graphs | Repeatable, automatable, shareable | Requires learning syntax |
+
+Player experience suggests that rebinding is worth the first ten minutes of any session. The default layout in a weather sandbox controls panel is usually built for demonstration rather than for long editing sessions, so moving the most-used parameters — intensity, wind direction, and time of day — onto keys your left hand already rests on pays off immediately.
+
+If you are working inside a commercial engine rather than a game, check the official documentation for your platform's environment tools before improvising. Store pages and engine manuals are the reliable source for what a given build actually supports; for a general sense of how broad the sandbox genre has become, [Steam's sandbox category](https://store.steampowered.com/tags/en/Sandbox/) is a useful overview.
+
+## A Step-by-Step Workflow for Clean Weather Changes
+
+Randomly dragging sliders until something looks right is a valid way to explore, but it is a terrible way to finish. The sequence below keeps your scene readable and makes it easy to undo a single decision without rebuilding everything.
+
+| Step | What you adjust | Why the order matters |
+|---|---|---|
+| 1. Freeze the scene | Pause the simulation or lock time | Prevents weather from changing while you tune |
+| 2. Set the baseline | Time of day, cloud cover | Determines lighting for every later effect |
+| 3. Aim the wind | Direction before speed | Rain angle and debris follow the heading |
+| 4. Raise wind speed | Intensity of horizontal force | Establishes how violent the scene feels |
+| 5. Add precipitation | Type, then intensity | Type first, so you tune the right particle set |
+| 6. Layer atmosphere | Fog, haze, color grade | Adds depth without extra particle cost |
+| 7. Fire triggers | Lightning, gusts, spawns | Accents land better on a finished foundation |
+| 8. Save a preset | Name it descriptively | Lets you return or share the exact setup |
+
+Two habits separate clean results from messy ones. First, change one parameter at a time so you always know what caused a problem. Second, save a preset before you start experimenting — not after. Rebuilding a storm you liked from memory is far more annoying than loading a file.
+
+## Mistakes That Make Weather Look Fake
+
+Even with solid weather sandbox controls, a few recurring errors give the illusion away. None of them are about having the wrong settings; they are about relationships between settings.
+
+| Mistake | Why it reads as fake | Fix |
+|---|---|---|
+| Rain falling straight down in strong wind | Physics contradiction the eye catches instantly | Tilt precipitation to match wind direction |
+| Fog so thick nothing is visible | Removes all depth cues | Keep a visible mid-ground layer |
+| Lightning with no delay to thunder | Breaks the sense of distance | Add a short gap before the audio cue |
+| Uniform intensity across the whole map | Real weather has edges | Blend intensity between zones |
+| Every effect maxed at once | No contrast, no focus | Keep one dominant element per shot |
+| Ignoring frame rate while layering | Stutter destroys the mood | Check performance after each addition |
+
+Community reports consistently flag the last one as the most common. Particle-heavy weather looks spectacular in a still frame and miserable at twenty frames per second, so test in motion, not in screenshots.
+
+## Presets, Sharing, and Performance Headroom
+
+A well-built preset is more than a saved slider position. It is a small recipe that other people can read. When you name and document a preset, include the pieces that make it reproducible.
+
+| Preset field | Example value | Why include it |
+|---|---|---|
+| Name | Coastal squall, late afternoon | Makes it findable in a list |
+| Time of day | Late afternoon | Lighting is half the look |
+| Cloud cover | Heavy, layered | Sets the base tone |
+| Wind | Strong, offshore | Explains the rain angle |
+| Precipitation | Rain, high intensity | The headline effect |
+| Extra effects | Occasional lightning, light haze | The finishing touches |
+| Performance note | Tested on mid-range hardware | Warns others before they load it |
+
+Sharing presets is one of the fastest ways to improve at weather sandbox controls, because someone else's file shows you combinations you would never have tried. Load it, change one thing, and see what breaks. That single habit teaches more than an hour of solo tinkering.
+
+Performance deserves its own line item. Wind, fog, and particle density all cost frames, and they stack. If a scene starts stuttering, cut intensity before you cut resolution — a slightly lighter storm usually looks better than a blurry one.
+
+## Frequently Asked Questions
+
+**What are weather sandbox controls in simple terms?**
+
+They are the inputs — hotkeys, sliders, radial menus, or typed commands — that let you create and adjust weather inside a sandbox environment. Instead of waiting for rain, you spawn it, dial its strength, and aim the wind that pushes it around.
+
+**Can I use weather sandbox controls on a console or phone?**
+
+Yes. Console versions typically use radial menus and modifier buttons, while mobile versions rely on touch sliders and tap-to-place tools. Both are fully usable, though PC setups generally allow finer numeric tuning and faster iteration.
+
+**Why does my weather still look fake after tuning everything?**
+
+It is usually a relationship problem rather than a settings problem. Check that rain angle matches wind direction, that fog leaves some visible depth, and that lightning and thunder are separated by a short delay. Contrast between zones matters as much as the values themselves.
+
+**Do these controls hurt performance?**
+
+They can. Precipitation density, wind, and fog are the heaviest contributors, and their costs add up. Add effects one at a time and check your frame rate after each change so you know exactly which setting pushed you over the edge.
+
+Mastering weather sandbox controls is really about sequence and restraint: set the baseline, aim the wind, add precipitation, then accent with triggers. Get that order right and even a simple storm will look like it belongs in the world rather than pasted on top of it.

@@ -1,0 +1,126 @@
+export const metadata = {
+  title: "Weather Sandbox Extra: Versions, Add-Ons, and How to Pick the Right Build",
+  description: "Compare weather sandbox extra versions, add-ons, and platform builds. Learn which features matter for simulation, testing, and play — plus setup tips.",
+  category: "versions",
+  date: "2026-10-06",
+}
+
+## What a Weather Sandbox Actually Does
+
+Few things break immersion faster than weather that never changes — and that is exactly the gap a weather sandbox extra tier is built to fill. A weather sandbox gives you direct control over temperature, wind, precipitation, pressure, and cloud cover, then lets you watch the consequences ripple through your world, your model, or your test environment. Whether you are building a game level, validating a forecasting pipeline, or simply curious how a storm organizes itself, the added control in a weather sandbox extra build is usually what separates a novelty from a genuine tool.
+
+At its core, a sandbox is about removing the guardrails. Instead of accepting whatever the default sky decides to do, you set the dials yourself. Most builds organize those dials into a few families:
+
+- **Thermodynamics** — temperature, humidity, dew point, and lapse rates
+- **Dynamics** — wind speed, direction, gusts, and vertical shear
+- **Moisture** — rain, snow, sleet, hail, and cloud density
+- **Pressure and fronts** — high and low centers, troughs, and boundaries
+- **Time** — pause, rewind, fast-forward, and scripted timelines
+
+The value of a sandbox is not realism for its own sake. It is repeatability. When you can hold every variable steady except one, you can actually learn something — or ship a feature without guessing.
+
+## Weather Sandbox Extra Versions at a Glance
+
+Version naming varies wildly between products, but the tiers themselves tend to follow a familiar pattern. A base build covers the essentials. A weather sandbox extra edition widens the parameter range, adds scenario management, and usually opens the door to scripting or mod support.
+
+| Tier | What you typically get | Best for | Watch out for |
+|---|---|---|---|
+| Base / standard sandbox | Core temperature, wind, rain, and cloud controls | Quick demos, casual tinkering | Shallow parameter depth, few saved slots |
+| Extra / expanded tier | Wider ranges, extra precipitation types, named profiles, sharing | Builders, educators, modders | Larger install, steeper learning curve |
+| Developer / API sandbox | Scripted access, mock endpoints, batch runs | Testing integrations before production | Requires coding comfort |
+| Community-modded build | User-made weather packs, shaders, physics tweaks | Long-term tinkerers | Compatibility drift between releases |
+
+The practical difference between tiers is rarely a single headline feature. It is the accumulation of small conveniences — a saved baseline, a shareable scenario, a wider slider — that together change how you work.
+
+## Core vs. Extra: Which Features Justify the Upgrade
+
+If you are deciding whether the expanded edition is worth your time, compare the two side by side rather than reading marketing copy.
+
+| Feature | Typical base build | Typical weather sandbox extra build |
+|---|---|---|
+| Temperature control | Single global value | Layered values with gradient tools |
+| Wind modeling | One surface layer | Multi-layer bands with altitude shear |
+| Precipitation types | Rain and snow | Rain, snow, sleet, hail, freezing rain |
+| Scenario save/load | One or two slots | Named profiles with import/export |
+| Historical data import | Rare | Common |
+| Automation or scripting | Usually absent | Frequently included |
+| Hardware cost | Light | Moderate to heavy |
+
+A useful rule of thumb: upgrade when you find yourself fighting the base build's limits, not before. If you only ever adjust a slider and watch the clouds roll in, the standard tier is plenty. If you are reproducing a specific event, teaching a lesson, or testing how a system behaves under stress, the extra layer of control pays for itself quickly.
+
+## Platform Builds and Version Support
+
+The same weather sandbox can behave very differently depending on where it runs. Platform versions are often updated on separate schedules, and feature parity is not guaranteed.
+
+| Platform | Control depth | Strengths | Notes |
+|---|---|---|---|
+| Desktop (PC, Mac, Linux) | Highest | Mods, scripting, large maps | Best choice for heavy simulation |
+| Console | Moderate | Pick-up-and-play, stable performance | Mod support often limited or absent |
+| Mobile | Basic | Quick checks on the go | Simplified UI, shorter sessions |
+| Browser-based | Light | Instant access, classroom demos | Dependent on connection quality |
+| Game-engine plug-ins | High | Integrated into your own project | Version-locked to engine releases |
+
+Community reports consistently flag one thing: when you update a sandbox, update everything that depends on it at the same time. Mods, plug-ins, and scenario files built against an older release may load incorrectly or silently drop parameters. If a project is in progress, finishing it on the version you started with is usually safer than chasing the newest build mid-stream.
+
+## Simulation Modes You Can Run
+
+A good weather sandbox is really several tools sharing one interface. Knowing which mode you need saves hours.
+
+| Mode | What it does | Good for | Typical input |
+|---|---|---|---|
+| Live / real-time | Mirrors current conditions | Nowcasting practice | Public observation feeds |
+| Forecast | Runs ahead in time | Planning, teaching | Model output |
+| Historical replay | Rebuilds past events | Case studies, training | Archived records |
+| Custom scenario | You define every variable | Stress tests, storytelling | Your own inputs |
+
+Many builders ground their scenarios in real observation data, such as [the National Weather Service's public forecasts and observations](https://www.weather.gov/), which keeps a simulated event anchored to something that actually happened. Others prefer pure invention — a fictional storm on a fictional coastline — because it lets them push extremes without worrying about accuracy.
+
+The most common mistake across all four modes is scale. A sandbox tuned for a single city block will not behave sensibly when you stretch it across a continent. Pick your domain first, then adjust the parameters to match.
+
+## Setting Up a Weather Sandbox Extra Build
+
+Setup is where most frustration happens, and almost all of it is avoidable. Work through these steps in order.
+
+| Step | Action | Why it matters |
+|---|---|---|
+| 1 | Confirm your build matches your platform and version | Mismatched builds are the top cause of load failures |
+| 2 | Start from a preset, not a blank slate | Presets teach you the parameter relationships |
+| 3 | Set units and time zone first | Mixing metric and imperial mid-project causes silent errors |
+| 4 | Test performance headroom early | Weather effects are expensive; find the ceiling before you build |
+| 5 | Save a baseline profile | Gives you a known-good state to return to |
+| 6 | Layer in extras gradually | One change at a time keeps cause and effect clear |
+
+Two habits separate people who enjoy their sandbox from people who abandon it. First, name your profiles descriptively — "coastal-storm-v2" beats "test3." Second, keep a short text log of what you changed and when. When a scenario stops behaving, that log is the fastest path back to a working state.
+
+## Practical Tips and Community-Reported Pitfalls
+
+Player experience and community reports point to a handful of recurring issues worth knowing before you commit hours.
+
+- **Do not max every slider at once.** Extreme values interact in unstable ways and can produce results that look like bugs but are actually physics.
+- **Watch your frame rate, not just your settings.** A sandbox that stutters breaks the feedback loop you need to learn from.
+- **Back up scenario files before major updates.** Version migrations are not always clean, especially with modded builds.
+- **Read the release notes for your tier, not the general ones.** Base-build notes often omit changes that affect extra-tier features.
+- **Test on the smallest map first.** A scenario that works on a small domain can fail entirely at larger scales.
+- **Join the community forums for your specific build.** Fixes for one version frequently break another.
+
+Above all, treat the sandbox as a laboratory rather than a toy. The point of controlled weather is that you can ask a question, change one variable, and get an answer you trust.
+
+## FAQ
+
+**Is a weather sandbox extra build harder to learn than the base version?**
+
+Generally, yes — but not dramatically. The extra tier adds parameters and tools rather than replacing the fundamentals. If you already understand temperature, wind, and moisture, the expanded controls read as a natural extension. Most people are comfortable within a few sessions.
+
+**Can I run a weather sandbox on a laptop?**
+
+Many desktop builds run fine on modest hardware, especially at smaller map sizes and lower effect quality. The heavier features — multi-layer wind, particle-heavy precipitation, and long historical replays — are where performance drops. Test headroom early so you know your limits before building around them.
+
+**Do versions across platforms stay in sync?**
+
+Not reliably. Desktop builds usually receive updates first, with console and mobile versions trailing. If you collaborate with others, agree on a version before you start and avoid updating until the project is finished.
+
+**Is a weather sandbox extra tier useful for anything beyond games?**
+
+Absolutely. Educators use them to demonstrate atmospheric processes, developers use sandbox environments to test weather-dependent integrations safely, and researchers use them to explore how small parameter changes cascade through a system. The skill transfers — the tool is just the entry point.
+
+Start with the tier that matches your ambition today, learn its edges, and upgrade only when the limits start costing you time. That approach keeps a weather sandbox extra build useful instead of overwhelming.

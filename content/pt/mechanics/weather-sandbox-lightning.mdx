@@ -1,0 +1,123 @@
+export const metadata = {
+  title: "Raios em Sandbox de Clima: Como Tempestades, Descargas e Faíscas Realmente Funcionam",
+  description: "Um guia prático sobre raios em sandbox de clima: como sistemas de tempestade geram descargas, como acioná-las sob demanda e como manter o desempenho fluido.",
+  category: "mechanics",
+  date: "2026-10-06",
+}
+
+## Por Que Raios em Sandbox de Clima Importam Mais Que a Chuva
+
+Poucas coisas vendem uma tempestade como o estalo de um raio, e em um sandbox de clima é o momento em que todos os outros sistemas reagem ao mesmo tempo. Raios controlam luz, som, dano, fogo, comportamento de IA e pânico dos jogadores simultaneamente — e é por isso que importam muito mais do que a chuva ao redor. Entender raios em sandbox de clima significa entender um motor de probabilidade embrulhado em direção de arte, e este guia desmonta esse motor peça por peça.
+
+A chuva é atmosfera. O raio é *consequência*. Uma tempestade que apenas escurece o céu é decoração de cenário; uma tempestade que ocasionalmente arremessa uma descarga contra o chão muda como os jogadores se movem, constroem e planejam. Essa diferença é o motivo pelo qual raios em sandbox de clima são tratados como mecânica, e não como efeito de partículas.
+
+Este artigo aborda como a lógica de descargas costuma ser estruturada, como forçar um raio quando você quiser um, o que acontece após o impacto e como evitar que uma cena com muitos raios derrube sua taxa de quadros. Tudo aqui fica no nível da intenção de design, porque os valores exatos variam de um motor, mod ou título para outro.
+
+## Como Funciona um Sistema de Raios em Sandbox de Clima
+
+A maioria das implementações segue o mesmo ciclo de três estágios: um estado de tempestade acumula carga, uma verificação decide se deve disparar, e uma descarga é resolvida contra o mundo. A parte interessante é o que alimenta cada estágio.
+
+### Estágio 1: O Acúmulo de Carga
+
+Uma tempestade não descarrega apenas com base em um temporizador. Normalmente, os designers condicionam as descargas a um valor de "intensidade da tempestade" que sobe conforme o sistema climático se intensifica. A intensidade pode aumentar a partir do volume de chuva, da duração decorrida da tempestade, de um passeio aleatório ou de uma curva roteirizada. Quando a intensidade ultrapassa um limiar, o sistema começa a rolar para descargas.
+
+É por isso que algumas tempestades parecem sonolentas e outras, violentas. Se a intensidade sobe linearmente, a tempestade escala de forma previsível. Se usa uma curva ruidosa, você tem surtos — grupos de descargas separados por calmaria. A maioria dos jogadores nunca percebe a curva, mas percebe absolutamente o ritmo.
+
+### Estágio 2: A Verificação de Descarga
+
+A verificação em si costuma ser uma rolagem de probabilidade avaliada em um intervalo fixo. Duas variáveis dominam: com que frequência a rolagem acontece e qual é a chance de sucesso. Aumentar qualquer uma delas faz a tempestade parecer mais furiosa.
+
+Um detalhe sutil, mas importante, é que muitos sistemas também exigem um alvo válido antes de disparar. Se não existe um ponto de descarga válido — nenhum solo exposto, nenhuma entidade alvo, nenhuma superfície legal —, a rolagem é descartada em vez de enfileirada. Isso evita que raios caiam em lugares impossíveis.
+
+### Estágio 3: Resolução e Consequências
+
+Depois que um ponto de descarga é escolhido, o sistema dispara a carga visual e sonora e então aplica efeitos. Os efeitos são a parte que transforma o raio de espetáculo em jogabilidade, e eles são abordados em detalhes mais adiante.
+
+| Componente do Sistema | O Que Controla | Se Ajustado Alto Demais | Se Ajustado Baixo Demais |
+|---|---|---|---|
+| Curva de intensidade da tempestade | Com que rapidez a tempestade escala | Descargas constantes, sem acúmulo | A tempestade nunca atinge o limiar de descarga |
+| Frequência de rolagem | Com que frequência uma descarga é considerada | Ritmo de metralhadora, fadiga auditiva | Longos silêncios entre raios |
+| Chance de sucesso | Probabilidade de cada rolagem disparar | Caos imprevisível | Raios parecem roteirizados e raros |
+| Regras de alvo válido | Onde os raios podem cair | Descargas em locais absurdos | Raios falham silenciosamente ao surgir |
+| Tempo de recarga | Intervalo mínimo entre descargas | Tempestades parecem sem graça | Clarões sobrepostos e áudio estourando |
+
+### Estágio 4: Fundamentação no Mundo Real
+
+Boas simulações tomam emprestado da física real mesmo quando a simplificam. Descargas reais favorecem objetos altos, isolados e condutores, e o mesmo viés aparece nos jogos como "preferir o ponto mais alto em um raio de alcance". Se você quer que sua tempestade pareça crível, imite essa preferência em vez de espalhar raios uniformemente. As [orientações de segurança contra raios do National Weather Service](https://www.weather.gov/safety/lightning) são uma referência útil sobre como descargas reais se comportam e por que existem regras de abrigo — princípios que se traduzem surpreendentemente bem para a lógica de sandbox.
+
+## Acionando Raios Sob Demanda: Um Fluxo de Trabalho Passo a Passo
+
+Se seu objetivo é um raio *agora mesmo* — para uma cutscene, um evento roteirizado ou um teste —, você geralmente não espera a tempestade colaborar. Você a força. O fluxo abaixo se aplica à maioria das configurações de sandbox de clima, seja você trabalhando no modo criativo de um jogo, em um kit de modding ou em um asset de clima.
+
+| Passo | Ação | Por Que Importa |
+|---|---|---|
+| 1 | Force o estado da tempestade para intensidade máxima | Ignora a escalada natural para que a verificação de descarga seja elegível |
+| 2 | Defina a chance de sucesso da rolagem como garantida | Remove a aleatoriedade para testes reproduzíveis |
+| 3 | Defina um alvo de descarga explícito | Impede que o sistema descarte a rolagem por falta de um ponto válido |
+| 4 | Desative ou encurte o tempo de recarga | Permite disparar raios consecutivos para testes de timing |
+| 5 | Dispare a descarga e observe | Confirma que visuais, áudio e efeitos são resolvidos corretamente |
+| 6 | Restaure seus valores originais | Substituições roteirizadas deixadas no lugar causam clima estranho depois |
+
+Algumas observações práticas sobre essa sequência:
+
+- **Sempre teste com o alvo definido.** Posicionamento aleatório parece bom em uma captura de tela e terrível em movimento.
+- **Capture o áudio separadamente do visual.** Um raio que cai na hora certa, mas soa atrasado, é a reclamação de polimento mais comum em relatos da comunidade.
+- **Verifique as consequências, não apenas o clarão.** Propagação de fogo, conversão de entidades e dano são onde os bugs se escondem.
+- **Registre suas substituições.** Se um evento de tempestade roteirizado deixar a intensidade travada no máximo, os jogadores vão notar imediatamente.
+
+## O Que o Raio Faz Depois de Cair
+
+O clarão é a parte fácil. Os efeitos são o que fazem os raios em sandbox de clima serem uma mecânica em vez de um show de luzes. Títulos sandbox variam bastante nesse aspecto, mas as categorias são consistentes.
+
+| Categoria de Efeito | Comportamento Típico | Propósito de Design |
+|---|---|---|
+| Ambiental | Incendeia blocos ou objetos inflamáveis | Cria perigos emergentes e jogabilidade de limpeza |
+| Transformação de entidades | Converte certas criaturas em formas alternativas | Recompensa jogadores por atrair mobs para tempestades |
+| Dano a entidades | Dano direto ou um breve efeito de status | Puni posicionamento exposto |
+| Descargas redirecionáveis | Hastes ou condutores dedicados absorvem raios | Dá aos jogadores uma ferramenta defensiva com uma saída bônus |
+| Geração de recursos | Descargas redirecionadas carregam ou alimentam dispositivos | Transforma um perigo em fonte de energia |
+| Saída de sinal | Uma descarga emite um pulso detectável | Permite engenhocas no estilo redstone ou baseadas em lógica |
+
+Um exemplo bem conhecido é o conceito de para-raios: um condutor posicionado que atrai descargas para longe da sua construção e, quando atingido, emite um sinal que pode acionar maquinário. Em títulos como Minecraft, raios também são famosos por transformar certos mobs e criar variantes carregadas, motivo pelo qual guias de "experiência do jogador" costumam recomendar construir um para-raios antes da tempestade, e não depois.
+
+A lição de design é simples: dê ao raio pelo menos um uso *positivo*. Se cada raio for puramente destrutivo, os jogadores vão apenas se esconder dentro de casa e ignorar completamente seu sistema climático.
+
+## Armadilhas de Desempenho e Design
+
+Raios são baratos de desenhar e caros de *simular*. O clarão em si é um efeito de curta duração, mas a verificação de descarga, a busca por alvo e a lógica de consequências podem rodar a cada tick se você permitir.
+
+| Preocupação de Desempenho | Por Que Prejudica | Mitigação Prática |
+|---|---|---|
+| Buscas por alvo a cada quadro | Escaneia cada ponto candidato em um raio de alcance | Armazene uma lista de candidatos em cache e atualize-a em intervalos |
+| Entidades de consequência sem limite | Fogo, partículas e detritos se acumulam | Limite objetos gerados e remova-os com um temporizador |
+| Áudio sobreposto | Vários clipes de trovão se empilham e estouram | Imponha um intervalo mínimo entre sons de trovão |
+| Rotatividade de fontes de luz | Luzes dinâmicas reativam sombras | Use um efeito de clarão breve em vez de uma luz dinâmica completa quando possível |
+| Estado de tempestade constante | Tempestades nunca terminam, então as verificações nunca param | Dê às tempestades um tempo de vida definido e um tempo de recarga |
+
+Erros comuns de design custam tanto quanto os de desempenho:
+
+| Erro | Sintoma Relatado pelos Jogadores | Correção |
+|---|---|---|
+| Sem aviso prévio | "Veio do nada" | Adicione um clarão ou pré-roll de áudio antes do impacto |
+| Descargas em temporizador fixo | "É tão previsível" | Aleatorize o intervalo dentro de uma faixa |
+| Sem zonas seguras | "Não consigo construir nada" | Garanta que o abrigo funcione de forma confiável |
+| Destruição pura | "Eu só espero passar" | Adicione um resultado redirecionável ou coletável |
+| Frequência sem limite | "Nunca para" | Imponha tempos de recarga e durações de tempestade |
+
+## Perguntas Frequentes
+
+**Raios em sandbox de clima precisam seguir a física real para serem bons?**
+Não, mas devem seguir regras *consistentes*. Descargas reais favorecem pontos altos, isolados e condutores, e imitar esse viés faz o posicionamento parecer intencional. Jogadores perdoam simplificação; não perdoam aleatoriedade que parece bug.
+
+**Posso acionar um único raio sem iniciar uma tempestade completa?**
+Na maioria dos sistemas, sim — force a intensidade da tempestade até o limiar, garanta a rolagem e defina um alvo explícito. O ponto-chave é restaurar seus valores originais depois, para que a substituição não vaze para a jogabilidade normal.
+
+**Por que meus raios nunca atingem nada?**
+A causa mais comum é uma verificação de alvo válido que falhou. Se não existe um ponto de descarga legal dentro do alcance, muitos sistemas descartam a rolagem silenciosamente em vez de tentar de novo. Verifique suas regras de alvo antes de assumir que a tempestade está quebrada.
+
+**Com que frequência os raios devem cair em um sandbox de clima?**
+Isso depende da intenção. Para atmosfera, raios pouco frequentes com áudio forte têm mais peso. Para um encontro focado em perigo, descargas mais frequentes com avisos claros funcionam melhor. Independentemente da escolha, adicione um tempo de recarga — a reclamação mais frequente em relatos da comunidade sobre raios em sandbox de clima é que eles nunca dão trégua.
+
+## Conclusão
+
+O raio é o momento em que um sandbox de clima prova que está de fato simulando algo. Construa uma curva de carga, condicione-a a uma verificação de probabilidade justa, garanta que os raios tenham alvos válidos, dê às consequências pelo menos um resultado útil e limite o conjunto para que ele não fuja do seu controle. Faça isso, e suas tempestades deixam de ser ruído de fundo e passam a ser o motivo pelo qual os jogadores olham para o céu antes de sair.
