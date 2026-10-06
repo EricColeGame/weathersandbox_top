@@ -19,19 +19,16 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "My Seafood Stand Wiki",
-  shortName: "My Seafood Stand",
-  logoText: "SS",
-  tagline: "Complete Guides, Codes, Recipes & Tier Lists",
-  description: "Your ultimate guide to My Seafood Stand on Roblox! Explore active working codes, seafood recipes, best upgrades, profit strategies, and progression guides.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://myseafoodstand.top",
-  supportEmail: `support@${new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://myseafoodstand.top").hostname.replace(/^www\./, "")}`,
-  gameUrl: "https://www.roblox.com/games/my-seafood-stand",
-  heroVideoId: "M8DvcwoFRrk", // Roblox My Seafood Stand codes & gameplay video
-  social: {
-    discord: "https://discord.gg/roblox",
-    youtube: "https://www.youtube.com/@roblox",
-  },
+  name: "Weather Sandbox Wiki",
+  shortName: "Weather Sandbox",
+  logoText: "WS",
+  tagline: "Weather Controls, Storm Experiments, Biomes & Guides",
+  description: "Fan-made Weather Sandbox wiki for the Roblox weather simulation sandbox. Learn weather controls, storm experiments, biomes, tools, contracts, and rare weather combinations.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://weathersandbox.top",
+  supportEmail: `support@${new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://weathersandbox.top").hostname.replace(/^www\./, "")}`,
+  gameUrl: "https://www.roblox.com/games/70412932199344/Weather-Sandbox",
+  heroVideoId: "9qoghhZDuK8", // Roblox Weather Sandbox gameplay & tornado tutorial
+  social: {},
   locales: ["en", "es", "pt", "de", "fr"],
   defaultLocale: "en",
 };
