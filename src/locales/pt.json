@@ -1,1 +1,495 @@
-{}
+{
+  "site": {
+    "name": "Wiki do Weather Sandbox",
+    "shortName": "Weather Sandbox",
+    "tagline": "Controles de Clima, Experimentos de Tempestade, Biomas e Guias",
+    "description": "Wiki de fãs do Weather Sandbox, o sandbox de simulação de clima da Roblox. Aprenda controles de clima, experimentos de tempestade, biomas, ferramentas, contratos e combinações raras de clima.",
+    "legalNotice": "Wiki de fãs não oficial. Sem afiliação com a Beyond Average ou a Roblox."
+  },
+  "nav": {
+    "home": "Início",
+    "menu": "Menu",
+    "toggleTheme": "Alternar tema",
+    "guide": "Guia",
+    "mechanics": "Mecânicas",
+    "controls": "Controles",
+    "platforms": "Plataformas",
+    "versions": "Versões",
+    "community": "Comunidade",
+    "roblox": "Roblox"
+  },
+  "home": {
+    "meta": {
+      "title": "Wiki do Weather Sandbox - Códigos, Guia e Eventos de Clima",
+      "description": "Wiki do Weather Sandbox - Guias, eventos de clima, biomas, ferramentas, contratos e combinações de tempestade para dominar cada experimento e descobrir climas raros."
+    },
+    "hero": {
+      "eyebrow": "Sandbox de Simulação de Clima",
+      "title": "Wiki do Weather Sandbox",
+      "description": "Controle temperatura, vento, umidade e pressão para criar tempestades, descobrir combinações raras de clima, desbloquear biomas e dominar experimentos atmosféricos.",
+      "stats": [
+        "963K+ Visitas Totais",
+        "1.725 Pico de CCU",
+        "70 Jogadores Online",
+        "85% Avaliação dos Usuários"
+      ],
+      "primaryCta": "Jogar na Roblox",
+      "secondaryCta": "Guia para Iniciantes",
+      "tertiaryCta": "Eventos de Clima",
+      "videoLabel": "Guia de Gameplay"
+    },
+    "updates": {
+      "title": "Últimas Atualizações",
+      "browse": "Ver Todos os Guias",
+      "viewAll": "Ver Tudo"
+    },
+    "start": {
+      "eyebrow": "Comece Aqui",
+      "title": "Sua Jornada no Weather Sandbox",
+      "cards": [
+        {
+          "number": "1",
+          "title": "Guia para Iniciantes",
+          "description": "Aprenda os parâmetros de clima essenciais e conclua seu primeiro experimento de céu limpo no Weather Sandbox."
+        },
+        {
+          "number": "2",
+          "title": "Controles de Clima",
+          "description": "Domine temperatura, umidade, pressão do ar e vento para que cada tempestade reaja como você espera."
+        },
+        {
+          "number": "3",
+          "title": "Como Criar Tempestades",
+          "description": "Combine umidade, instabilidade, elevação e cisalhamento do vento para formar trovões, raios e chuva."
+        },
+        {
+          "number": "4",
+          "title": "Tornado e Furacão",
+          "description": "Gere, direcione e ajuste os desastres mais poderosos do Weather Sandbox."
+        }
+      ]
+    },
+    "popular": {
+      "eyebrow": "Páginas Populares",
+      "title": "Em Alta no Weather Sandbox",
+      "quickLinks": [
+        "Controles de Clima",
+        "Criar Tempestades",
+        "Mecânicas de Tornado",
+        "Guia para Iniciantes"
+      ],
+      "cards": [
+        {
+          "badge": "Iniciante",
+          "title": "Guia para Iniciantes do Weather Sandbox",
+          "description": "Comece com os parâmetros de clima essenciais e uma primeira sessão passo a passo.",
+          "href": "/guide/weather-sandbox-beginner-guide"
+        },
+        {
+          "badge": "Controles",
+          "title": "Controles do Weather Sandbox",
+          "description": "Temperatura, umidade, pressão, vento e configurações de precipitação explicadas.",
+          "href": "/controls/weather-sandbox-controls"
+        },
+        {
+          "badge": "Guia",
+          "title": "Como Criar Tempestades",
+          "description": "Umidade, instabilidade, elevação e cisalhamento combinados em uma tempestade completa.",
+          "href": "/guide/weather-sandbox-how-to-create-storms"
+        },
+        {
+          "badge": "Mecânicas",
+          "title": "Mecânicas de Tornado",
+          "description": "Ferramentas de geração, formas de funil e a física por trás da rotação.",
+          "href": "/mechanics/weather-sandbox-tornado"
+        },
+        {
+          "badge": "Mecânicas",
+          "title": "Mecânicas de Furacão",
+          "description": "Pressão, vento e chegada em terra para ciclones em escala de categoria.",
+          "href": "/mechanics/weather-sandbox-hurricane"
+        },
+        {
+          "badge": "Guia",
+          "title": "Como Fazer um Tornado",
+          "description": "Ordem de construção passo a passo para um funil em rotação.",
+          "href": "/guide/weather-sandbox-how-to-make-tornado"
+        },
+        {
+          "badge": "Guia",
+          "title": "Dicas do Weather Sandbox",
+          "description": "Hábitos que fazem as tempestades parecerem reais e mantêm a simulação fluida.",
+          "href": "/guide/weather-sandbox-tips"
+        },
+        {
+          "badge": "Mecânicas",
+          "title": "Mecânicas de Simulação",
+          "description": "Como o modelo atmosférico transforma ajustes em clima em tempo real.",
+          "href": "/mechanics/weather-sandbox-simulation"
+        },
+        {
+          "badge": "Plataforma",
+          "title": "Weather Sandbox na Roblox",
+          "description": "Visão geral do gameplay e como jogar Weather Sandbox na Roblox.",
+          "href": "/roblox/weather-sandbox-roblox"
+        }
+      ]
+    },
+    "aboutGame": {
+      "title": "O que é o Weather Sandbox?",
+      "paragraphs": [
+        "Weather Sandbox é um jogo de simulação de clima da Roblox desenvolvido pela Beyond Average. Você controla temperatura, vento, umidade e pressão do ar para criar tempestades em tempo real e observa a simulação reagir conforme nuvens, chuva, raios e tornados se formam pelo mapa.",
+        "Os jogadores experimentam desde uma linha de base calma de céu limpo até um furacão em escala de categoria, desbloqueando novos biomas e ferramentas conforme dominam a atmosfera. Com mais de 963K visitas e 85% de avaliação dos usuários, o Weather Sandbox transforma o céu em um sandbox que você pode pausar, rebobinar e reconstruir."
+      ],
+      "stats": [
+        {
+          "label": "Desenvolvedor",
+          "value": "Beyond Average"
+        },
+        {
+          "label": "Plataforma",
+          "value": "Roblox"
+        },
+        {
+          "label": "Gênero",
+          "value": "Sandbox de Simulação de Clima"
+        },
+        {
+          "label": "Visitas",
+          "value": "963K+"
+        },
+        {
+          "label": "Pico de CCU",
+          "value": "1.725"
+        },
+        {
+          "label": "Jogadores Online",
+          "value": "70"
+        },
+        {
+          "label": "Avaliação dos Usuários",
+          "value": "85%"
+        }
+      ],
+      "cta": "Explorar Todos os Guias"
+    },
+    "explore": {
+      "title": "Explore a Wiki do Weather Sandbox",
+      "description": "Controles de clima, criação de tempestades, experimentos de bioma e mecânicas de desastres - tudo o que você precisa para dominar a atmosfera do Weather Sandbox.",
+      "modules": [
+        {
+          "order": 1,
+          "name": "Guia para Iniciantes do Weather Sandbox",
+          "description": "Um passo a passo inicial cobrindo os parâmetros essenciais de clima, a configuração da primeira sessão e experimentos para iniciantes no Weather Sandbox.",
+          "href": "/guide/weather-sandbox-beginner-guide",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "Redefina para um céu limpo e defina uma hora do dia de base"
+            },
+            {
+              "label": "2",
+              "detail": "Aumente a temperatura da superfície para criar instabilidade"
+            },
+            {
+              "label": "3",
+              "detail": "Eleve a umidade até a saturação para formar a base de uma nuvem"
+            },
+            {
+              "label": "4",
+              "detail": "Dispare a elevação com terreno, uma fonte de calor ou uma frente"
+            },
+            {
+              "label": "5",
+              "detail": "Adicione cisalhamento do vento para inclinar a corrente ascendente e organizar a rotação"
+            },
+            {
+              "label": "6",
+              "detail": "Ative a precipitação e ajuste intensidade e duração"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "name": "Controles de Clima do Weather Sandbox",
+          "description": "Todos os controles essenciais de clima no Weather Sandbox - temperatura, umidade, pressão do ar, vento, cobertura de nuvens e precipitação - com faixas iniciais práticas.",
+          "href": "/controls/weather-sandbox-controls",
+          "displayType": "code-cards",
+          "highlights": [
+            {
+              "label": "Temperatura",
+              "detail": "15-24 C (60-75 F) - energia armazenada no ar"
+            },
+            {
+              "label": "Umidade",
+              "detail": "50-70% - umidade disponível para nuvens e chuva"
+            },
+            {
+              "label": "Pressão",
+              "detail": "Próxima do nível do mar padrão - valores menores impulsionam elevação e tempestades"
+            },
+            {
+              "label": "Velocidade do Vento",
+              "detail": "8-24 km/h - movimento mais rápido e mais mistura"
+            },
+            {
+              "label": "Cobertura de Nuvens",
+              "detail": "20-50% - sombreamento e combustível para tempestades"
+            },
+            {
+              "label": "Hora do Dia",
+              "detail": "Meio da manhã - convecção mais forte e aquecimento mais longo"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "name": "Guia de Tempestades do Weather Sandbox",
+          "description": "Como criar tempestades no Weather Sandbox combinando umidade, instabilidade, elevação e cisalhamento do vento, e depois ajustando trovões, raios e chuva.",
+          "href": "/guide/weather-sandbox-how-to-create-storms",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Umidade",
+              "detail": "Fornece a água que se torna nuvem e chuva; eleve a umidade até a saturação"
+            },
+            {
+              "label": "Instabilidade",
+              "detail": "O ar quente da superfície continua subindo sozinho e forma nuvens altas"
+            },
+            {
+              "label": "Elevação",
+              "detail": "Terreno, frentes ou uma fonte de calor dão o primeiro empurrão para cima"
+            },
+            {
+              "label": "Cisalhamento",
+              "detail": "Inclina a corrente ascendente, separa a chuva do núcleo e prolonga a vida da tempestade"
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "name": "Biomas do Weather Sandbox",
+          "description": "Explore os ambientes do mapa no Weather Sandbox e como o terreno molda o clima local, de planícies planas a montanhas e litorais.",
+          "href": "/mechanics",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Planícies",
+              "detail": "Terreno plano favorece trajetórias de tempestade duradouras e amplas vistas de funil"
+            },
+            {
+              "label": "Montanhas",
+              "detail": "Terreno alto força o ar para cima e provoca sombras de chuva"
+            },
+            {
+              "label": "Litoral",
+              "detail": "Água quente alimenta furacões e intensifica frentes de brisa marítima"
+            },
+            {
+              "label": "Deserto",
+              "detail": "O ar seco enfraquece as tempestades, então é preciso adicionar umidade primeiro"
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "name": "Ferramentas do Weather Sandbox",
+          "description": "As ferramentas do Weather Sandbox que vale a pena aprender primeiro - radar, timelapse, predefinições e controles de câmera - e os experimentos que cada uma apoia.",
+          "href": "/controls",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Radar",
+              "detail": "Acompanhe células, rotação e movimento da tempestade em uma leitura ao vivo de cima para baixo"
+            },
+            {
+              "label": "Timelapse",
+              "detail": "Reproduza todo o ciclo de vida de uma tempestade quadro a quadro"
+            },
+            {
+              "label": "Predefinições",
+              "detail": "Salve e recarregue cenários nomeados para testes repetíveis"
+            },
+            {
+              "label": "Câmera",
+              "detail": "Voo livre para filmar funis, raios e faixas de chuva"
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "name": "Contratos do Weather Sandbox",
+          "description": "Contratos e objetivos de experimento do Weather Sandbox, com metas, condições e recompensas que desbloqueiam novas ferramentas e biomas.",
+          "href": "/guide",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Base",
+              "detail": "Conclua uma execução de céu limpo para aprender a interface e os controles de tempo"
+            },
+            {
+              "label": "Chuva",
+              "detail": "Produza chuva e neve convincentes a partir de umidade e resfriamento"
+            },
+            {
+              "label": "Tempestades",
+              "detail": "Construa uma tempestade elétrica estruturada e em movimento com cisalhamento do vento"
+            },
+            {
+              "label": "Surto",
+              "detail": "Monte um surto multicélula e mantenha todas as tempestades vivas"
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "name": "Coleção de Climas do Weather Sandbox",
+          "description": "Uma lista de verificação dos fenômenos climáticos do Weather Sandbox para descobrir e colecionar, da chuva e neblina do dia a dia a tempestades rotativas raras.",
+          "href": "/mechanics/weather-sandbox-simulation",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Supercélula",
+              "detail": "Tempestade elétrica rotativa com mesociclone e topo de bigorna"
+            },
+            {
+              "label": "Tromba d'água",
+              "detail": "Funil sobre a água que se forma perto de mapas costeiros"
+            },
+            {
+              "label": "Nevasca",
+              "detail": "Neve pesada com vento forte e visibilidade nula"
+            },
+            {
+              "label": "Raios",
+              "detail": "Frequência de disparo e efeitos sonoros para tempestades maduras"
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "name": "Desastres do Weather Sandbox",
+          "description": "O clima mais perigoso do Weather Sandbox classificado por impacto, de furacões e tornados a supercélulas e nevascas, com condições de disparo.",
+          "href": "/mechanics/weather-sandbox-hurricane",
+          "displayType": "tier-grid",
+          "highlights": [
+            {
+              "label": "S",
+              "detail": "Furacão - Ciclone em escala de categoria com olho, parede do olho e faixas espirais de chuva"
+            },
+            {
+              "label": "A",
+              "detail": "Tornado - Funis em cone e cunha com destroços e danos estruturais"
+            },
+            {
+              "label": "B",
+              "detail": "Supercélula - Tempestade elétrica rotativa duradoura que gera tornados"
+            },
+            {
+              "label": "C",
+              "detail": "Nevasca - Neve pesada e condições de visibilidade nula que paralisam a visão"
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "description": "Respostas rápidas para as perguntas mais comuns sobre o Weather Sandbox.",
+      "items": [
+        {
+          "question": "O que é o Weather Sandbox?",
+          "answer": "Weather Sandbox é um jogo de simulação de clima da Roblox da Beyond Average. Você controla temperatura, vento, umidade e pressão do ar para criar tempestades, desbloquear biomas e experimentar a atmosfera em tempo real."
+        },
+        {
+          "question": "Como você controla o clima no Weather Sandbox?",
+          "answer": "Abra o painel de controle de clima e ajuste temperatura, umidade, pressão do ar, velocidade do vento, direção do vento, cobertura de nuvens e precipitação. Altere um valor por vez para ver exatamente como o céu responde."
+        },
+        {
+          "question": "É possível fazer um tornado no Weather Sandbox?",
+          "answer": "Sim. Um tornado no Weather Sandbox precisa de ar quente e úmido perto do solo, ar frio e seco em altitude, cisalhamento do vento e um gatilho de elevação. Construa esses quatro ingredientes e a corrente ascendente rotativa se organiza em um funil."
+        },
+        {
+          "question": "Quais biomas e ferramentas você pode desbloquear no Weather Sandbox?",
+          "answer": "Ao concluir experimentos e contratos, você desbloqueia novos biomas, ferramentas e predefinições de tempestade. Terrenos como planícies, montanhas e litorais mudam como o clima se comporta em cada mapa."
+        },
+        {
+          "question": "O Weather Sandbox é gratuito?",
+          "answer": "Sim. Weather Sandbox é gratuito na Roblox, e você pode começar a experimentar com o painel completo de controle de clima imediatamente."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Pronto para Dominar o Weather Sandbox?",
+      "description": "Da sua primeira tempestade a combinações raras de clima, nossa wiki da comunidade cobre você com guias gratuitos e atualizados.",
+      "primary": "Leia o Guia para Iniciantes",
+      "secondary": "Jogar na Roblox"
+    }
+  },
+  "guide": {
+    "overviewTitle": "Guias do Weather Sandbox",
+    "overviewDescription": "Comece com o guia para iniciantes do Weather Sandbox e depois siga tutoriais passo a passo sobre tempestades, tornados e furacões."
+  },
+  "mechanics": {
+    "overviewTitle": "Mecânicas do Weather Sandbox",
+    "overviewDescription": "Entenda como o Weather Sandbox simula tornados, supercélulas, furacões, raios, radar e reprodução em timelapse."
+  },
+  "controls": {
+    "overviewTitle": "Controles do Weather Sandbox",
+    "overviewDescription": "Aprenda o esquema de controle do Weather Sandbox, ajuste o painel de configurações e jogue confortavelmente no desktop e no celular."
+  },
+  "platforms": {
+    "overviewTitle": "Plataformas do Weather Sandbox",
+    "overviewDescription": "Veja onde baixar o Weather Sandbox, quais dispositivos e versões de aplicativo são compatíveis e como jogar online de graça."
+  },
+  "versions": {
+    "overviewTitle": "Versões do Weather Sandbox",
+    "overviewDescription": "Compare as versões do Weather Sandbox, incluindo as builds 2D e 3D, a edição extra, a v3 e downloads de versões antigas."
+  },
+  "community": {
+    "overviewTitle": "Comunidade do Weather Sandbox",
+    "overviewDescription": "Encontre o Discord, Reddit, GitHub e site oficiais do Weather Sandbox para compartilhar criações e obter ajuda."
+  },
+  "roblox": {
+    "overviewTitle": "Weather Sandbox na Roblox",
+    "overviewDescription": "Explore a experiência do Weather Sandbox na Roblox, seu ciclo de gameplay e um guia dedicado da Roblox para novos jogadores."
+  },
+  "shared": {
+    "wikiNavigation": "Navegação da Wiki",
+    "activeCodes": "Códigos Ativos",
+    "updated": "Atualizado",
+    "viewAllCodes": "Ver todos os códigos",
+    "playOnRoblox": "Jogar na Roblox",
+    "inThisSection": "Nesta seção",
+    "tableOfContents": "Índice",
+    "nextSteps": "Próximos Passos",
+    "needHelp": "Precisa de Ajuda?",
+    "relatedReading": "Leitura Relacionada",
+    "relatedGuides": "Guias Relacionados",
+    "readMore": "Ler mais",
+    "officialMedia": "Mídia oficial",
+    "home": "Início",
+    "noGuidesAvailable": "Nenhum guia disponível ainda. Volte em breve!"
+  },
+  "footer": {
+    "aboutTitle": "Wiki do Weather Sandbox",
+    "about": "A Wiki do Weather Sandbox é um hub de guias independente feito por fãs, cobrindo controles de clima, experimentos de tempestade, biomas, ferramentas e conhecimentos essenciais do jogo para jogadores novos e veteranos.",
+    "quickLinks": "Links Rápidos",
+    "guides": "Guias",
+    "legal": "Jurídico",
+    "copyright": "2026 Wiki do Weather Sandbox. Sem afiliação com a Beyond Average ou a Roblox.",
+    "description": "Sandbox de simulação de clima da Roblox. Controle temperatura, vento, umidade e pressão para criar tempestades e desbloquear biomas.",
+    "playGame": "Jogar Weather Sandbox na Roblox",
+    "officialDiscord": "Discord Oficial",
+    "officialYoutube": "YouTube Oficial",
+    "vvBuilder": "Ferramentas do Weather Sandbox",
+    "beginnerGuide": "Guia para Iniciantes",
+    "mechanicsGuides": "Mecânicas de Clima",
+    "controlsGuides": "Controles e Configurações",
+    "platformsGuides": "Plataformas e Download",
+    "privacyPolicy": "Política de Privacidade",
+    "termsOfService": "Termos de Serviço"
+  }
+}

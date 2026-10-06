@@ -29,6 +29,6 @@ export const siteConfig: SiteConfig = {
   gameUrl: "https://www.roblox.com/games/70412932199344/Weather-Sandbox",
   heroVideoId: "9qoghhZDuK8", // Roblox Weather Sandbox gameplay & tornado tutorial
   social: {},
-  locales: ["en", "es", "pt", "de", "fr"],
+  locales: ["en", "pt", "es", "de"],
   defaultLocale: "en",
 };
