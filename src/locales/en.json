@@ -1,10 +1,10 @@
 {
   "site": {
-    "name": "My Seafood Stand Wiki",
-    "shortName": "My Seafood Stand",
-    "tagline": "Complete Guides, Codes, Recipes & Tier Lists",
-    "description": "Your ultimate guide to My Seafood Stand on Roblox! Explore active codes, seafood recipes, best upgrades, profit strategies, and progression guides.",
-    "legalNotice": "Non-official fan wiki. Made by players, for players."
+    "name": "Weather Sandbox Wiki",
+    "shortName": "Weather Sandbox",
+    "tagline": "Weather Controls, Storm Experiments, Biomes & Guides",
+    "description": "Fan-made Weather Sandbox wiki for the Roblox weather simulation sandbox. Learn weather controls, storm experiments, biomes, tools, contracts, and rare weather combinations.",
+    "legalNotice": "Non-official fan wiki. Not affiliated with Beyond Average or Roblox."
   },
   "nav": {
     "races": "Races",
@@ -26,23 +26,23 @@
   },
   "home": {
     "meta": {
-      "title": "My Seafood Stand Wiki — Codes, Recipes, Upgrades & Guides",
-      "description": "Complete My Seafood Stand guide on Roblox with active working codes, all fish & recipes, best upgrades tier list, and fast cash tips."
+      "title": "Weather Sandbox Wiki - Codes, Guide & Weather Events",
+      "description": "Weather Sandbox Wiki - Guides, weather events, biomes, tools, contracts, and storm combinations to help you master every experiment and discover rare weather."
     },
     "hero": {
-      "eyebrow": "Fan-Made Community Wiki",
-      "title": "My Seafood Stand",
-      "description": "Master your restaurant in My Seafood Stand on Roblox. Access all active codes, complete fish & recipe catalog, optimal upgrades, and pro money-making strategies.",
+      "eyebrow": "Weather Simulation Sandbox",
+      "title": "Weather Sandbox Wiki",
+      "description": "Control temperature, wind, humidity and pressure to create storms, discover rare weather combinations, unlock biomes and master atmospheric experiments.",
       "stats": [
-        "All Codes",
-        "All Fish & Recipes",
-        "Upgrade Guides",
-        "Fast Cash Tips"
+        "963K+ Total Visits",
+        "1,725 Peak CCU",
+        "70 Players Online",
+        "85% User Rating"
       ],
-      "primaryCta": "Beginner Guide",
-      "secondaryCta": "Seafood Tier List",
-      "tertiaryCta": "Active Codes",
-      "videoLabel": "Official media"
+      "primaryCta": "Play on Roblox",
+      "secondaryCta": "Beginner Guide",
+      "tertiaryCta": "Weather Events",
+      "videoLabel": "Gameplay Guide"
     },
     "updates": {
       "title": "Latest Updates",
@@ -342,8 +342,8 @@
       ]
     },
     "finalCta": {
-      "title": "Ready to Master My Seafood Stand?",
-      "description": "From your first steps in Fort Adams to endgame boss fights our community wiki has you covered with free, up-to-date guides.",
+      "title": "Ready to Master Weather Sandbox?",
+      "description": "From your first storm to rare weather combinations, our community wiki has you covered with free, up-to-date guides.",
       "primary": "Read the Beginner Guide",
       "secondary": "Play on Roblox"
     }
@@ -379,17 +379,17 @@
     "noGuidesAvailable": "No guides available yet. Check back soon!"
   },
   "footer": {
-    "aboutTitle": "My Seafood Stand Wiki",
-    "about": "My Seafood Stand Wiki is an independent fan-built guide hub covering progression routes, races, bosses, builds, and essential game knowledge for new and veteran players alike.",
+    "aboutTitle": "Weather Sandbox Wiki",
+    "about": "Weather Sandbox Wiki is an independent fan-built guide hub covering weather controls, storm experiments, biomes, tools, and essential game knowledge for new and veteran players alike.",
     "quickLinks": "Quick Links",
     "guides": "Guides",
     "legal": "Legal",
-    "copyright": "2026 My Seafood Stand Wiki. Not affiliated with Midnight Continent or Roblox.",
-    "description": "Free Bleach-inspired fighting RPG on Roblox. 3 races, 130+ skills, Lv100 cap.",
-    "playGame": "Play My Seafood Stand",
+    "copyright": "2026 Weather Sandbox Wiki. Not affiliated with Beyond Average or Roblox.",
+    "description": "Roblox weather simulation sandbox. Control temperature, wind, humidity and pressure to create storms and unlock biomes.",
+    "playGame": "Play Weather Sandbox on Roblox",
     "officialDiscord": "Official Discord",
     "officialYoutube": "Official YouTube",
-    "vvBuilder": "VV Builder (Skill Planner)",
+    "vvBuilder": "Weather Sandbox Tools",
     "beginnerGuide": "Beginner Guide",
     "raceGuides": "Race Guides",
     "bossGuides": "Boss Guides",
